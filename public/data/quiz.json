@@ -1,349 +1,604 @@
 {
   "questions": [
     {
-      "title": "How do you define a global middleware in Nuxt 3?",
+      "title": "What is Nuxt 3?",
       "options": [
-        "You can't",
-        "Create a file in `middleware/`",
-        "Import it in every page",
-        "Add it to `nuxt.config.ts`"
+        "A JavaScript library",
+        "A Vue.js framework",
+        "A type of fish",
+        "A CSS framework"
       ],
       "correctIndex": 1,
-      "explanation": "Global middleware goes in the `middleware/` directory and runs on every route."
+      "explanation": "Nuxt 3 is a framework built on top of Vue.js for creating server-side rendered applications."
     },
     {
-      "title": "How do you define a global middleware in Nuxt 3?",
+      "title": "Which of the following is a feature of Nuxt 3?",
       "options": [
-        "Add it to `nuxt.config.ts`",
-        "Import it in every page",
-        "Create a file in `middleware/`",
-        "You can't"
-      ],
-      "correctIndex": 2,
-      "explanation": "Global middleware goes in the `middleware/` directory and runs on every route."
-    },
-    {
-      "title": "Where should server API files be placed in a Nuxt 3 project?",
-      "options": ["pages/api/", "server/api/", "nuxt/api/", "api/routes/"],
-      "correctIndex": 1,
-      "explanation": "Nuxt 3 uses the `server/api/` directory for defining server routes."
-    },
-    {
-      "title": "Which is a valid Nuxt 3 middleware file?",
-      "options": [
-        "pages/middleware.ts",
-        "middleware/auth.ts",
-        "plugins/auth.js",
-        "layouts/auth.vue"
-      ],
-      "correctIndex": 1,
-      "explanation": "Middleware lives in the `middleware/` folder and is auto-registered."
-    },
-    {
-      "title": "What folder is best for placing static assets like images or downloadable files?",
-      "options": ["static/", "composables/", "assets/", "public/"],
-      "correctIndex": 3,
-      "explanation": "`public/` is for static files served directly via URL, like images and PDFs."
-    },
-    {
-      "title": "True or False: Nuxt 3 automatically generates routes from files inside the `pages/` directory.",
-      "options": ["False", "True"],
-      "correctIndex": 1,
-      "explanation": "Nuxt 3 uses file-based routing, generating routes from `pages/`."
-    },
-    {
-      "title": "What does `definePageMeta({ layout: 'custom' })` do?",
-      "options": [
-        "Changes page title",
-        "Defines the component layout",
-        "Initializes plugins",
-        "Loads middleware"
-      ],
-      "correctIndex": 1,
-      "explanation": "It sets a custom layout for the current page."
-    },
-    {
-      "title": "What happens if you place a file in `assets/`?",
-      "options": [
-        "It\u2019s ignored by Vite",
-        "It's available via URL directly",
-        "It's pre-processed and bundled",
-        "None option is correct"
-      ],
-      "correctIndex": 2,
-      "explanation": "Assets in `assets/` are processed by Vite (e.g., SCSS, images) and bundled."
-    },
-    {
-      "title": "What will this code output?\n\n`const msg = ref('hi'); console.log(msg.value)`",
-      "options": ["'hi'", "msg", "undefined", "null"],
-      "correctIndex": 0,
-      "explanation": "Accessing `.value` gives you the actual content of a ref."
-    },
-    {
-      "title": "What does this return?\n\n`const items = ref([]); items.value.push('apple')`",
-      "options": ["A new reactive array", "null", "`['apple']`", "undefined"],
-      "correctIndex": 2,
-      "explanation": "The array inside the ref is updated, and `items.value` is now `['apple']`."
-    },
-    {
-      "title": "What does `definePageMeta({ layout: 'custom' })` do?",
-      "options": [
-        "Initializes plugins",
-        "Loads middleware",
-        "Defines the component layout",
-        "Changes page title"
-      ],
-      "correctIndex": 2,
-      "explanation": "It sets a custom layout for the current page."
-    },
-    {
-      "title": "True or False: Nuxt 3 supports both SSR and static site generation (SSG).",
-      "options": ["False", "True"],
-      "correctIndex": 1,
-      "explanation": "Nuxt 3 allows both SSR and SSG depending on your setup (`nuxi generate` for static)."
-    },
-    {
-      "title": "True or False: Nuxt 3 automatically generates routes from files inside the `pages/` directory.",
-      "options": ["False", "True"],
-      "correctIndex": 1,
-      "explanation": "Nuxt 3 uses file-based routing, generating routes from `pages/`."
-    },
-    {
-      "title": "True or False: You can use both `ref()` and `reactive()` inside `<script setup>`.",
-      "options": ["False", "True"],
-      "correctIndex": 1,
-      "explanation": "Both `ref` and `reactive` work inside `<script setup>` in Nuxt 3."
-    },
-    {
-      "title": "Where should server API files be placed in a Nuxt 3 project?",
-      "options": ["api/routes/", "server/api/", "nuxt/api/", "pages/api/"],
-      "correctIndex": 1,
-      "explanation": "Nuxt 3 uses the `server/api/` directory for defining server routes."
-    },
-    {
-      "title": "True or False: Nuxt 3 automatically generates routes from files inside the `pages/` directory.",
-      "options": ["False", "True"],
-      "correctIndex": 1,
-      "explanation": "Nuxt 3 uses file-based routing, generating routes from `pages/`."
-    },
-    {
-      "title": "What\u2019s the correct syntax to display a ref value in a template?",
-      "options": [
-        "{{ count.value }}",
-        "{{ count }}",
-        "{{ ref(count) }}",
-        "{{ reactive(count) }}"
-      ],
-      "correctIndex": 0,
-      "explanation": "You must use `.value` to access the value of a ref."
-    },
-    {
-      "title": "What folder is best for placing static assets like images or downloadable files?",
-      "options": ["static/", "public/", "assets/", "composables/"],
-      "correctIndex": 1,
-      "explanation": "`public/` is for static files served directly via URL, like images and PDFs."
-    },
-    {
-      "title": "Which is a valid Nuxt 3 middleware file?",
-      "options": [
-        "plugins/auth.js",
-        "middleware/auth.ts",
-        "layouts/auth.vue",
-        "pages/middleware.ts"
-      ],
-      "correctIndex": 1,
-      "explanation": "Middleware lives in the `middleware/` folder and is auto-registered."
-    },
-    {
-      "title": "What does `definePageMeta({ layout: 'custom' })` do?",
-      "options": [
-        "Changes page title",
-        "Defines the component layout",
-        "Initializes plugins",
-        "Loads middleware"
-      ],
-      "correctIndex": 1,
-      "explanation": "It sets a custom layout for the current page."
-    },
-    {
-      "title": "In `<script setup>`, how do you declare a reactive variable?",
-      "options": [
-        "`ref count = 0`",
-        "`const count = useState(0)`",
-        "`count = useRef(0)`",
-        "`let count = ref(0)`"
+        "Server-side rendering",
+        "Client-side routing",
+        "Global state management",
+        "All options are correct"
       ],
       "correctIndex": 3,
-      "explanation": "`ref(0)` is the proper way to define a reactive primitive in `<script setup>`."
+      "explanation": "Nuxt 3 supports server-side rendering, client-side routing, and global state management."
     },
     {
-      "title": "Choose the correct method to make an API request in a Nuxt 3 component.",
-      "options": ["axios.get()", "refetch()", "useFetch()", "fetchAPI()"],
-      "correctIndex": 2,
-      "explanation": "`useFetch()` is a built-in Nuxt composable for SSR-friendly data fetching."
-    },
-    {
-      "title": "What does `ref(0)` return?",
+      "title": "True or False: Nuxt 3 supports TypeScript out of the box.",
       "options": [
-        "A plain number",
-        "A reactive reference",
-        "A computed value",
-        "An object with no reactivity"
-      ],
-      "correctIndex": 1,
-      "explanation": "`ref()` wraps a value into a reactive reference that tracks changes."
-    },
-    {
-      "title": "Where should server API files be placed in a Nuxt 3 project?",
-      "options": ["server/api/", "api/routes/", "pages/api/", "nuxt/api/"],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 uses the `server/api/` directory for defining server routes."
-    },
-    {
-      "title": "What is the purpose of `useState()` in Nuxt 3?",
-      "options": [
-        "Create shared state",
-        "Add styles",
-        "Render async content",
-        "Import global variables"
+        "True",
+        "False"
       ],
       "correctIndex": 0,
-      "explanation": "`useState()` is a Nuxt-specific composable to create reactive shared state across components."
+      "explanation": "Nuxt 3 has built-in support for TypeScript, making it easy to use in projects."
     },
     {
-      "title": "What does `ref(0)` return?",
+      "title": "How do you define a composable in Nuxt 3?",
       "options": [
-        "A computed value",
-        "A plain number",
-        "An object with no reactivity",
-        "A reactive reference"
-      ],
-      "correctIndex": 3,
-      "explanation": "`ref()` wraps a value into a reactive reference that tracks changes."
-    },
-    {
-      "title": "Which of these is a valid dynamic route file?",
-      "options": ["slug.vue", "{id}.vue", "[id].vue", "_slug.vue"],
-      "correctIndex": 2,
-      "explanation": "`[id].vue` is the correct format for defining a dynamic route in Nuxt 3."
-    },
-    {
-      "title": "Which is a valid Nuxt 3 middleware file?",
-      "options": [
-        "middleware/auth.ts",
-        "layouts/auth.vue",
-        "plugins/auth.js",
-        "pages/middleware.ts"
+        "Using `export function useComposable()`",
+        "Using `export default function()`",
+        "Using `defineComponent()`",
+        "Using `new Vue()`"
       ],
       "correctIndex": 0,
-      "explanation": "Middleware lives in the `middleware/` folder and is auto-registered."
+      "explanation": "Composables are defined using `export function useComposable()` syntax in Nuxt 3."
     },
     {
-      "title": "Which of the following is NOT a valid location for Nuxt 3 composables?",
-      "options": ["`composables/`", "`components/`", "`plugins/`", "`server/`"],
-      "correctIndex": 1,
-      "explanation": "Composables should be placed in the `composables/` directory."
-    },
-    {
-      "title": "Choose the correct method to make an API request in a Nuxt 3 component.",
-      "options": ["useFetch()", "fetchAPI()", "refetch()", "axios.get()"],
+      "title": "Which of the following is a built-in component in Nuxt 3?",
+      "options": [
+        "<NuxtLink>",
+        "<NuxtImage>",
+        "<NuxtForm>",
+        "<NuxtData>"
+      ],
       "correctIndex": 0,
-      "explanation": "`useFetch()` is a built-in Nuxt composable for SSR-friendly data fetching."
+      "explanation": "<NuxtLink> is a built-in component for client-side navigation in Nuxt 3."
     },
     {
-      "title": "Which of these statements about `useRoute()` is true?",
+      "title": "What is the default rendering mode in Nuxt 3?",
       "options": [
-        "It fetches route meta.",
-        "It returns a reactive object of the current route.",
-        "None option is correct",
-        "It navigates to a new route."
+        "Server-side rendering",
+        "Static site generation",
+        "Client-side rendering",
+        "Hybrid rendering"
       ],
-      "correctIndex": 1,
-      "explanation": "`useRoute()` gives access to route information like params and query."
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 defaults to server-side rendering, enhancing performance and SEO."
     },
     {
-      "title": "Choose the correct method to make an API request in a Nuxt 3 component.",
-      "options": ["fetchAPI()", "refetch()", "axios.get()", "useFetch()"],
-      "correctIndex": 3,
-      "explanation": "`useFetch()` is a built-in Nuxt composable for SSR-friendly data fetching."
-    },
-    {
-      "title": "Which of the following correctly defines a Nuxt 3 plugin?",
+      "title": "How do you use a ref in Nuxt 3?",
       "options": [
-        "`export const usePlugin = () => {}`",
-        "`export default definePlugin()`",
-        "`definePlugin(() => {})`",
-        "`export default defineNuxtPlugin()`"
+        "`const myRef = ref('value')`",
+        "`let myRef = reactive('value')`",
+        "`var myRef = computed('value')`",
+        "`myRef = value`"
       ],
-      "correctIndex": 3,
-      "explanation": "`defineNuxtPlugin()` is used to create plugins in Nuxt 3."
+      "correctIndex": 0,
+      "explanation": "Refs are created using the `ref()` function to hold reactive values."
     },
     {
-      "title": "What is the purpose of `useState()` in Nuxt 3?",
+      "title": "Which file is used to configure a Nuxt 3 project?",
       "options": [
-        "Import global variables",
-        "Render async content",
-        "Create shared state",
-        "Add styles"
+        "nuxt.config.ts",
+        "app.config.ts",
+        "nuxt.config.js",
+        "vue.config.js"
       ],
-      "correctIndex": 2,
-      "explanation": "`useState()` is a Nuxt-specific composable to create reactive shared state across components."
+      "correctIndex": 0,
+      "explanation": "The nuxt.config.ts file is used for configuring various aspects of a Nuxt 3 project."
     },
     {
-      "title": "True or False: You can use both `ref()` and `reactive()` inside `<script setup>`.",
-      "options": ["False", "True"],
-      "correctIndex": 1,
-      "explanation": "Both `ref` and `reactive` work inside `<script setup>` in Nuxt 3."
-    },
-    {
-      "title": "Which of these statements about `useRoute()` is true?",
+      "title": "What is the purpose of the `pages` directory in Nuxt 3?",
       "options": [
-        "None option is correct",
-        "It navigates to a new route.",
-        "It returns a reactive object of the current route.",
-        "It fetches route meta."
+        "To define application routes",
+        "To store global components",
+        "To manage application state",
+        "To configure server middleware"
       ],
-      "correctIndex": 2,
-      "explanation": "`useRoute()` gives access to route information like params and query."
+      "correctIndex": 0,
+      "explanation": "The `pages` directory is used to define application routes automatically in Nuxt 3."
     },
     {
-      "title": "What happens if you place a file in `assets/`?",
+      "title": "Which of the following is a valid Nuxt 3 component file?",
       "options": [
-        "It's available via URL directly",
-        "None option is correct",
-        "It's pre-processed and bundled",
-        "It\u2019s ignored by Vite"
+        "`MyComponent.vue`",
+        "`myComponent.js`",
+        "`my-component.html`",
+        "`MyComponent.jsx`"
       ],
-      "correctIndex": 2,
-      "explanation": "Assets in `assets/` are processed by Vite (e.g., SCSS, images) and bundled."
+      "correctIndex": 0,
+      "explanation": "Component files in Nuxt 3 are typically `.vue` files, such as `MyComponent.vue`."
     },
     {
-      "title": "In `<script setup>`, how do you declare a reactive variable?",
+      "title": "How do you access the current route in a Nuxt 3 component?",
       "options": [
-        "`ref count = 0`",
-        "`let count = ref(0)`",
-        "`count = useRef(0)`",
-        "`const count = useState(0)`"
+        "Using `useRoute()` composable",
+        "Using `this.$route`",
+        "Using `route()` function",
+        "Using `router.currentRoute`"
       ],
-      "correctIndex": 1,
-      "explanation": "`ref(0)` is the proper way to define a reactive primitive in `<script setup>`."
+      "correctIndex": 0,
+      "explanation": "The `useRoute()` composable is used to access the current route in Nuxt 3."
     },
     {
-      "title": "What does `ref(0)` return?",
+      "title": "Which of the following is a correct way to define a reactive object in Nuxt 3?",
       "options": [
-        "A computed value",
-        "A plain number",
-        "A reactive reference",
-        "An object with no reactivity"
+        "`const state = reactive({ count: 0 })`",
+        "`let state = ref({ count: 0 })`",
+        "`var state = computed({ count: 0 })`",
+        "`state = reactive({ count: 0 })`"
       ],
-      "correctIndex": 2,
-      "explanation": "`ref()` wraps a value into a reactive reference that tracks changes."
+      "correctIndex": 0,
+      "explanation": "Reactive objects are defined using the `reactive()` function in Nuxt 3."
     },
     {
-      "title": "What folder is best for placing static assets like images or downloadable files?",
-      "options": ["composables/", "assets/", "public/", "static/"],
-      "correctIndex": 2,
-      "explanation": "`public/` is for static files served directly via URL, like images and PDFs."
+      "title": "What is the purpose of the `server/api` directory in Nuxt 3?",
+      "options": [
+        "To define server-side API routes",
+        "To store client-side components",
+        "To manage application state",
+        "To configure environment variables"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `server/api` directory is used to define server-side API routes in Nuxt 3."
+    },
+    {
+      "title": "Which of the following can be used to handle errors in Nuxt 3?",
+      "options": [
+        "error.vue",
+        "middleware.js",
+        "nuxt.config.ts",
+        "store.js"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `error.vue` file can be used to handle errors globally in a Nuxt 3 application."
+    },
+    {
+      "title": "How can you define a dynamic route in Nuxt 3?",
+      "options": [
+        "By using a file with an underscore prefix, e.g., `_id.vue`",
+        "By creating a file named `dynamic.vue`",
+        "By configuring in `nuxt.config.ts`",
+        "By using `v-route` directive"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dynamic routes are defined by creating a file with an underscore prefix, e.g., `_id.vue`."
+    },
+    {
+      "title": "Which of the following is true about Nuxt 3 deployment?",
+      "options": [
+        "Nuxt 3 can be deployed as a static site",
+        "Nuxt 3 requires a dedicated server",
+        "Nuxt 3 cannot be deployed to Vercel",
+        "Nuxt 3 must be deployed with Docker"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 can be deployed as a static site, making it flexible for various hosting solutions."
+    },
+    {
+      "title": "What is the use of the `<script setup>` block in Nuxt 3?",
+      "options": [
+        "To define component logic concisely",
+        "To import global styles",
+        "To configure server middleware",
+        "To declare environment variables"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `<script setup>` block allows for a concise way to define component logic in Nuxt 3."
+    },
+    {
+      "title": "Which of the following is a correct usage of `ref` in Nuxt 3?",
+      "options": [
+        "`const count = ref(0);`",
+        "`let count = reactive(0);`",
+        "`var count = computed(() => 0);`",
+        "`count = 0;`"
+      ],
+      "correctIndex": 0,
+      "explanation": "The correct usage is `const count = ref(0);` to create a reactive reference."
+    },
+    {
+      "title": "How do you fetch data in a Nuxt 3 component?",
+      "options": [
+        "Using `useFetch()` composable",
+        "Using `fetch()` in `mounted()`",
+        "Using `axios` directly in `data()`",
+        "Using `data-fetch` directive"
+      ],
+      "correctIndex": 0,
+      "explanation": "Data can be fetched using the `useFetch()` composable in Nuxt 3 components."
+    },
+    {
+      "title": "True or False: Nuxt 3 supports hybrid rendering.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 supports hybrid rendering, combining server-side and client-side rendering."
+    },
+    {
+      "title": "Which command is used to start a Nuxt 3 development server?",
+      "options": [
+        "`npm run dev`",
+        "`nuxt start`",
+        "`nuxt build`",
+        "`npm start`"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `npm run dev` command is used to start a Nuxt 3 development server."
+    },
+    {
+      "title": "What is the purpose of the `assets` directory in Nuxt 3?",
+      "options": [
+        "To store unprocessed assets like styles and images",
+        "To store server-side scripts",
+        "To store compiled JavaScript files",
+        "To store HTML templates"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `assets` directory is used for unprocessed assets such as styles and images."
+    },
+    {
+      "title": "How do you define a middleware in Nuxt 3?",
+      "options": [
+        "By creating a file in the `middleware/` directory",
+        "By adding a function in `nuxt.config.ts`",
+        "By defining a component in `components/`",
+        "By setting a property in `app.config.ts`"
+      ],
+      "correctIndex": 0,
+      "explanation": "Middleware is defined by creating a file in the `middleware/` directory."
+    },
+    {
+      "title": "Which lifecycle hook is used for server-side data fetching in Nuxt 3?",
+      "options": [
+        "`asyncData`",
+        "`mounted`",
+        "`created`",
+        "`beforeMount`"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `asyncData` lifecycle hook is used for server-side data fetching in Nuxt 3."
+    },
+    {
+      "title": "True or False: Nuxt 3 can be used to create static websites.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 supports static site generation, allowing the creation of static websites."
+    },
+    {
+      "title": "Which of the following statements is true about Nuxt 3 routing?",
+      "options": [
+        "Routes are automatically generated based on the `pages` directory structure",
+        "Routes must be manually defined in `nuxt.config.ts`",
+        "Routes are defined using a `routes.js` file",
+        "Nuxt 3 does not support dynamic routing"
+      ],
+      "correctIndex": 0,
+      "explanation": "In Nuxt 3, routes are automatically generated based on the `pages` directory structure."
+    },
+    {
+      "title": "What is the use of `useAsyncData` in Nuxt 3?",
+      "options": [
+        "To fetch data asynchronously in components",
+        "To manage state globally",
+        "To define server middleware",
+        "To handle form submissions"
+      ],
+      "correctIndex": 0,
+      "explanation": "`useAsyncData` is used to fetch data asynchronously in Nuxt 3 components."
+    },
+    {
+      "title": "How do you create a server route in Nuxt 3?",
+      "options": [
+        "By creating a file in the `server/api` directory",
+        "By defining a route in `nuxt.config.ts`",
+        "By adding a function in `app.vue`",
+        "By using the `createServerRoute()` function"
+      ],
+      "correctIndex": 0,
+      "explanation": "Server routes are created by adding files to the `server/api` directory in Nuxt 3."
+    },
+    {
+      "title": "Which of the following is true about Nuxt 3's `app.config.ts`?",
+      "options": [
+        "It is used to define application-wide settings",
+        "It configures server-side rendering options",
+        "It manages client-side routing",
+        "It defines global middleware"
+      ],
+      "correctIndex": 0,
+      "explanation": "`app.config.ts` is used to define application-wide settings in Nuxt 3."
+    },
+    {
+      "title": "What is the purpose of the `public/` directory in Nuxt 3?",
+      "options": [
+        "To store publicly accessible files",
+        "To define application routes",
+        "To manage server-side scripts",
+        "To compile JavaScript files"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `public/` directory is used for files that should be publicly accessible in a Nuxt 3 application."
+    },
+    {
+      "title": "How do you define a Nuxt 3 plugin?",
+      "options": [
+        "By creating a file in the `plugins/` directory",
+        "By adding a function in `nuxt.config.ts`",
+        "By using the `createPlugin()` function",
+        "By defining a component in `components/`"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plugins are defined by creating a file in the `plugins/` directory in Nuxt 3."
+    },
+    {
+      "title": "True or False: Nuxt 3 uses Vue 3 as its core framework.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 is built on top of Vue 3, leveraging its features and improvements."
+    },
+    {
+      "title": "Which of the following is a benefit of using Nuxt 3?",
+      "options": [
+        "Improved SEO through server-side rendering",
+        "Built-in support for mobile app development",
+        "Automatic database integration",
+        "Native support for GraphQL"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 improves SEO by utilizing server-side rendering capabilities."
+    },
+    {
+      "title": "What is the purpose of the `components/` directory in Nuxt 3?",
+      "options": [
+        "To store reusable Vue components",
+        "To define server-side scripts",
+        "To manage application state",
+        "To configure environment variables"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `components/` directory is used to store reusable Vue components in Nuxt 3."
+    },
+    {
+      "title": "How do you use a `computed` property in Nuxt 3?",
+      "options": [
+        "`const result = computed(() => value * 2)`",
+        "`let result = ref(value * 2)`",
+        "`var result = reactive(value * 2)`",
+        "`result = computed(value * 2)`"
+      ],
+      "correctIndex": 0,
+      "explanation": "Computed properties are defined using the `computed()` function in Nuxt 3."
+    },
+    {
+      "title": "Which of the following is true about Nuxt 3's `useRouter` composable?",
+      "options": [
+        "It provides access to the router instance",
+        "It manages server-side rendering",
+        "It handles global state management",
+        "It configures API endpoints"
+      ],
+      "correctIndex": 0,
+      "explanation": "`useRouter` provides access to the router instance in Nuxt 3 components."
+    },
+    {
+      "title": "True or False: Nuxt 3 supports both server-side and client-side rendering.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 supports both server-side and client-side rendering, offering flexibility in rendering modes."
+    },
+    {
+      "title": "Which of the following is a correct way to define a reactive object in Nuxt 3?",
+      "options": [
+        "`const state = reactive({ count: 0 })`",
+        "`let state = ref({ count: 0 })`",
+        "`var state = computed({ count: 0 })`",
+        "`state = reactive({ count: 0 })`"
+      ],
+      "correctIndex": 0,
+      "explanation": "Reactive objects are defined using the `reactive()` function in Nuxt 3."
+    },
+    {
+      "title": "How do you define a Nuxt 3 middleware?",
+      "options": [
+        "By creating a file in the `middleware/` directory",
+        "By adding a function in `nuxt.config.ts`",
+        "By defining a component in `components/`",
+        "By setting a property in `app.config.ts`"
+      ],
+      "correctIndex": 0,
+      "explanation": "Middleware is defined by creating a file in the `middleware/` directory."
+    },
+    {
+      "title": "Which of the following is true about Nuxt 3's `useFetch` composable?",
+      "options": [
+        "It is used to fetch data asynchronously in components",
+        "It manages global state",
+        "It handles form submissions",
+        "It defines server middleware"
+      ],
+      "correctIndex": 0,
+      "explanation": "`useFetch` is used to fetch data asynchronously in Nuxt 3 components."
+    },
+    {
+      "title": "What is the purpose of the `layouts/` directory in Nuxt 3?",
+      "options": [
+        "To define different layouts for pages",
+        "To store reusable components",
+        "To manage server-side scripts",
+        "To configure application settings"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `layouts/` directory is used to define different layouts for pages in Nuxt 3."
+    },
+    {
+      "title": "True or False: In Nuxt 3, the `pages` directory is used to define API endpoints.",
+      "options": [
+        "False",
+        "True"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `pages` directory is used to define routes, not API endpoints, in Nuxt 3."
+    },
+    {
+      "title": "How do you define a plugin in Nuxt 3?",
+      "options": [
+        "By creating a file in the `plugins/` directory",
+        "By adding a function in `nuxt.config.ts`",
+        "By using the `createPlugin()` function",
+        "By defining a component in `components/`"
+      ],
+      "correctIndex": 0,
+      "explanation": "Plugins are defined by creating a file in the `plugins/` directory in Nuxt 3."
+    },
+    {
+      "title": "Which of the following is true about Nuxt 3's `useState` composable?",
+      "options": [
+        "It is used to manage state across components",
+        "It defines server middleware",
+        "It fetches data from APIs",
+        "It creates dynamic routes"
+      ],
+      "correctIndex": 0,
+      "explanation": "`useState` is a composable used to manage state across components in Nuxt 3."
+    },
+    {
+      "title": "True or False: Nuxt 3 automatically generates routes based on the `pages` directory structure.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 automatically generates application routes based on the `pages` directory structure."
+    },
+    {
+      "title": "What is the purpose of the `server/api` directory in Nuxt 3?",
+      "options": [
+        "To define server-side API routes",
+        "To store client-side components",
+        "To manage application state",
+        "To configure environment variables"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `server/api` directory is used to define server-side API routes in Nuxt 3."
+    },
+    {
+      "title": "Which of the following can be used to handle errors in Nuxt 3?",
+      "options": [
+        "error.vue",
+        "middleware.js",
+        "nuxt.config.ts",
+        "store.js"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `error.vue` file can be used to handle errors globally in a Nuxt 3 application."
+    },
+    {
+      "title": "How can you define a dynamic route in Nuxt 3?",
+      "options": [
+        "By using a file with an underscore prefix, e.g., `_id.vue`",
+        "By creating a file named `dynamic.vue`",
+        "By configuring in `nuxt.config.ts`",
+        "By using `v-route` directive"
+      ],
+      "correctIndex": 0,
+      "explanation": "Dynamic routes are defined by creating a file with an underscore prefix, e.g., `_id.vue`."
+    },
+    {
+      "title": "Which of the following is true about Nuxt 3 deployment?",
+      "options": [
+        "Nuxt 3 can be deployed as a static site",
+        "Nuxt 3 requires a dedicated server",
+        "Nuxt 3 cannot be deployed to Vercel",
+        "Nuxt 3 must be deployed with Docker"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 can be deployed as a static site, making it flexible for various hosting solutions."
+    },
+    {
+      "title": "What is the use of the `<script setup>` block in Nuxt 3?",
+      "options": [
+        "To define component logic concisely",
+        "To import global styles",
+        "To configure server middleware",
+        "To declare environment variables"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `<script setup>` block allows for a concise way to define component logic in Nuxt 3."
+    },
+    {
+      "title": "Which of the following is a correct usage of `ref` in Nuxt 3?",
+      "options": [
+        "`const count = ref(0);`",
+        "`let count = reactive(0);`",
+        "`var count = computed(() => 0);`",
+        "`count = 0;`"
+      ],
+      "correctIndex": 0,
+      "explanation": "The correct usage is `const count = ref(0);` to create a reactive reference."
+    },
+    {
+      "title": "How do you fetch data in a Nuxt 3 component?",
+      "options": [
+        "Using `useFetch()` composable",
+        "Using `fetch()` in `mounted()`",
+        "Using `axios` directly in `data()`",
+        "Using `data-fetch` directive"
+      ],
+      "correctIndex": 0,
+      "explanation": "Data can be fetched using the `useFetch()` composable in Nuxt 3 components."
+    },
+    {
+      "title": "True or False: Nuxt 3 supports hybrid rendering.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nuxt 3 supports hybrid rendering, combining server-side and client-side rendering."
+    },
+    {
+      "title": "Which command is used to start a Nuxt 3 development server?",
+      "options": [
+        "`npm run dev`",
+        "`nuxt start`",
+        "`nuxt build`",
+        "`npm start`"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `npm run dev` command is used to start a Nuxt 3 development server."
+    },
+    {
+      "title": "What is the purpose of the `assets` directory in Nuxt 3?",
+      "options": [
+        "To store unprocessed assets like styles and images",
+        "To store server-side scripts",
+        "To store compiled JavaScript files",
+        "To store HTML templates"
+      ],
+      "correctIndex": 0,
+      "explanation": "The `assets` directory is used for unprocessed assets such as styles and images."
+    },
+    {
+      "title": "How do you define a middleware in Nuxt 3?",
+      "options": [
+        "By creating a file in the `middleware/` directory",
+        "By adding a function in `nuxt.config.ts`",
+        "By defining a component in `components/`",
+        "By setting a property in `app.config.ts`"
+      ],
+      "correctIndex": 0,
+      "explanation": "Middleware is defined by creating a file in the `middleware/` directory."
     }
   ]
 }
