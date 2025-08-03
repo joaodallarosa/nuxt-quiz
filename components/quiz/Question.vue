@@ -19,7 +19,18 @@ async function onNextQuestion() {
 <template>
   <UCard v-if="question" class="mt-8 drop-shadow-xl">
     <template #header>
-      <CodeText class="font-semibold" :text="question.title" />
+      <div class="flex items-center w-full justify-between">
+        <CodeText class="font-semibold" :text="question.title" />
+        <UButton
+          class="self-end place-self-end"
+          icon="uil:skip-forward"
+          size="md"
+          color="primary"
+          variant="outline"
+          @click="onNextQuestion"
+          >Skip Question
+        </UButton>
+      </div>
     </template>
     <URadioGroup
       v-if="!isDisplayingAnswer"
