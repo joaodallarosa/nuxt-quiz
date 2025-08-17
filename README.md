@@ -1,4 +1,6 @@
-# Nuxt Minimal Starter
+# Nuxt question please
+
+Nuxt 3 Quiz application to help people study for Nuxt 3 Certification.
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 

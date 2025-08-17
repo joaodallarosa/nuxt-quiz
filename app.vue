@@ -4,7 +4,7 @@
 <template>
   <UApp>
     <UContainer>
-      <Quiz />
+      <NuxtPage />
     </UContainer>
   </Uapp>
 </template>

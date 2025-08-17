@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   app: {
     head: {
-      title: "Nuxt Quiz",
+      title: "Nuxt question please",
     },
   },
 });
