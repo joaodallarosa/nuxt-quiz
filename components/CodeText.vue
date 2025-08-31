@@ -1,6 +1,8 @@
 <!-- components/CodeText.vue -->
 <template>
-  <p v-html="formatCode(text)" class="prose" />
+  <p class="prose">
+    {{ text }}
+  </p>
 </template>
 
 <script setup>

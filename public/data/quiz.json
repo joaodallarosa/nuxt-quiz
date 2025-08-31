@@ -3,602 +3,2110 @@
     {
       "title": "What is Nuxt 3?",
       "options": [
-        "A JavaScript library",
-        "A Vue.js framework",
-        "A type of fish",
-        "A CSS framework"
+        {
+          "id": "1",
+          "text": "A serverless database"
+        },
+        {
+          "id": "2",
+          "text": "A Vue.js Framework"
+        }
       ],
-      "correctIndex": 1,
-      "explanation": "Nuxt 3 is a framework built on top of Vue.js for creating server-side rendered applications."
+      "correctId": "2",
+      "explanation": "Nuxt 3 is a Vue 3–based framework for building web apps."
     },
     {
-      "title": "Which of the following is a feature of Nuxt 3?",
+      "title": "Which command creates a new Nuxt 3 project?",
       "options": [
-        "Server-side rendering",
-        "Client-side routing",
-        "Global state management",
-        "All options are correct"
+        {
+          "id": "1",
+          "text": "npx nuxi init my-app"
+        },
+        {
+          "id": "2",
+          "text": "npm init vue@latest my-app"
+        },
+        {
+          "id": "3",
+          "text": "nuxt create my-app"
+        }
       ],
-      "correctIndex": 3,
-      "explanation": "Nuxt 3 supports server-side rendering, client-side routing, and global state management."
+      "correctId": "1",
+      "explanation": "Use the Nuxt CLI `nuxi` to scaffold projects."
     },
     {
-      "title": "True or False: Nuxt 3 supports TypeScript out of the box.",
+      "title": "Where do you put public, unprocessed static files in Nuxt 3?",
       "options": [
-        "True",
-        "False"
+        {
+          "id": "1",
+          "text": "/assets"
+        },
+        {
+          "id": "2",
+          "text": "/public"
+        },
+        {
+          "id": "3",
+          "text": "/static"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 has built-in support for TypeScript, making it easy to use in projects."
+      "correctId": "2",
+      "explanation": "Files in `/public` are served as-is at the site root."
     },
     {
-      "title": "How do you define a composable in Nuxt 3?",
+      "title": "Which directory defines API routes in Nuxt 3?",
       "options": [
-        "Using `export function useComposable()`",
-        "Using `export default function()`",
-        "Using `defineComponent()`",
-        "Using `new Vue()`"
+        {
+          "id": "1",
+          "text": "server/api"
+        },
+        {
+          "id": "2",
+          "text": "pages/api"
+        },
+        {
+          "id": "3",
+          "text": "api"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Composables are defined using `export function useComposable()` syntax in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Nitro server routes live under `server/api`."
     },
     {
-      "title": "Which of the following is a built-in component in Nuxt 3?",
+      "title": "What does `useState` do in Nuxt 3?",
       "options": [
-        "<NuxtLink>",
-        "<NuxtImage>",
-        "<NuxtForm>",
-        "<NuxtData>"
+        {
+          "id": "1",
+          "text": "Creates a globally shared reactive state across all users"
+        },
+        {
+          "id": "2",
+          "text": "Creates a universal reactive state scoped per request on the server"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "<NuxtLink> is a built-in component for client-side navigation in Nuxt 3."
+      "correctId": "2",
+      "explanation": "`useState` is per-request on server and universal across SSR/CSR."
     },
     {
-      "title": "What is the default rendering mode in Nuxt 3?",
+      "title": "Pick the correct `useState` usage in `<script setup>`",
       "options": [
-        "Server-side rendering",
-        "Static site generation",
-        "Client-side rendering",
-        "Hybrid rendering"
+        {
+          "id": "1",
+          "text": "const count = ref(0)"
+        },
+        {
+          "id": "2",
+          "text": "const count = useState('count', () => 0)"
+        },
+        {
+          "id": "3",
+          "text": "const { count } = useState('count')"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 defaults to server-side rendering, enhancing performance and SEO."
+      "correctId": "2",
+      "explanation": "`useState(key, init)` returns a ref; provide a key and initializer."
     },
     {
-      "title": "How do you use a ref in Nuxt 3?",
+      "title": "Which file configures Nuxt modules and build options?",
       "options": [
-        "`const myRef = ref('value')`",
-        "`let myRef = reactive('value')`",
-        "`var myRef = computed('value')`",
-        "`myRef = value`"
+        {
+          "id": "1",
+          "text": "nuxt.config.ts"
+        },
+        {
+          "id": "2",
+          "text": "app.config.ts"
+        },
+        {
+          "id": "3",
+          "text": "vite.config.ts"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Refs are created using the `ref()` function to hold reactive values."
+      "correctId": "1",
+      "explanation": "Project-wide config lives in `nuxt.config.ts`."
     },
     {
-      "title": "Which file is used to configure a Nuxt 3 project?",
+      "title": "Where do you set public app-level UI defaults (e.g., site name)?",
       "options": [
-        "nuxt.config.ts",
-        "app.config.ts",
-        "nuxt.config.js",
-        "vue.config.js"
+        {
+          "id": "1",
+          "text": "app.config.ts"
+        },
+        {
+          "id": "2",
+          "text": ".env only"
+        },
+        {
+          "id": "3",
+          "text": "pages/app.vue"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The nuxt.config.ts file is used for configuring various aspects of a Nuxt 3 project."
+      "correctId": "1",
+      "explanation": "`app.config.ts` provides typed public config; avoid secrets."
     },
     {
-      "title": "What is the purpose of the `pages` directory in Nuxt 3?",
+      "title": "True or False: Nuxt 3 uses Vue 3 and Vite by default.",
       "options": [
-        "To define application routes",
-        "To store global components",
-        "To manage application state",
-        "To configure server middleware"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `pages` directory is used to define application routes automatically in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Nuxt 3 is built on Vue 3 and Vite."
     },
     {
-      "title": "Which of the following is a valid Nuxt 3 component file?",
+      "title": "Which built-in component handles document metadata?",
       "options": [
-        "`MyComponent.vue`",
-        "`myComponent.js`",
-        "`my-component.html`",
-        "`MyComponent.jsx`"
+        {
+          "id": "1",
+          "text": "<Head>"
+        },
+        {
+          "id": "2",
+          "text": "<NuxtLayout>"
+        },
+        {
+          "id": "3",
+          "text": "<NuxtPage>"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Component files in Nuxt 3 are typically `.vue` files, such as `MyComponent.vue`."
+      "correctId": "1",
+      "explanation": "Use `<Head>` (or `useHead`/`useSeoMeta`) for meta tags."
     },
     {
-      "title": "How do you access the current route in a Nuxt 3 component?",
+      "title": "Fetch data in a page with `useFetch` (SSR-compatible).",
       "options": [
-        "Using `useRoute()` composable",
-        "Using `this.$route`",
-        "Using `route()` function",
-        "Using `router.currentRoute`"
+        {
+          "id": "1",
+          "text": "const { data, error } = await useFetch('/api/posts')"
+        },
+        {
+          "id": "2",
+          "text": "const data = fetch('/api/posts')"
+        },
+        {
+          "id": "3",
+          "text": "await $fetch.use('/api/posts')"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `useRoute()` composable is used to access the current route in Nuxt 3."
+      "correctId": "1",
+      "explanation": "`useFetch` returns reactive refs and works SSR/CSR."
     },
     {
-      "title": "Which of the following is a correct way to define a reactive object in Nuxt 3?",
+      "title": "Which directory auto-registers Vue components?",
       "options": [
-        "`const state = reactive({ count: 0 })`",
-        "`let state = ref({ count: 0 })`",
-        "`var state = computed({ count: 0 })`",
-        "`state = reactive({ count: 0 })`"
+        {
+          "id": "1",
+          "text": "components/"
+        },
+        {
+          "id": "2",
+          "text": "composables/"
+        },
+        {
+          "id": "3",
+          "text": "plugins/"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Reactive objects are defined using the `reactive()` function in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Components in `components/` are auto-imported."
     },
     {
-      "title": "What is the purpose of the `server/api` directory in Nuxt 3?",
+      "title": "Define a dynamic route for a blog post slug.",
       "options": [
-        "To define server-side API routes",
-        "To store client-side components",
-        "To manage application state",
-        "To configure environment variables"
+        {
+          "id": "1",
+          "text": "pages/blog/_slug.vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/blog/[slug].vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/[blog]/slug.vue"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `server/api` directory is used to define server-side API routes in Nuxt 3."
+      "correctId": "2",
+      "explanation": "Nuxt 3 uses bracket syntax for dynamic params."
     },
     {
-      "title": "Which of the following can be used to handle errors in Nuxt 3?",
+      "title": "Add global CSS (e.g., Tailwind entry)",
       "options": [
-        "error.vue",
-        "middleware.js",
-        "nuxt.config.ts",
-        "store.js"
+        {
+          "id": "1",
+          "text": "nuxt.config.ts -> css: ['~/assets/main.css']"
+        },
+        {
+          "id": "2",
+          "text": "app.config.ts -> css"
+        },
+        {
+          "id": "3",
+          "text": "components/Global.css"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `error.vue` file can be used to handle errors globally in a Nuxt 3 application."
+      "correctId": "1",
+      "explanation": "Declare global CSS in `nuxt.config.ts` under `css`."
     },
     {
-      "title": "How can you define a dynamic route in Nuxt 3?",
+      "title": "Server API handler (GET) returning JSON",
       "options": [
-        "By using a file with an underscore prefix, e.g., `_id.vue`",
-        "By creating a file named `dynamic.vue`",
-        "By configuring in `nuxt.config.ts`",
-        "By using `v-route` directive"
+        {
+          "id": "1",
+          "text": "// server/api/hello.get.ts  export default defineEventHandler(() => ({ msg: 'hi' }))"
+        },
+        {
+          "id": "2",
+          "text": "// api/hello.ts  export default (req, res) => res.send('hi')"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Dynamic routes are defined by creating a file with an underscore prefix, e.g., `_id.vue`."
+      "correctId": "1",
+      "explanation": "Use Nitro handlers in `server/api` with `defineEventHandler`."
     },
     {
-      "title": "Which of the following is true about Nuxt 3 deployment?",
+      "title": "Access query params in a server route",
       "options": [
-        "Nuxt 3 can be deployed as a static site",
-        "Nuxt 3 requires a dedicated server",
-        "Nuxt 3 cannot be deployed to Vercel",
-        "Nuxt 3 must be deployed with Docker"
+        {
+          "id": "1",
+          "text": "getQuery(event)"
+        },
+        {
+          "id": "2",
+          "text": "useRoute().query"
+        },
+        {
+          "id": "3",
+          "text": "context.query"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 can be deployed as a static site, making it flexible for various hosting solutions."
+      "correctId": "1",
+      "explanation": "On the server, use `getQuery(event)` (from h3)."
     },
     {
-      "title": "What is the use of the `<script setup>` block in Nuxt 3?",
+      "title": "True or False: `app.vue` should include `<NuxtPage />`.",
       "options": [
-        "To define component logic concisely",
-        "To import global styles",
-        "To configure server middleware",
-        "To declare environment variables"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `<script setup>` block allows for a concise way to define component logic in Nuxt 3."
+      "correctId": "1",
+      "explanation": "`app.vue` is the root and renders the current page."
     },
     {
-      "title": "Which of the following is a correct usage of `ref` in Nuxt 3?",
+      "title": "Define a layout correctly",
       "options": [
-        "`const count = ref(0);`",
-        "`let count = reactive(0);`",
-        "`var count = computed(() => 0);`",
-        "`count = 0;`"
+        {
+          "id": "1",
+          "text": "<!-- layouts/default.vue --> <template><div><Nav /><slot /></div></template>"
+        },
+        {
+          "id": "2",
+          "text": "<!-- pages/layout.vue --> <template><slot/></template>"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The correct usage is `const count = ref(0);` to create a reactive reference."
+      "correctId": "1",
+      "explanation": "Layouts live under `layouts/` and expose a slot."
     },
     {
-      "title": "How do you fetch data in a Nuxt 3 component?",
+      "title": "Set a page layout from `<script setup>`",
       "options": [
-        "Using `useFetch()` composable",
-        "Using `fetch()` in `mounted()`",
-        "Using `axios` directly in `data()`",
-        "Using `data-fetch` directive"
+        {
+          "id": "1",
+          "text": "definePageMeta({ layout: 'admin' })"
+        },
+        {
+          "id": "2",
+          "text": "useLayout('admin')"
+        },
+        {
+          "id": "3",
+          "text": "setLayout('admin')"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Data can be fetched using the `useFetch()` composable in Nuxt 3 components."
+      "correctId": "1",
+      "explanation": "Use `definePageMeta` to choose a layout."
     },
     {
-      "title": "True or False: Nuxt 3 supports hybrid rendering.",
+      "title": "Rendering modes supported by Nuxt 3",
       "options": [
-        "True",
-        "False"
+        {
+          "id": "1",
+          "text": "SSR, SSG (prerender) and client-only pages"
+        },
+        {
+          "id": "2",
+          "text": "CSR only"
+        },
+        {
+          "id": "3",
+          "text": "SSR only"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 supports hybrid rendering, combining server-side and client-side rendering."
+      "correctId": "1",
+      "explanation": "Nuxt supports SSR, SSG and SPA pages."
     },
     {
-      "title": "Which command is used to start a Nuxt 3 development server?",
+      "title": "Disable SSR for a single page",
       "options": [
-        "`npm run dev`",
-        "`nuxt start`",
-        "`nuxt build`",
-        "`npm start`"
+        {
+          "id": "1",
+          "text": "definePageMeta({ ssr: false })"
+        },
+        {
+          "id": "2",
+          "text": "export const ssr = false in the page SFC"
+        },
+        {
+          "id": "3",
+          "text": "nuxt.config.ts -> ssr: false (global)"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `npm run dev` command is used to start a Nuxt 3 development server."
+      "correctId": "1",
+      "explanation": "Per-page SSR can be disabled via `definePageMeta`."
     },
     {
-      "title": "What is the purpose of the `assets` directory in Nuxt 3?",
+      "title": "Use `useRoute` in `<script setup>`",
       "options": [
-        "To store unprocessed assets like styles and images",
-        "To store server-side scripts",
-        "To store compiled JavaScript files",
-        "To store HTML templates"
+        {
+          "id": "1",
+          "text": "const route = useRoute(); const slug = route.params.slug"
+        },
+        {
+          "id": "2",
+          "text": "import { useRoute } from 'vue-router'"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `assets` directory is used for unprocessed assets such as styles and images."
+      "correctId": "1",
+      "explanation": "Nuxt auto-imports `useRoute`; no manual import needed."
     },
     {
-      "title": "How do you define a middleware in Nuxt 3?",
+      "title": "Add Nuxt modules like `@nuxtjs/tailwindcss`",
       "options": [
-        "By creating a file in the `middleware/` directory",
-        "By adding a function in `nuxt.config.ts`",
-        "By defining a component in `components/`",
-        "By setting a property in `app.config.ts`"
+        {
+          "id": "1",
+          "text": "nuxt.config.ts -> modules: []"
+        },
+        {
+          "id": "2",
+          "text": "app.config.ts -> modules: []"
+        },
+        {
+          "id": "3",
+          "text": "package.json -> modules"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Middleware is defined by creating a file in the `middleware/` directory."
+      "correctId": "1",
+      "explanation": "Configure modules in `nuxt.config.ts`."
     },
     {
-      "title": "Which lifecycle hook is used for server-side data fetching in Nuxt 3?",
+      "title": "Use `useAsyncData` properly",
       "options": [
-        "`asyncData`",
-        "`mounted`",
-        "`created`",
-        "`beforeMount`"
+        {
+          "id": "1",
+          "text": "const { data, pending, error } = await useAsyncData('posts', () => $fetch('/api/posts'))"
+        },
+        {
+          "id": "2",
+          "text": "const data = await useAsyncData(() => fetch('/api/posts'))"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `asyncData` lifecycle hook is used for server-side data fetching in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Provide a key and a function returning a promise."
     },
     {
-      "title": "True or False: Nuxt 3 can be used to create static websites.",
+      "title": "Define a plugin that injects `$hello`",
       "options": [
-        "True",
-        "False"
+        {
+          "id": "1",
+          "text": "// plugins/hello.ts  export default defineNuxtPlugin(() => ({ provide: { hello: () => 'hi' } }))"
+        },
+        {
+          "id": "2",
+          "text": "// plugin/hello.ts  export default () => {}"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 supports static site generation, allowing the creation of static websites."
+      "correctId": "1",
+      "explanation": "Use `defineNuxtPlugin` in `plugins/`."
     },
     {
-      "title": "Which of the following statements is true about Nuxt 3 routing?",
+      "title": "True or False: Composables in `composables/` are auto-imported.",
       "options": [
-        "Routes are automatically generated based on the `pages` directory structure",
-        "Routes must be manually defined in `nuxt.config.ts`",
-        "Routes are defined using a `routes.js` file",
-        "Nuxt 3 does not support dynamic routing"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "In Nuxt 3, routes are automatically generated based on the `pages` directory structure."
+      "correctId": "1",
+      "explanation": "Functions in `composables/` are auto-imported."
     },
     {
-      "title": "What is the use of `useAsyncData` in Nuxt 3?",
+      "title": "Which statement about `assets/` is correct?",
       "options": [
-        "To fetch data asynchronously in components",
-        "To manage state globally",
-        "To define server middleware",
-        "To handle form submissions"
+        {
+          "id": "1",
+          "text": "Files in `assets/` are processed by Vite (e.g., SCSS, images)."
+        },
+        {
+          "id": "2",
+          "text": "Files in `assets/` are served raw at `/`."
+        },
+        {
+          "id": "3",
+          "text": "There is no difference between `assets/` and `public/`."
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "`useAsyncData` is used to fetch data asynchronously in Nuxt 3 components."
+      "correctId": "1",
+      "explanation": "`assets/` is bundled; `public/` is raw."
     },
     {
-      "title": "How do you create a server route in Nuxt 3?",
+      "title": "Add route middleware globally",
       "options": [
-        "By creating a file in the `server/api` directory",
-        "By defining a route in `nuxt.config.ts`",
-        "By adding a function in `app.vue`",
-        "By using the `createServerRoute()` function"
+        {
+          "id": "1",
+          "text": "Create `middleware/auth.global.ts` exporting a handler"
+        },
+        {
+          "id": "2",
+          "text": "Add `middleware` in `app.config.ts`"
+        },
+        {
+          "id": "3",
+          "text": "Place file under `plugins/middleware.ts`"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Server routes are created by adding files to the `server/api` directory in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Global middleware uses the `.global` suffix in `middleware/`."
     },
     {
-      "title": "Which of the following is true about Nuxt 3's `app.config.ts`?",
+      "title": "Global error page location",
       "options": [
-        "It is used to define application-wide settings",
-        "It configures server-side rendering options",
-        "It manages client-side routing",
-        "It defines global middleware"
+        {
+          "id": "1",
+          "text": "error.vue at project root"
+        },
+        {
+          "id": "2",
+          "text": "pages/error.vue"
+        },
+        {
+          "id": "3",
+          "text": "layouts/error.vue"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "`app.config.ts` is used to define application-wide settings in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Nuxt uses a root-level `error.vue`."
     },
     {
-      "title": "What is the purpose of the `public/` directory in Nuxt 3?",
+      "title": "Throw an HTTP 400 in a server route",
       "options": [
-        "To store publicly accessible files",
-        "To define application routes",
-        "To manage server-side scripts",
-        "To compile JavaScript files"
+        {
+          "id": "1",
+          "text": "throw createError({ statusCode: 400, statusMessage: 'Bad Request' })"
+        },
+        {
+          "id": "2",
+          "text": "throw new Error('400')"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `public/` directory is used for files that should be publicly accessible in a Nuxt 3 application."
+      "correctId": "1",
+      "explanation": "Use `createError` for HTTP errors."
     },
     {
-      "title": "How do you define a Nuxt 3 plugin?",
+      "title": "True or False: `useHead` works in components and pages.",
       "options": [
-        "By creating a file in the `plugins/` directory",
-        "By adding a function in `nuxt.config.ts`",
-        "By using the `createPlugin()` function",
-        "By defining a component in `components/`"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Plugins are defined by creating a file in the `plugins/` directory in Nuxt 3."
+      "correctId": "1",
+      "explanation": "`useHead` works in any setup context."
     },
     {
-      "title": "True or False: Nuxt 3 uses Vue 3 as its core framework.",
+      "title": "Read runtime config on the server",
       "options": [
-        "True",
-        "False"
+        {
+          "id": "1",
+          "text": "const config = useRuntimeConfig(); config.apiSecret"
+        },
+        {
+          "id": "2",
+          "text": "process.env only"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 is built on top of Vue 3, leveraging its features and improvements."
+      "correctId": "1",
+      "explanation": "`useRuntimeConfig()` gives typed access to runtime config."
     },
     {
-      "title": "Which of the following is a benefit of using Nuxt 3?",
+      "title": "Render the current page inside a layout",
       "options": [
-        "Improved SEO through server-side rendering",
-        "Built-in support for mobile app development",
-        "Automatic database integration",
-        "Native support for GraphQL"
+        {
+          "id": "1",
+          "text": "<NuxtPage />"
+        },
+        {
+          "id": "2",
+          "text": "<RouterView />"
+        },
+        {
+          "id": "3",
+          "text": "<slot /> only"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 improves SEO by utilizing server-side rendering capabilities."
+      "correctId": "1",
+      "explanation": "`<NuxtPage />` is Nuxt’s router view."
     },
     {
-      "title": "What is the purpose of the `components/` directory in Nuxt 3?",
+      "title": "Define a page title properly (SSR-friendly)",
       "options": [
-        "To store reusable Vue components",
-        "To define server-side scripts",
-        "To manage application state",
-        "To configure environment variables"
+        {
+          "id": "1",
+          "text": "useHead({ title: 'Home' })"
+        },
+        {
+          "id": "2",
+          "text": "document.title = 'Home'"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `components/` directory is used to store reusable Vue components in Nuxt 3."
+      "correctId": "1",
+      "explanation": "`useHead` is SSR-friendly and reactive."
     },
     {
-      "title": "How do you use a `computed` property in Nuxt 3?",
+      "title": "Render a client-only component during SSR",
       "options": [
-        "`const result = computed(() => value * 2)`",
-        "`let result = ref(value * 2)`",
-        "`var result = reactive(value * 2)`",
-        "`result = computed(value * 2)`"
+        {
+          "id": "1",
+          "text": "Wrap with <ClientOnly> ... </ClientOnly>"
+        },
+        {
+          "id": "2",
+          "text": "Disable SSR globally in nuxt.config.ts"
+        },
+        {
+          "id": "3",
+          "text": "Use a `v-client` directive"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Computed properties are defined using the `computed()` function in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Use the built-in `<ClientOnly>` component."
     },
     {
-      "title": "Which of the following is true about Nuxt 3's `useRouter` composable?",
+      "title": "Read JSON body in a server handler",
       "options": [
-        "It provides access to the router instance",
-        "It manages server-side rendering",
-        "It handles global state management",
-        "It configures API endpoints"
+        {
+          "id": "1",
+          "text": "const body = await readBody(event)"
+        },
+        {
+          "id": "2",
+          "text": "req.body"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "`useRouter` provides access to the router instance in Nuxt 3 components."
+      "correctId": "1",
+      "explanation": "Use `readBody(event)` in Nitro routes."
     },
     {
-      "title": "True or False: Nuxt 3 supports both server-side and client-side rendering.",
+      "title": "True or False: `app.config.ts` is publicly available on the client.",
       "options": [
-        "True",
-        "False"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 supports both server-side and client-side rendering, offering flexibility in rendering modes."
+      "correctId": "1",
+      "explanation": "It is bundled client-side for UI defaults; avoid secrets."
     },
     {
-      "title": "Which of the following is a correct way to define a reactive object in Nuxt 3?",
+      "title": "Declare per-page middleware",
       "options": [
-        "`const state = reactive({ count: 0 })`",
-        "`let state = ref({ count: 0 })`",
-        "`var state = computed({ count: 0 })`",
-        "`state = reactive({ count: 0 })`"
+        {
+          "id": "1",
+          "text": "definePageMeta({ middleware: 'auth' })"
+        },
+        {
+          "id": "2",
+          "text": "useHead({ middleware: 'auth' })"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Reactive objects are defined using the `reactive()` function in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Attach middleware with `definePageMeta`."
     },
     {
-      "title": "How do you define a Nuxt 3 middleware?",
+      "title": "What does `nuxi dev` do?",
       "options": [
-        "By creating a file in the `middleware/` directory",
-        "By adding a function in `nuxt.config.ts`",
-        "By defining a component in `components/`",
-        "By setting a property in `app.config.ts`"
+        {
+          "id": "1",
+          "text": "Starts the Nuxt development server"
+        },
+        {
+          "id": "2",
+          "text": "Runs unit tests"
+        },
+        {
+          "id": "3",
+          "text": "Deploys to production"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Middleware is defined by creating a file in the `middleware/` directory."
+      "correctId": "1",
+      "explanation": "It launches the local dev server with HMR."
     },
     {
-      "title": "Which of the following is true about Nuxt 3's `useFetch` composable?",
+      "title": "Programmatic navigation in Nuxt 3",
       "options": [
-        "It is used to fetch data asynchronously in components",
-        "It manages global state",
-        "It handles form submissions",
-        "It defines server middleware"
+        {
+          "id": "1",
+          "text": "const router = useRouter(); router.push('/about')"
+        },
+        {
+          "id": "2",
+          "text": "await navigateTo('/about')"
+        },
+        {
+          "id": "3",
+          "text": "All options are correct"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "`useFetch` is used to fetch data asynchronously in Nuxt 3 components."
+      "correctId": "3",
+      "explanation": "Both `useRouter().push` and `navigateTo` are valid."
     },
     {
-      "title": "What is the purpose of the `layouts/` directory in Nuxt 3?",
+      "title": "Which runs on the server during SSR to fetch data?",
       "options": [
-        "To define different layouts for pages",
-        "To store reusable components",
-        "To manage server-side scripts",
-        "To configure application settings"
+        {
+          "id": "1",
+          "text": "onMounted"
+        },
+        {
+          "id": "2",
+          "text": "useAsyncData/useFetch (server side)"
+        },
+        {
+          "id": "3",
+          "text": "onBeforeMount"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `layouts/` directory is used to define different layouts for pages in Nuxt 3."
+      "correctId": "2",
+      "explanation": "Data fetching composables run during SSR."
     },
     {
-      "title": "True or False: In Nuxt 3, the `pages` directory is used to define API endpoints.",
+      "title": "Add a route alias for a page",
       "options": [
-        "False",
-        "True"
+        {
+          "id": "1",
+          "text": "definePageMeta({ alias: ['/home'] })"
+        },
+        {
+          "id": "2",
+          "text": "nuxt.config.ts -> router.alias"
+        },
+        {
+          "id": "3",
+          "text": "No option is correct"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `pages` directory is used to define routes, not API endpoints, in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Use `definePageMeta` to define per-page aliases."
     },
     {
-      "title": "How do you define a plugin in Nuxt 3?",
+      "title": "True or False: `useState` values are shared between users in production.",
       "options": [
-        "By creating a file in the `plugins/` directory",
-        "By adding a function in `nuxt.config.ts`",
-        "By using the `createPlugin()` function",
-        "By defining a component in `components/`"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Plugins are defined by creating a file in the `plugins/` directory in Nuxt 3."
+      "correctId": "2",
+      "explanation": "Server state is scoped per request; not shared."
     },
     {
-      "title": "Which of the following is true about Nuxt 3's `useState` composable?",
+      "title": "Access a plugin injection named `$hello`",
       "options": [
-        "It is used to manage state across components",
-        "It defines server middleware",
-        "It fetches data from APIs",
-        "It creates dynamic routes"
+        {
+          "id": "1",
+          "text": "const { $hello } = useNuxtApp(); $hello()"
+        },
+        {
+          "id": "2",
+          "text": "import { $hello } from '@/plugins/hello'"
+        },
+        {
+          "id": "3",
+          "text": "window.$hello()"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "`useState` is a composable used to manage state across components in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Use `useNuxtApp()` to access provided values."
     },
     {
-      "title": "True or False: Nuxt 3 automatically generates routes based on the `pages` directory structure.",
+      "title": "Minimal `app.vue` structure",
       "options": [
-        "True",
-        "False"
+        {
+          "id": "1",
+          "text": "<template><NuxtLayout><NuxtPage /></NuxtLayout></template>"
+        },
+        {
+          "id": "2",
+          "text": "<template><RouterView/></template>"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 automatically generates application routes based on the `pages` directory structure."
+      "correctId": "1",
+      "explanation": "Nuxt uses `<NuxtLayout>` and `<NuxtPage>`."
     },
     {
-      "title": "What is the purpose of the `server/api` directory in Nuxt 3?",
+      "title": "Set default page transitions for all pages",
       "options": [
-        "To define server-side API routes",
-        "To store client-side components",
-        "To manage application state",
-        "To configure environment variables"
+        {
+          "id": "1",
+          "text": "app.config.ts via defineAppConfig({ pageTransition: {...} })"
+        },
+        {
+          "id": "2",
+          "text": "Only inside each page’s `<script setup>`"
+        },
+        {
+          "id": "3",
+          "text": "Nuxt has no API"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `server/api` directory is used to define server-side API routes in Nuxt 3."
+      "correctId": "1",
+      "explanation": "Define defaults in `app.config.ts`."
     },
     {
-      "title": "Which of the following can be used to handle errors in Nuxt 3?",
+      "title": "Create a typed counter composable",
       "options": [
-        "error.vue",
-        "middleware.js",
-        "nuxt.config.ts",
-        "store.js"
+        {
+          "id": "1",
+          "text": "// composables/useCounter.ts  export const useCounter = () => useState<number>('counter', () => 0)"
+        },
+        {
+          "id": "2",
+          "text": "export default function useCounter(){ return 0 }"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `error.vue` file can be used to handle errors globally in a Nuxt 3 application."
+      "correctId": "1",
+      "explanation": "Return a shared typed `ref` from `useState`."
     },
     {
-      "title": "How can you define a dynamic route in Nuxt 3?",
+      "title": "True or False: The `pages/` directory is required in every Nuxt app.",
       "options": [
-        "By using a file with an underscore prefix, e.g., `_id.vue`",
-        "By creating a file named `dynamic.vue`",
-        "By configuring in `nuxt.config.ts`",
-        "By using `v-route` directive"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Dynamic routes are defined by creating a file with an underscore prefix, e.g., `_id.vue`."
+      "correctId": "2",
+      "explanation": "You can build apps without pages."
     },
     {
-      "title": "Which of the following is true about Nuxt 3 deployment?",
+      "title": "`navigateTo` works on server and client.",
       "options": [
-        "Nuxt 3 can be deployed as a static site",
-        "Nuxt 3 requires a dedicated server",
-        "Nuxt 3 cannot be deployed to Vercel",
-        "Nuxt 3 must be deployed with Docker"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 can be deployed as a static site, making it flexible for various hosting solutions."
+      "correctId": "1",
+      "explanation": "`navigateTo` is universal."
     },
     {
-      "title": "What is the use of the `<script setup>` block in Nuxt 3?",
+      "title": "Which statement about deployment is correct?",
       "options": [
-        "To define component logic concisely",
-        "To import global styles",
-        "To configure server middleware",
-        "To declare environment variables"
+        {
+          "id": "1",
+          "text": "`nuxi generate` produces a static site for SSG."
+        },
+        {
+          "id": "2",
+          "text": "`nuxi build` only outputs static HTML."
+        },
+        {
+          "id": "3",
+          "text": "Nuxt 3 cannot run on Node servers."
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `<script setup>` block allows for a concise way to define component logic in Nuxt 3."
+      "correctId": "1",
+      "explanation": "`generate` outputs a prerendered site."
     },
     {
-      "title": "Which of the following is a correct usage of `ref` in Nuxt 3?",
+      "title": "Access route params in a page",
       "options": [
-        "`const count = ref(0);`",
-        "`let count = reactive(0);`",
-        "`var count = computed(() => 0);`",
-        "`count = 0;`"
+        {
+          "id": "1",
+          "text": "const route = useRoute(); route.params.id"
+        },
+        {
+          "id": "2",
+          "text": "this.$route.params.id"
+        },
+        {
+          "id": "3",
+          "text": "getQuery(event).id"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The correct usage is `const count = ref(0);` to create a reactive reference."
+      "correctId": "1",
+      "explanation": "Use `useRoute()` in the composition API."
     },
     {
-      "title": "How do you fetch data in a Nuxt 3 component?",
+      "title": "Auto-import a composable without manual imports",
       "options": [
-        "Using `useFetch()` composable",
-        "Using `fetch()` in `mounted()`",
-        "Using `axios` directly in `data()`",
-        "Using `data-fetch` directive"
+        {
+          "id": "1",
+          "text": "Place it in `composables/` and call it directly"
+        },
+        {
+          "id": "2",
+          "text": "Register it in `plugins/`"
+        },
+        {
+          "id": "3",
+          "text": "Add to `nuxt.config.ts -> modules`"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Data can be fetched using the `useFetch()` composable in Nuxt 3 components."
+      "correctId": "1",
+      "explanation": "Anything in `composables/` is auto-imported."
     },
     {
-      "title": "True or False: Nuxt 3 supports hybrid rendering.",
+      "title": "True or False: You can have server utilities in `server/utils`.",
       "options": [
-        "True",
-        "False"
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Nuxt 3 supports hybrid rendering, combining server-side and client-side rendering."
+      "correctId": "1",
+      "explanation": "The `server/` directory supports utilities and more."
     },
     {
-      "title": "Which command is used to start a Nuxt 3 development server?",
+      "title": "Use `useFetch` with query parameters",
       "options": [
-        "`npm run dev`",
-        "`nuxt start`",
-        "`nuxt build`",
-        "`npm start`"
+        {
+          "id": "1",
+          "text": "const { data } = await useFetch('/api/post', { query: { id: 1 } })"
+        },
+        {
+          "id": "2",
+          "text": "const { data } = await useFetch('/api/post?id=1', { query: {} })"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `npm run dev` command is used to start a Nuxt 3 development server."
+      "correctId": "1",
+      "explanation": "Pass `query` and let Nuxt build the URL."
     },
     {
-      "title": "What is the purpose of the `assets` directory in Nuxt 3?",
+      "title": "Expose runtime config safely",
       "options": [
-        "To store unprocessed assets like styles and images",
-        "To store server-side scripts",
-        "To store compiled JavaScript files",
-        "To store HTML templates"
+        {
+          "id": "1",
+          "text": "nuxt.config.ts -> runtimeConfig: { apiSecret: process.env.API_SECRET, public: { apiBase: '/api' } }"
+        },
+        {
+          "id": "2",
+          "text": "nuxt.config.ts -> publicRuntimeConfig only"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "The `assets` directory is used for unprocessed assets such as styles and images."
+      "correctId": "1",
+      "explanation": "Use `runtimeConfig` with a `public` section for client-safe values."
     },
     {
-      "title": "How do you define a middleware in Nuxt 3?",
+      "title": "Lazy-load an image using Nuxt Image module",
       "options": [
-        "By creating a file in the `middleware/` directory",
-        "By adding a function in `nuxt.config.ts`",
-        "By defining a component in `components/`",
-        "By setting a property in `app.config.ts`"
+        {
+          "id": "1",
+          "text": "<NuxtImg loading='lazy' src='/img.png' />"
+        },
+        {
+          "id": "2",
+          "text": "<img nuxt-lazy src='/img.png'>"
+        },
+        {
+          "id": "3",
+          "text": "No option is correct"
+        }
       ],
-      "correctIndex": 0,
-      "explanation": "Middleware is defined by creating a file in the `middleware/` directory."
+      "correctId": "1",
+      "explanation": "With the image module, `<NuxtImg>` supports `loading='lazy'`."
+    },
+    {
+      "title": "Set page-specific middleware and title (best practice)",
+      "options": [
+        {
+          "id": "1",
+          "text": "definePageMeta({ middleware: 'auth' }); useHead({ title: 'Dashboard' })"
+        },
+        {
+          "id": "2",
+          "text": "useHead({ middleware: 'auth', title: 'Dashboard' })"
+        },
+        {
+          "id": "3",
+          "text": "Only `app.config.ts` can set titles"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `definePageMeta` for middleware and `useHead` for title."
+    },
+    {
+      "title": "True or False: `ref` and `reactive` from Vue work in Nuxt 3.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt 3 uses Vue 3’s reactivity."
+    },
+    {
+      "title": "Correct `<script setup>` usage in a page",
+      "options": [
+        {
+          "id": "1",
+          "text": "<script setup lang='ts'> const msg = ref('Hello') </script> <template><p>{{ msg }}</p></template>"
+        },
+        {
+          "id": "2",
+          "text": "<script> setup(){ return { msg: 'Hello' } } </script>"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "`<script setup>` is the recommended SFC syntax."
+    },
+    {
+      "title": "Which statement about `useAsyncData` caching is correct?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Caches per key during a request and can persist between navigations"
+        },
+        {
+          "id": "2",
+          "text": "Never caches results"
+        },
+        {
+          "id": "3",
+          "text": "Caching only works with `fetch()`"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Caching is keyed and improves SSR/CSR performance."
+    },
+    {
+      "title": "SSR-only code guard",
+      "options": [
+        {
+          "id": "1",
+          "text": "if (process.server) { /* SSR-only */ }"
+        },
+        {
+          "id": "2",
+          "text": "if (window.isServer) { /* SSR-only */ }"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `process.server`/`process.client`."
+    },
+    {
+      "title": "Where should you store fonts to be processed by the bundler?",
+      "options": [
+        {
+          "id": "1",
+          "text": "assets/"
+        },
+        {
+          "id": "2",
+          "text": "public/"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `assets/` so Vite can process and hash them."
+    },
+    {
+      "title": "Reference a file inside `public/`",
+      "options": [
+        {
+          "id": "1",
+          "text": "Use absolute path from root, e.g., `/favicon.ico`"
+        },
+        {
+          "id": "2",
+          "text": "Import from `@/public` in code"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Files in `public/` are served at the root URL."
+    },
+    {
+      "title": "Create dynamic server API route for `/api/users/[id]` (GET)",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/users/[id].get.ts"
+        },
+        {
+          "id": "2",
+          "text": "pages/api/users/[id].ts"
+        },
+        {
+          "id": "3",
+          "text": "server/routes/users/[id].get.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Place Nitro handlers under `server/api` with method suffix."
+    },
+    {
+      "title": "Return an error page from the client without throwing",
+      "options": [
+        {
+          "id": "1",
+          "text": "showError({ statusCode: 404, statusMessage: 'Not Found' })"
+        },
+        {
+          "id": "2",
+          "text": "throw new Error(404)"
+        },
+        {
+          "id": "3",
+          "text": "navigateTo('/__error')"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "`showError` renders the global error page."
+    },
+    {
+      "title": "Set SEO meta in a component",
+      "options": [
+        {
+          "id": "1",
+          "text": "useSeoMeta({ title: 'Home', description: 'Welcome' })"
+        },
+        {
+          "id": "2",
+          "text": "document.head.append('<meta ...>')"
+        },
+        {
+          "id": "3",
+          "text": "Only in nuxt.config.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "`useSeoMeta` is a wrapper over head tags."
+    },
+    {
+      "title": "Path alias for source directory in Nuxt 3",
+      "options": [
+        {
+          "id": "1",
+          "text": "~/"
+        },
+        {
+          "id": "2",
+          "text": "@@"
+        },
+        {
+          "id": "3",
+          "text": "$root/"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "`~/` resolves to the source directory."
+    },
+    {
+      "title": "Register global components automatically",
+      "options": [
+        {
+          "id": "1",
+          "text": "Place them in `components/`"
+        },
+        {
+          "id": "2",
+          "text": "Register in `main.ts`"
+        },
+        {
+          "id": "3",
+          "text": "Only via `app.component()`"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt auto-imports from `components/`."
+    },
+    {
+      "title": "Define a named route middleware",
+      "options": [
+        {
+          "id": "1",
+          "text": "// middleware/auth.ts  export default defineNuxtRouteMiddleware((to, from) => { /* ... */ })"
+        },
+        {
+          "id": "2",
+          "text": "// middleware/auth.js  export default (to, from) => { /* ... */ }"
+        },
+        {
+          "id": "3",
+          "text": "// plugins/auth.ts  defineNuxtRouteMiddleware(...)"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `defineNuxtRouteMiddleware` in `middleware/`."
+    },
+    {
+      "title": "Pre-render (SSG) a specific route",
+      "options": [
+        {
+          "id": "1",
+          "text": "nuxt.config.ts -> routeRules: { '/about': { prerender: true } }"
+        },
+        {
+          "id": "2",
+          "text": "app.config.ts -> ssg: ['/about']"
+        },
+        {
+          "id": "3",
+          "text": "pages/about.vue -> export const prerender = true"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `routeRules` in config."
+    },
+    {
+      "title": "Valid ways to set meta tags",
+      "options": [
+        {
+          "id": "1",
+          "text": "useHead({ meta: [{ name: 'description', content: '...' }] })"
+        },
+        {
+          "id": "2",
+          "text": "useSeoMeta({ description: '...' })"
+        },
+        {
+          "id": "3",
+          "text": "All options are correct"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "`useHead` and `useSeoMeta` both work."
+    },
+    {
+      "title": "Create and read a cookie in a server handler",
+      "options": [
+        {
+          "id": "1",
+          "text": "setCookie(event, 'token', 'abc'); const v = getCookie(event, 'token')"
+        },
+        {
+          "id": "2",
+          "text": "document.cookie = 'token=abc'; req.cookies.token"
+        },
+        {
+          "id": "3",
+          "text": "cookies.set('token', 'abc'); cookies.get('token')"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use h3 helpers in Nitro."
+    },
+    {
+      "title": "Which statement about `public/` is correct?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Files are copied as-is and not processed by Vite."
+        },
+        {
+          "id": "2",
+          "text": "Files are hashed and referenced via imports."
+        },
+        {
+          "id": "3",
+          "text": "They are bundled into JavaScript."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "`public/` is for raw assets."
+    },
+    {
+      "title": "Best directory for global SCSS variables and mixins",
+      "options": [
+        {
+          "id": "1",
+          "text": "assets/"
+        },
+        {
+          "id": "2",
+          "text": "public/"
+        },
+        {
+          "id": "3",
+          "text": "server/"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "SCSS in `assets/` is processed by Vite."
+    },
+    {
+      "title": "Enable a module in `nuxt.config.ts`",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNuxtConfig({ modules: ['@nuxtjs/tailwindcss'] })"
+        },
+        {
+          "id": "2",
+          "text": "export default { tailwind: true }"
+        },
+        {
+          "id": "3",
+          "text": "export default defineAppConfig({ modules: [...] })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Modules go in `defineNuxtConfig`."
+    },
+    {
+      "title": "Add a global page transition in `app.config.ts`",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineAppConfig({ pageTransition: { name: 'fade', mode: 'out-in' } })"
+        },
+        {
+          "id": "2",
+          "text": "export default defineNuxtConfig({ pageTransition: { name: 'fade' } })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `defineAppConfig` for default page transitions."
+    },
+    {
+      "title": "Use a composable from `composables/`",
+      "options": [
+        {
+          "id": "1",
+          "text": "Call it directly: const count = useCounter()"
+        },
+        {
+          "id": "2",
+          "text": "import { useCounter } from '@/composables/useCounter'"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt auto-imports composables."
+    },
+    {
+      "title": "True or False: You can read `process.env.MY_VAR` anywhere on client.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Prefer `runtimeConfig` for client-safe access."
+    },
+    {
+      "title": "POST endpoint at `/api/login` via filename",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/login.post.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/api/login.ts"
+        },
+        {
+          "id": "3",
+          "text": "server/routes/login.post.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use method suffix `.post.ts` inside `server/api`."
+    },
+    {
+      "title": "Where to put images you want to import and be processed?",
+      "options": [
+        {
+          "id": "1",
+          "text": "assets/"
+        },
+        {
+          "id": "2",
+          "text": "public/"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Bundled imports should live in `assets/`."
+    },
+    {
+      "title": "Guard a page for authenticated users only",
+      "options": [
+        {
+          "id": "1",
+          "text": "definePageMeta({ middleware: 'auth' }) and implement `middleware/auth.ts`"
+        },
+        {
+          "id": "2",
+          "text": "Check inside `onMounted` and redirect manually only"
+        },
+        {
+          "id": "3",
+          "text": "Create `pages/_middleware.vue`"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use route middleware for guards."
+    },
+    {
+      "title": "Server vs client composables",
+      "options": [
+        {
+          "id": "1",
+          "text": "Composables can branch with `process.server`/`process.client`"
+        },
+        {
+          "id": "2",
+          "text": "Composables run only on the client"
+        },
+        {
+          "id": "3",
+          "text": "Composables run only on the server"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "They can run in both contexts."
+    },
+    {
+      "title": "`pages/` routing basics",
+      "options": [
+        {
+          "id": "1",
+          "text": "Index routes use `pages/index.vue`"
+        },
+        {
+          "id": "2",
+          "text": "Nested routes follow folder structure"
+        },
+        {
+          "id": "3",
+          "text": "All options are correct"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "Nuxt file routing handles index and nested paths."
+    },
+    {
+      "title": "Find the incorrect approach for head tags",
+      "options": [
+        {
+          "id": "1",
+          "text": "useHead({ title: 'About' })"
+        },
+        {
+          "id": "2",
+          "text": "useSeoMeta({ ogTitle: 'About' })"
+        },
+        {
+          "id": "3",
+          "text": "Direct DOM manipulation in `onMounted` only"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "Use Nuxt head utilities for SSR."
+    },
+    {
+      "title": "Add an alias path to a page",
+      "options": [
+        {
+          "id": "1",
+          "text": "definePageMeta({ alias: ['/welcome'] })"
+        },
+        {
+          "id": "2",
+          "text": "app.config.ts -> alias: ['/welcome']"
+        },
+        {
+          "id": "3",
+          "text": "No option is correct"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Per-page alias via `definePageMeta`."
+    },
+    {
+      "title": "True or False: `error.vue` can access the error via `useError()`.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `useError()` in `error.vue`."
+    },
+    {
+      "title": "Provide and use an injected helper",
+      "options": [
+        {
+          "id": "1",
+          "text": "// plugins/hello.ts provide $hello"
+        },
+        {
+          "id": "2",
+          "text": "// component: const { $hello } = useNuxtApp(); $hello()"
+        },
+        {
+          "id": "3",
+          "text": "All options are correct"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "Define in a plugin and access via `useNuxtApp()`."
+    },
+    {
+      "title": "Use `useFetch` with a typed return",
+      "options": [
+        {
+          "id": "1",
+          "text": "const { data } = await useFetch<User[]>('/api/users')"
+        },
+        {
+          "id": "2",
+          "text": "const data: User[] = await useFetch('/api/users')"
+        },
+        {
+          "id": "3",
+          "text": "const users = useFetch<User[]>('/api/users').value"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "`useFetch<T>` returns refs; destructure `data`."
+    },
+    {
+      "title": "Enable payload extraction for SSG (experimental)",
+      "options": [
+        {
+          "id": "1",
+          "text": "experimental: { payloadExtraction: true } in nuxt.config.ts"
+        },
+        {
+          "id": "2",
+          "text": "app: { payload: true } in app.config.ts"
+        },
+        {
+          "id": "3",
+          "text": "nitro: { extract: true }"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Payload extraction is under `experimental`."
+    },
+    {
+      "title": "Declare global meta defaults (e.g., title template)",
+      "options": [
+        {
+          "id": "1",
+          "text": "app.vue -> useHead({ titleTemplate: '%s · Site' })"
+        },
+        {
+          "id": "2",
+          "text": "nuxt.config.ts -> app.head.titleTemplate"
+        },
+        {
+          "id": "3",
+          "text": "All options are correct"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "Both places can define defaults."
+    },
+    {
+      "title": "Redirect in a server handler",
+      "options": [
+        {
+          "id": "1",
+          "text": "return sendRedirect(event, '/login', 302)"
+        },
+        {
+          "id": "2",
+          "text": "res.redirect('/login')"
+        },
+        {
+          "id": "3",
+          "text": "navigateTo('/login')"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use Nitro’s `sendRedirect`."
+    },
+    {
+      "title": "Invalid statement about `assets/` vs `public/`",
+      "options": [
+        {
+          "id": "1",
+          "text": "`assets/` is processed and hashed by Vite"
+        },
+        {
+          "id": "2",
+          "text": "`public/` files are accessible via absolute URLs"
+        },
+        {
+          "id": "3",
+          "text": "`assets/` files are available at `/` without build"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "`assets/` requires build; not served raw."
+    },
+    {
+      "title": "Create a dynamic page for `users/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/users/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[users]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/users/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `products/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/products/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[products]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/products/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `articles/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/articles/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[articles]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/articles/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `categories/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/categories/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[categories]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/categories/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `profiles/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/profiles/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[profiles]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/profiles/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `orders/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/orders/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[orders]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/orders/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `posts/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/posts/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[posts]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/posts/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `tickets/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/tickets/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[tickets]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/tickets/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `events/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/events/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[events]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/events/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `teams/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/teams/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[teams]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/teams/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `docs/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/docs/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[docs]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/docs/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "Create a dynamic page for `photos/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "pages/photos/[id].vue"
+        },
+        {
+          "id": "2",
+          "text": "pages/[photos]/id.vue"
+        },
+        {
+          "id": "3",
+          "text": "pages/photos/_id.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use bracket syntax for dynamic params."
+    },
+    {
+      "title": "File to implement `POST` at `/api/login`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/login.post.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/login.post.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/login.post.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "File to implement `POST` at `/api/logout`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/logout.post.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/logout.post.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/logout.post.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "File to implement `GET` at `/api/health`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/health.get.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/health.get.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/health.get.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "File to implement `GET` at `/api/users/[id]`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/users/[id].get.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/users/[id].get.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/users/[id].get.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "File to implement `GET` at `/api/users`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/users.get.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/users.get.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/users.get.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "File to implement `POST` at `/api/users`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/users.post.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/users.post.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/users.post.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "File to implement `PATCH` at `/api/orders/[id]/status`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/orders/[id]/status.patch.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/orders/[id]/status.patch.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/orders/[id]/status.patch.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "File to implement `GET` at `/api/orders`",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/orders.get.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/routes/orders.get.ts"
+        },
+        {
+          "id": "3",
+          "text": "pages/api/orders.get.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Use `server/api` with method suffix."
+    },
+    {
+      "title": "True or False: Components in `components/` are auto-registered.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt basics."
+    },
+    {
+      "title": "True or False: Composables in `composables/` need manual imports.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Nuxt basics."
+    },
+    {
+      "title": "True or False: `public/` assets are processed by Vite.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Nuxt basics."
+    },
+    {
+      "title": "True or False: `assets/` is intended for files processed by the bundler.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt basics."
+    },
+    {
+      "title": "True or False: `definePageMeta` can set aliases.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt basics."
+    },
+    {
+      "title": "True or False: `useHead` can only be used in pages.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Nuxt basics."
+    },
+    {
+      "title": "True or False: `ClientOnly` prevents SSR for its children.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt basics."
+    },
+    {
+      "title": "True or False: `navigateTo` can be awaited.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt basics."
     }
   ]
 }

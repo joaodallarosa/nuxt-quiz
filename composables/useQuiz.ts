@@ -1,15 +1,15 @@
 export default function () {
-  const answeredQuestions = ref<number[]>([]);
+  const loadedQuestions = useState("loadedQuestions", () => []);
+  const answeredCorrectly = useState("answeredCorrectly", () => 0);
   const question = ref<any>({});
   const selectedOption = ref<string | null>(null);
   const isDisplayingAnswer = ref<Boolean>(false);
   const hasSelectedCorrectAnswer = computed(
-    () =>
-      question.value?.options[question.value.correctIndex] ===
-      selectedOption.value
+    () => question.value?.correctId === selectedOption.value
   );
   const questionsLength = ref<number>(0);
   const hasNoMoreQuestions = ref<boolean>(false);
+  const answersRatio = useState("answersRatio", () => 0);
 
   return {
     question,
@@ -19,27 +19,43 @@ export default function () {
     isCorrectAnswer,
     getQuestion,
     displayAnswer,
+    answersRatio,
+    loadedQuestions,
   };
   async function getQuestion() {
+    if (
+      question.value &&
+      selectedOption.value &&
+      hasSelectedCorrectAnswer.value
+    ) {
+      console.log("Correct Answwer!");
+      answeredCorrectly.value++;
+    }
+
+    if (loadedQuestions.value.length > 0) {
+      answersRatio.value =
+        (answeredCorrectly.value / loadedQuestions.value.length) * 100;
+    }
+
     selectedOption.value = null;
     isDisplayingAnswer.value = false;
     const questionIndex = await getRandomNewQuestionIndex();
     const data = await $fetch(`/api/questions/${questionIndex}`);
-    question.value = data;
-    answeredQuestions.value.push(questionIndex as number);
+    question.value = { ...data, options: shuffle(data.options) };
+    loadedQuestions.value.push(questionIndex as number);
   }
   function displayAnswer() {
     isDisplayingAnswer.value = true;
   }
-  function isCorrectAnswer(index: number) {
-    return index === question.value?.correctIndex;
+  function isCorrectAnswer(id: string) {
+    return id === question.value?.correctId;
   }
   async function getRandomNewQuestionIndex() {
     if (!questionsLength.value) {
       const { data } = await useFetch("/api/questionsLength");
       questionsLength.value = data.value as number;
     }
-    if (answeredQuestions.value.length >= questionsLength.value) {
+    if (loadedQuestions.value.length >= questionsLength.value) {
       console.log("No more new questions to get...");
       return;
     }
@@ -48,8 +64,15 @@ export default function () {
   }
   function generateRandom(min: number, max: number): number {
     var num = Math.floor(Math.random() * (max - min + 1)) + min;
-    return answeredQuestions.value.indexOf(num) >= 0
+    return loadedQuestions.value.indexOf(num) >= 0
       ? generateRandom(min, max)
       : num;
+  }
+  function shuffle(array: any) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1)); // pick a random index from 0 to i
+      [array[i], array[j]] = [array[j], array[i]]; // swap elements
+    }
+    return array;
   }
 }

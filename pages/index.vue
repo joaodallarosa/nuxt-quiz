@@ -6,7 +6,7 @@
         <UContainer>
             <div class="w-full px-4 sm:px-6 lg:px-8 text-center">
                 <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted lg:mt-16">
-                    Nuxt question <br> <span class="text-primary">please</span>
+                    <span class="text-primary">Nuxt</span> Question Please
                 </h1>
                 <div class="text-lg sm:text-xl/8 text-muted mt-6 text-balance">A free Nuxt 3 quiz.</div>
 
