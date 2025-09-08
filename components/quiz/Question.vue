@@ -15,6 +15,12 @@ useAsyncData("quiz", () => {
 async function onNextQuestion() {
   await getQuestion();
 }
+function getNextButtonText(): string {
+  if (selectedOption.value) {
+    return 'Verify'
+  }
+  return 'Continue'
+}
 </script>
 
 <template>
@@ -34,18 +40,24 @@ async function onNextQuestion() {
       <UCard v-for="item in question.options" :class="{
         'border-green-700 border-3':
           isCorrectAnswer(item.id) && item.id === selectedOption,
-        'border-red-700 border-3':
+        'border-red-700 border-2':
           !isCorrectAnswer(item.id) && item.id === selectedOption,
       }">
         <div class="flex gap-4 align-middle items-center">
           <UIcon :name="`uil:${isCorrectAnswer(item.id) ? 'check-circle' : 'multiply'
-            }`" class="size-5" />
+            }`" class="size-5" :class="{
+              'text-green-700':
+                isCorrectAnswer(item.id),
+              'text-red-700':
+                !isCorrectAnswer(item.id),
+            }" />
 
           <pre><code>{{ item.text }}</code></pre>
         </div>
       </UCard>
-      <div v-if="!hasSelectedCorrectAnswer" class="group relative block px-4 py-3 rounded-md text-sm/6 my-5 last:mb-0">
-        <CodeText :text="question.explanation" />
+      <div class="group relative px-4 py-3 rounded-md text-sm/6 my-5 last:mb-0 flex">
+        <UIcon name="uil-lightbulb-alt" class="size-5" />
+        <CodeText class="inline ml-2" :text="question.explanation" />
       </div>
     </div>
     <template #footer>
@@ -55,11 +67,13 @@ async function onNextQuestion() {
           <span class="truncate">Exit</span>
         </UButton>
         <div class="flex gap-4">
-          <UButton size="md" color="warning" variant="subtle" :disabled="!selectedOption" @click="displayAnswer">Check
-            Answer
+          <UButton v-if="isDisplayingAnswer" size="md" variant="subtle" :color="selectedOption ? 'primary' : 'neutral'"
+            @click="onNextQuestion" :disabled="!selectedOption" class="secondary">
+            Continue
           </UButton>
-          <UButton size="md" color="primary" variant="subtle" @click="onNextQuestion">Next
-            Question
+          <UButton v-else size="md" variant="subtle" :color="selectedOption ? 'primary' : 'neutral'"
+            @click="displayAnswer" :disabled="!selectedOption" class="secondary">
+            {{ getNextButtonText() }}
           </UButton>
         </div>
       </div>

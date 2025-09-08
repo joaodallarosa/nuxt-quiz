@@ -16,7 +16,7 @@
                             <div class="flex items-center gap-3">
                                 <div class="text-highlighted text-2xl sm:text-3xl text-pretty font-semibold">
                                     <UIcon name="uil-paint-tool" class="size-6" />
-                                    Free Mode
+                                    Freeflow Mode
                                 </div>
                             </div>
                             <ul class="list-disc list-inside flex flex-col gap-3 flex-1 mt-6 text-left">
@@ -25,9 +25,6 @@
                                 </li>
                                 <li class="text-muted text-sm">
                                     Real-time statistics
-                                </li>
-                                <li class="text-muted text-sm">
-                                    Check Correct Answer instantly
                                 </li>
                             </ul>
                         </div>
@@ -57,7 +54,7 @@
                         <div class="flex flex-col gap-6 items-center justify-end">
                             <UButton to="/certification-mode" disabled class="px-3 py-2 text-sm w-full justify-center"
                                 color="neutral">
-                                <span class="truncate">(Under Construction)</span>
+                                <span class="truncate">(Work In Progress)</span>
                             </UButton>
                         </div>
                     </div>

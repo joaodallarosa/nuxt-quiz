@@ -1,6 +1,7 @@
 export default function () {
   const loadedQuestions = useState("loadedQuestions", () => []);
   const answeredCorrectly = useState("answeredCorrectly", () => 0);
+  const answeredCount = useState("answeredCount", () => 0);
   const question = ref<any>({});
   const selectedOption = ref<string | null>(null);
   const isDisplayingAnswer = ref<Boolean>(false);
@@ -21,22 +22,9 @@ export default function () {
     displayAnswer,
     answersRatio,
     loadedQuestions,
+    answeredCount,
   };
   async function getQuestion() {
-    if (
-      question.value &&
-      selectedOption.value &&
-      hasSelectedCorrectAnswer.value
-    ) {
-      console.log("Correct Answwer!");
-      answeredCorrectly.value++;
-    }
-
-    if (loadedQuestions.value.length > 0) {
-      answersRatio.value =
-        (answeredCorrectly.value / loadedQuestions.value.length) * 100;
-    }
-
     selectedOption.value = null;
     isDisplayingAnswer.value = false;
     const questionIndex = await getRandomNewQuestionIndex();
@@ -46,6 +34,15 @@ export default function () {
   }
   function displayAnswer() {
     isDisplayingAnswer.value = true;
+    answeredCount.value++;
+    if (
+      question.value &&
+      selectedOption.value &&
+      hasSelectedCorrectAnswer.value
+    ) {
+      answeredCorrectly.value++;
+    }
+    answersRatio.value = (answeredCorrectly.value / answeredCount.value) * 100;
   }
   function isCorrectAnswer(id: string) {
     return id === question.value?.correctId;
