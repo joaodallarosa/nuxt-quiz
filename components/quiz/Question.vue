@@ -5,9 +5,8 @@ const {
   isDisplayingAnswer,
   selectedOption,
   isCorrectAnswer,
-  hasSelectedCorrectAnswer,
   displayAnswer,
-  answersRatio
+  isLoading
 } = useQuiz();
 useAsyncData("quiz", () => {
   return getQuestion();
@@ -27,11 +26,18 @@ function getNextButtonText(): string {
   <UCard v-if="question" class="mt-8 drop-shadow-xl text-left" :ui="{ body: '' }">
     <template #header>
       <div class="flex items-center w-full justify-between">
-        <CodeText class="font-semibold text-base md:text-2xl" :text="question.title" />
+        <USkeleton v-if="isLoading" class="h-4 w-[250px]" />
+        <CodeText v-else class="font-semibold text-base md:text-2xl" :text="question.title" />
       </div>
     </template>
-    <URadioGroup v-if="!isDisplayingAnswer" variant="table" v-model="selectedOption" value-key="id"
-      :items="question.options" size="md" :ui="{ item: 'p-6' }">
+    <div v-if="isLoading" class="grid gap-4">
+      <USkeleton class="h-4 w-[300px]" />
+      <USkeleton class="h-4 w-[300px]" />
+      <USkeleton class="h-4 w-[300px]" />
+      <USkeleton class="h-4 w-[300px]" />
+    </div>
+    <URadioGroup v-else-if="!isDisplayingAnswer" variant="table" v-model="selectedOption" value-key="id"
+      :items="question.options" size="md" :ui="{ item: 'p-4 lg:p-6' }">
       <template #label="{ item }">
         <CodeText v-if="item" :text="item.text" />
       </template>
@@ -43,16 +49,17 @@ function getNextButtonText(): string {
         'border-red-700 border-2':
           !isCorrectAnswer(item.id) && item.id === selectedOption,
       }">
-        <div class="flex gap-4 align-middle items-center">
+        <div class="flex items-center">
           <UIcon :name="`uil:${isCorrectAnswer(item.id) ? 'check-circle' : 'multiply'
-            }`" class="size-5" :class="{
+            }`" class="size-5 flex-none" :class="{
               'text-green-700':
                 isCorrectAnswer(item.id),
               'text-red-700':
                 !isCorrectAnswer(item.id),
             }" />
-
-          <pre><code>{{ item.text }}</code></pre>
+          <span class="ml-2">
+            {{ item.text }}
+          </span>
         </div>
       </UCard>
       <div class="group relative px-4 py-3 rounded-md text-sm/6 my-5 last:mb-0 flex">

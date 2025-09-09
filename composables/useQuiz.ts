@@ -9,8 +9,9 @@ export default function () {
     () => question.value?.correctId === selectedOption.value
   );
   const questionsLength = ref<number>(0);
-  const hasNoMoreQuestions = ref<boolean>(false);
+  const hasNoMoreQuestions = ref<Boolean>(false);
   const answersRatio = useState("answersRatio", () => 0);
+  const isLoading = ref<Boolean>(false);
 
   return {
     question,
@@ -23,14 +24,17 @@ export default function () {
     answersRatio,
     loadedQuestions,
     answeredCount,
+    isLoading,
   };
   async function getQuestion() {
+    isLoading.value = true;
     selectedOption.value = null;
     isDisplayingAnswer.value = false;
     const questionIndex = await getRandomNewQuestionIndex();
     const data = await $fetch(`/api/questions/${questionIndex}`);
     question.value = { ...data, options: shuffle(data.options) };
     loadedQuestions.value.push(questionIndex as number);
+    isLoading.value = false;
   }
   function displayAnswer() {
     isDisplayingAnswer.value = true;

@@ -3,7 +3,7 @@ const { answersRatio, answeredCount } = useQuiz()
 </script>
 <template>
     <UContainer>
-        <div class="w-full px-0 sm:px-6 lg:px-8 text-center">
+        <div class="w-full text-center">
             <h1 class="text-2xl sm:text-7xl text-pretty tracking-tight font-bold lg:mt-16">
                 <span class="text-primary">Freeflow</span> Mode
             </h1>

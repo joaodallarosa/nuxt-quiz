@@ -4,7 +4,7 @@
 <template>
     <UApp>
         <UContainer>
-            <div class="w-full px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-full text-center">
                 <h1 class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted lg:mt-16">
                     <span class="text-primary">Nuxt</span> Question Please
                 </h1>
