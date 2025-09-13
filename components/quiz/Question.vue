@@ -63,12 +63,11 @@ function getNextButtonText(): string {
         </div>
       </UCard>
       <div class="group relative px-4 py-3 rounded-md text-sm/6 my-5 last:mb-0 flex">
-        <UIcon name="uil-lightbulb-alt" class="size-5" />
+        <UIcon name="uil-lightbulb-alt" class="size-5 flex-none" />
         <CodeText class="inline ml-2" :text="question.explanation" />
       </div>
     </div>
     <template #footer>
-
       <div class="flex justify-between">
         <UButton to="/" class="text-sm" variant="subtle" color="error">
           <span class="truncate">Exit</span>

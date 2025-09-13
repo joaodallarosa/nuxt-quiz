@@ -1,7 +1,16 @@
 export default function () {
-  const loadedQuestions = useState("loadedQuestions", () => []);
-  const answeredCorrectly = useState("answeredCorrectly", () => 0);
-  const answeredCount = useState("answeredCount", () => 0);
+  const loadedQuestionsCookie = useCookie("loadedQuestions");
+  const loadedQuestions = useState("loadedQuestions", () =>
+    loadedQuestionsCookie.value ? loadedQuestionsCookie.value : []
+  );
+  const answeredCorrectlyCookie = useCookie("answeredCorrectly");
+  const answeredCorrectly = useState("answeredCorrectly", () =>
+    answeredCorrectlyCookie.value ? parseInt(answeredCorrectlyCookie.value) : 0
+  );
+  const answeredCountCookie = useCookie("answeredCount");
+  const answeredCount = useState("answeredCount", () =>
+    answeredCountCookie.value ? parseInt(answeredCountCookie.value) : 0
+  );
   const question = ref<any>({});
   const selectedOption = ref<string | null>(null);
   const isDisplayingAnswer = ref<Boolean>(false);
@@ -9,8 +18,12 @@ export default function () {
     () => question.value?.correctId === selectedOption.value
   );
   const questionsLength = ref<number>(0);
+  const questionIndex = ref<number | undefined>(undefined);
   const hasNoMoreQuestions = ref<Boolean>(false);
-  const answersRatio = useState("answersRatio", () => 0);
+  const answersRatioCookie = useCookie("answersRatio");
+  const answersRatio = useState("answersRatio", () =>
+    answersRatioCookie.value ? parseInt(answersRatioCookie.value) : 0
+  );
   const isLoading = ref<Boolean>(false);
 
   return {
@@ -25,28 +38,39 @@ export default function () {
     loadedQuestions,
     answeredCount,
     isLoading,
+    clearCookies,
   };
+  function clearCookies() {
+    loadedQuestionsCookie.value = null;
+    answeredCountCookie.value = null;
+    answersRatioCookie.value = null;
+    answeredCorrectlyCookie.value = null;
+  }
   async function getQuestion() {
     isLoading.value = true;
     selectedOption.value = null;
     isDisplayingAnswer.value = false;
-    const questionIndex = await getRandomNewQuestionIndex();
-    const data = await $fetch(`/api/questions/${questionIndex}`);
+    questionIndex.value = await getRandomNewQuestionIndex();
+    const data = await $fetch(`/api/questions/${questionIndex.value}`);
     question.value = { ...data, options: shuffle(data.options) };
-    loadedQuestions.value.push(questionIndex as number);
     isLoading.value = false;
   }
   function displayAnswer() {
+    loadedQuestions.value.push(questionIndex.value as number);
+    loadedQuestionsCookie.value = JSON.stringify(loadedQuestions.value);
     isDisplayingAnswer.value = true;
     answeredCount.value++;
+    answeredCountCookie.value = JSON.stringify(answeredCount.value);
     if (
       question.value &&
       selectedOption.value &&
       hasSelectedCorrectAnswer.value
     ) {
       answeredCorrectly.value++;
+      answeredCorrectlyCookie.value = JSON.stringify(answeredCorrectly.value);
     }
     answersRatio.value = (answeredCorrectly.value / answeredCount.value) * 100;
+    answersRatioCookie.value = JSON.stringify(answersRatio.value);
   }
   function isCorrectAnswer(id: string) {
     return id === question.value?.correctId;

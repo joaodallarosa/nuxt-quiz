@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const { answersRatio, answeredCount } = useQuiz()
+const { answersRatio, answeredCount, clearCookies } = useQuiz()
+
+function reset() {
+    clearCookies()
+    window.location.reload()
+}
 </script>
 <template>
     <UContainer>
@@ -10,11 +15,13 @@ const { answersRatio, answeredCount } = useQuiz()
             <Quiz />
             <UDrawer title="Statistics">
                 <UButton label="Display Statistics" color="neutral" variant="subtle" trailing-icon="i-lucide-chevron-up"
-                    class="absolute bottom-2 right-2" />
+                    class="fixed bottom-2 right-2" />
                 <template #body>
                     <p>Questions Answered: {{ answeredCount || 0 }}</p>
                     <p>Accuracy: {{ Number.parseInt(answersRatio) }}%</p>
                     <UProgress class="mt-2" v-model="answersRatio" />
+
+                    <UButton @click="reset" label="Reset" color="error" variant="subtle" class="mt-4" />
                 </template>
             </UDrawer>
         </div>
