@@ -8,4 +8,7 @@ export default defineNuxtConfig({
       title: "Nuxt question please",
     },
   },
+  colorMode: {
+    preference: "dark",
+  },
 });

@@ -69,7 +69,7 @@
       "explanation": "Assets are processed and bundled by Vite, unlike files in /public which are static at predictable URLs."
     },
     {
-      "title": "Given the following code, will the page title reactively update when the title property on the post reactive ref updates?",
+      "title": "Given the following code, will the page title reactively update when the title property on the post reactive ref updates? const { data: post } = await useFetch(`/api/posts/${slug.value}`);useSeoMeta({title: post.value.title,});",
       "options": [
         { "id": "1", "text": "Yes" },
         { "id": "2", "text": "No" }
@@ -3013,6 +3013,276 @@
       ],
       "correctId": "4",
       "explanation": "API rate limiting can be implemented using server middleware, storage solutions like Redis, or adapting existing rate limiting libraries for h3 server framework."
+    },
+    {
+      "title": "Given the following code, what will happen when the component mounts? const count = ref(0); onMounted(() => { count.value = 10; });",
+      "options": [
+        {
+          "id": "1",
+          "text": "count will be 10 only on the client side"
+        },
+        {
+          "id": "2",
+          "text": "count will be 10 on both server and client"
+        },
+        {
+          "id": "3",
+          "text": "count will remain 0"
+        },
+        {
+          "id": "4",
+          "text": "An error will be thrown"
+        },
+        {
+          "id": "5",
+          "text": "count will be undefined"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "onMounted only runs on the client side, so count will be updated to 10 only after the component is mounted in the browser."
+    },
+    {
+      "title": "What's wrong with this middleware code? export default defineNuxtRouteMiddleware((to, from) => { if (!user.value) { return navigateTo('/login'); } });",
+      "options": [
+        {
+          "id": "1",
+          "text": "Should use 'throw createError()' instead"
+        },
+        {
+          "id": "2",
+          "text": "Missing 'await' before navigateTo"
+        },
+        {
+          "id": "3",
+          "text": "user.value is not defined in scope"
+        },
+        {
+          "id": "4",
+          "text": "Nothing is wrong"
+        },
+        {
+          "id": "5",
+          "text": "Should use useRouter().push() instead"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "The 'user' reactive reference is not defined in the middleware scope. You need to import or define the user state properly."
+    },
+    {
+      "title": "Given this server API route, what will be the response? export default defineEventHandler(async (event) => { return { message: 'Hello', data: await $fetch('/api/external') }; });",
+      "options": [
+        {
+          "id": "1",
+          "text": "Will work correctly"
+        },
+        {
+          "id": "2",
+          "text": "Will throw an error because $fetch is not available"
+        },
+        {
+          "id": "3",
+          "text": "Will return only the message"
+        },
+        {
+          "id": "4",
+          "text": "Will hang indefinitely"
+        },
+        {
+          "id": "5",
+          "text": "Will return undefined"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "$fetch is available in server routes and can be used to make HTTP requests to external APIs or internal routes."
+    },
+    {
+      "title": "What will this composable return on first render? const useCounter = () => { const count = useState('counter', () => 0); const increment = () => count.value++; return { count, increment }; };",
+      "options": [
+        {
+          "id": "1",
+          "text": "count will be 0"
+        },
+        {
+          "id": "2",
+          "text": "count will be undefined"
+        },
+        {
+          "id": "3",
+          "text": "count will be null"
+        },
+        {
+          "id": "4",
+          "text": "An error will be thrown"
+        },
+        {
+          "id": "5",
+          "text": "count will be a function"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useState initializes with the provided factory function result (0) on first render and maintains this state across navigation."
+    },
+    {
+      "title": "What's the issue with this useFetch call? const { data } = await useFetch('/api/users', { query: { page: page.value } });",
+      "options": [
+        {
+          "id": "1",
+          "text": "Should not use await with useFetch"
+        },
+        {
+          "id": "2",
+          "text": "Query parameter won't be reactive"
+        },
+        {
+          "id": "3",
+          "text": "Missing error handling"
+        },
+        {
+          "id": "4",
+          "text": "Nothing is wrong"
+        },
+        {
+          "id": "5",
+          "text": "Should use $fetch instead"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Using page.value directly makes the query static. Use a computed or function to make it reactive: query: computed(() => ({ page: page.value }))."
+    },
+    {
+      "title": "Given this plugin code, when will it execute? export default defineNuxtPlugin(() => { console.log('Plugin loaded'); return { provide: { myFunction: () => 'hello' } }; });",
+      "options": [
+        {
+          "id": "1",
+          "text": "Only on the server"
+        },
+        {
+          "id": "2",
+          "text": "Only on the client"
+        },
+        {
+          "id": "3",
+          "text": "On both server and client"
+        },
+        {
+          "id": "4",
+          "text": "Only during build time"
+        },
+        {
+          "id": "5",
+          "text": "Never executes"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "By default, Nuxt plugins run on both server and client unless explicitly configured otherwise with .client or .server suffixes."
+    },
+    {
+      "title": "What will happen with this watch statement? const search = ref(''); watch(search, (newVal) => { console.log('Search:', newVal); }, { immediate: true });",
+      "options": [
+        {
+          "id": "1",
+          "text": "Console will log 'Search: ' immediately"
+        },
+        {
+          "id": "2",
+          "text": "Console will log nothing until search changes"
+        },
+        {
+          "id": "3",
+          "text": "An error will be thrown"
+        },
+        {
+          "id": "4",
+          "text": "Console will log 'Search: undefined'"
+        },
+        {
+          "id": "5",
+          "text": "Watch won't work with ref"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "With immediate: true, the watch callback executes immediately with the current value of search, which is an empty string ''."
+    },
+    {
+      "title": "What's wrong with this layout code? <template><div><slot /></div></template><script setup>const route = useRoute(); useHead({ title: route.params.title });</script>",
+      "options": [
+        {
+          "id": "1",
+          "text": "useRoute() cannot be used in layouts"
+        },
+        {
+          "id": "2",
+          "text": "useHead() should be in a page, not layout"
+        },
+        {
+          "id": "3",
+          "text": "route.params.title won't be reactive"
+        },
+        {
+          "id": "4",
+          "text": "Missing <NuxtPage> component"
+        },
+        {
+          "id": "5",
+          "text": "Nothing is wrong"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "useHead() needs reactive values for dynamic updates. Use computed(() => route.params.title) or a function to make the title reactive."
+    },
+    {
+      "title": "Given this server middleware, what will it do? export default defineEventHandler(async (event) => { if (event.node.req.url?.startsWith('/api/')) { setHeader(event, 'X-API-Version', '1.0'); } });",
+      "options": [
+        {
+          "id": "1",
+          "text": "Add header to all requests"
+        },
+        {
+          "id": "2",
+          "text": "Add header only to API requests"
+        },
+        {
+          "id": "3",
+          "text": "Throw an error"
+        },
+        {
+          "id": "4",
+          "text": "Do nothing"
+        },
+        {
+          "id": "5",
+          "text": "Block API requests"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "This middleware checks if the request URL starts with '/api/' and only adds the X-API-Version header to those requests."
+    },
+    {
+      "title": "What will this computed property return? const user = ref({ name: 'John', age: 25 }); const userInfo = computed(() => `${user.value.name} is ${user.value.age} years old`);",
+      "options": [
+        {
+          "id": "1",
+          "text": "'John is 25 years old'"
+        },
+        {
+          "id": "2",
+          "text": "undefined"
+        },
+        {
+          "id": "3",
+          "text": "An error"
+        },
+        {
+          "id": "4",
+          "text": "A function"
+        },
+        {
+          "id": "5",
+          "text": "'undefined is undefined years old'"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The computed property will reactively return the formatted string 'John is 25 years old' based on the user ref values."
     }
   ]
 }
