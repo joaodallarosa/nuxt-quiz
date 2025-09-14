@@ -1,6 +1,114 @@
 {
   "questions": [
     {
+      "title": "Which of the following is an option for the useFetch composable?",
+      "options": [
+        { "id": "1", "text": "translate" },
+        { "id": "2", "text": "none of these" },
+        { "id": "3", "text": "event" }
+      ],
+      "correctId": "2",
+      "explanation": "useFetch supports options like key, method, query, headers, etc. but not 'translate' or 'event'."
+    },
+    {
+      "title": "Server middleware handlers will run on every request before any other server route to:",
+      "options": [
+        { "id": "1", "text": "Extend the event's request object" },
+        { "id": "2", "text": "All of these" },
+        { "id": "3", "text": "Log requests" },
+        { "id": "4", "text": "Add or check headers" }
+      ],
+      "correctId": "2",
+      "explanation": "Server middleware can extend requests, log them, and add or check headers — all of these."
+    },
+    {
+      "title": "What is the advantage of useSeoMeta over useHead?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It can handle reactive values, while useHead cannot"
+        },
+        { "id": "2", "text": "There is no advantage" },
+        {
+          "id": "3",
+          "text": "It's slightly more performant since it relies on no external dependencies"
+        },
+        { "id": "4", "text": "It helps you avoid typos and common mistakes" }
+      ],
+      "correctId": "4",
+      "explanation": "useSeoMeta adds helpers for common SEO fields and prevents mistakes when defining meta tags."
+    },
+    {
+      "title": "The createError function can accept an object that includes (but is not limited to) which properties?",
+      "options": [
+        { "id": "1", "text": "msg, statusMsg, status" },
+        { "id": "2", "text": "status, fatal, message" },
+        { "id": "3", "text": "statusCode, fatal, message" },
+        { "id": "4", "text": "name, statusCode, msg" }
+      ],
+      "correctId": "3",
+      "explanation": "createError accepts objects with properties such as statusCode, fatal, and message."
+    },
+    {
+      "title": "Route middleware runs on...",
+      "options": [
+        { "id": "1", "text": "The server" },
+        { "id": "2", "text": "Both of these" },
+        { "id": "3", "text": "The client" }
+      ],
+      "correctId": "2",
+      "explanation": "Route middleware can run on both client and server depending on navigation and rendering context."
+    },
+    {
+      "title": "Assets served from the assets directory exist at a static, predictable URL that never changes unless the filename changes.",
+      "options": [
+        { "id": "1", "text": "false" },
+        { "id": "2", "text": "true" }
+      ],
+      "correctId": "1",
+      "explanation": "Assets are processed and bundled by Vite, unlike files in /public which are static at predictable URLs."
+    },
+    {
+      "title": "Given the following code, will the page title reactively update when the title property on the post reactive ref updates?",
+      "options": [
+        { "id": "1", "text": "Yes" },
+        { "id": "2", "text": "No" }
+      ],
+      "correctId": "2",
+      "explanation": "Passing post.value.title makes it static. To make it reactive, use a function: title: () => post.value.title."
+    },
+    {
+      "title": "What command is used for bootstrapping a new Nuxt project?",
+      "options": [
+        { "id": "1", "text": "npx nuxt init" },
+        { "id": "2", "text": "npx nuxi@latest init" },
+        { "id": "3", "text": "None of these" },
+        { "id": "4", "text": "npm create nuxt-project" }
+      ],
+      "correctId": "2",
+      "explanation": "The official command is npx nuxi@latest init <project-name>."
+    },
+    {
+      "title": "Which of the following is NOT true about file-based routing?",
+      "options": [
+        {
+          "id": "1",
+          "text": "You must enable it in nuxt.config.ts like this fileBasedRouting: true"
+        },
+        {
+          "id": "2",
+          "text": "You can create a catch all route by creating the file: pages/[...slug].vue"
+        },
+        {
+          "id": "3",
+          "text": "Files under the pages directory are automatically turned into routes"
+        },
+        { "id": "4", "text": "It supports creating routes with dynamic params" }
+      ],
+      "correctId": "1",
+      "explanation": "File-based routing is enabled by default and does not require configuration in nuxt.config.ts."
+    },
+    {
       "title": "What is Nuxt 3?",
       "options": [
         {
