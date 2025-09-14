@@ -329,11 +329,19 @@
       "options": [
         {
           "id": "1",
-          "text": "true"
+          "text": "Vue 3"
         },
         {
           "id": "2",
-          "text": "false"
+          "text": "Vue 2"
+        },
+        {
+          "id": "3",
+          "text": "Vue 4"
+        },
+        {
+          "id": "4",
+          "text": "Vue 1"
         }
       ],
       "correctId": "1",
@@ -537,7 +545,7 @@
         },
         {
           "id": "2",
-          "text": "const navigate = useNavigate(); navigate('/path')"
+          "text": "await navigateTo('/path', { external: true })"
         },
         {
           "id": "3",
@@ -549,7 +557,7 @@
         },
         {
           "id": "5",
-          "text": "All options are correct"
+          "text": "Both useRouter().push() and navigateTo() are correct"
         }
       ],
       "correctId": "5",
@@ -876,7 +884,7 @@
         },
         {
           "id": "2",
-          "text": "useMeta({})"
+          "text": "useHead({})"
         },
         {
           "id": "3",
@@ -891,8 +899,8 @@
           "text": "export const meta = {}"
         }
       ],
-      "correctId": "1",
-      "explanation": "definePageMeta() is used to define page-specific metadata like layout, middleware, and other route-level configuration in Nuxt 3."
+      "correctId": "2",
+      "explanation": "useHead() is the composable used to define metadata for pages in Nuxt 3, allowing you to set title, meta tags, and other head elements."
     },
     {
       "title": "How do you create a custom 404 page in Nuxt 3?",
@@ -965,15 +973,15 @@
         },
         {
           "id": "4",
-          "text": "All options are correct"
+          "text": "reactive(), ref(), and useState() are all correct"
         },
         {
           "id": "5",
-          "text": "No option is correct"
+          "text": "const count = computed(() => 0)"
         }
       ],
       "correctId": "4",
-      "explanation": "All three options are valid ways to create reactive state in Nuxt 3, each serving different purposes: reactive() for objects, ref() for primitives, and useState() for shared state."
+      "explanation": "reactive(), ref(), and useState() are all valid ways to create reactive state in Nuxt 3, each serving different purposes: reactive() for objects, ref() for primitives, and useState() for shared state. computed() returns computed values, not reactive state."
     },
     {
       "title": "What is the difference between server and client rendering in Nuxt 3?",
@@ -1158,7 +1166,7 @@
         },
         {
           "id": "5",
-          "text": "Both option 1 and 4 are correct"
+          "text": "Method checking in defineEventHandler and file naming convention are both correct"
         }
       ],
       "correctId": "5",
@@ -1508,7 +1516,7 @@
         },
         {
           "id": "4",
-          "text": "Both options 1 and 2"
+          "text": "Install @nuxt/image module and use <NuxtImg> component"
         },
         {
           "id": "5",
@@ -1905,7 +1913,7 @@
         },
         {
           "id": "5",
-          "text": "Forms are not supported in Nuxt 3"
+          "text": "Use $el.submit() to trigger form submission"
         }
       ],
       "correctId": "4",
@@ -2036,7 +2044,7 @@
         },
         {
           "id": "4",
-          "text": "Both options 2 and 3 are correct"
+          "text": "Use process.env variables and .env files with runtimeConfig"
         },
         {
           "id": "5",
@@ -2190,7 +2198,7 @@
         },
         {
           "id": "5",
-          "text": "Custom error handling is not supported"
+          "text": "Use window.onerror for global error handling"
         }
       ],
       "correctId": "4",
@@ -2240,7 +2248,7 @@
         },
         {
           "id": "4",
-          "text": "Both options 1 and 2 are correct"
+          "text": "Use defineAsyncComponent() and 'Lazy' prefix for components"
         },
         {
           "id": "5",
@@ -2406,7 +2414,7 @@
         },
         {
           "id": "5",
-          "text": "CSP is not supported in Nuxt 3"
+          "text": "CSP must be configured in the web server only"
         }
       ],
       "correctId": "4",
@@ -2568,7 +2576,7 @@
         },
         {
           "id": "5",
-          "text": "Lazy loading is not supported"
+          "text": "Images must be preloaded using link tags"
         }
       ],
       "correctId": "4",
@@ -2676,7 +2684,7 @@
         },
         {
           "id": "5",
-          "text": "Dark mode is not supported"
+          "text": "Dark mode requires a separate CSS framework"
         }
       ],
       "correctId": "4",
@@ -2703,7 +2711,7 @@
         },
         {
           "id": "5",
-          "text": "File uploads are not supported"
+          "text": "File uploads require external cloud services only"
         }
       ],
       "correctId": "4",
@@ -2784,7 +2792,7 @@
         },
         {
           "id": "5",
-          "text": "Debouncing is not supported"
+          "text": "Search requires immediate execution without delay"
         }
       ],
       "correctId": "4",
@@ -2811,7 +2819,7 @@
         },
         {
           "id": "5",
-          "text": "WebSockets are not supported"
+          "text": "WebSockets require a separate server framework"
         }
       ],
       "correctId": "4",
@@ -2838,7 +2846,7 @@
         },
         {
           "id": "5",
-          "text": "PWA caching is not supported"
+          "text": "PWA caching must be implemented manually without tools"
         }
       ],
       "correctId": "4",
@@ -2892,7 +2900,7 @@
         },
         {
           "id": "5",
-          "text": "Error boundaries are not supported"
+          "text": "Error boundaries require React-specific libraries"
         }
       ],
       "correctId": "4",
@@ -2946,7 +2954,7 @@
         },
         {
           "id": "5",
-          "text": "Form validation is not supported"
+          "text": "Form validation must be handled server-side only"
         }
       ],
       "correctId": "4",
@@ -3000,7 +3008,7 @@
         },
         {
           "id": "5",
-          "text": "Rate limiting is not supported"
+          "text": "Rate limiting requires external proxy servers only"
         }
       ],
       "correctId": "4",
