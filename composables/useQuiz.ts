@@ -1,4 +1,5 @@
 export default function () {
+  const allQuestions = useState("allQuestions", () => []);
   const loadedQuestionsCookie = useCookie("loadedQuestions");
   const loadedQuestions = useState("loadedQuestions", () =>
     loadedQuestionsCookie.value ? loadedQuestionsCookie.value : []
@@ -17,14 +18,13 @@ export default function () {
   const hasSelectedCorrectAnswer = computed(
     () => question.value?.correctId === selectedOption.value
   );
-  const questionsLength = ref<number>(0);
   const questionIndex = ref<number | undefined>(undefined);
   const hasNoMoreQuestions = ref<Boolean>(false);
   const answersRatioCookie = useCookie("answersRatio");
   const answersRatio = useState("answersRatio", () =>
     answersRatioCookie.value ? parseInt(answersRatioCookie.value) : 0
   );
-  const isLoading = ref<Boolean>(false);
+  const isLoading = useState("isLoading", () => true);
 
   return {
     question,
@@ -39,20 +39,24 @@ export default function () {
     answeredCount,
     isLoading,
     clearCookies,
+    setAllQuestions,
   };
+  function setAllQuestions(questions: []) {
+    allQuestions.value = questions;
+  }
   function clearCookies() {
     loadedQuestionsCookie.value = null;
     answeredCountCookie.value = null;
     answersRatioCookie.value = null;
     answeredCorrectlyCookie.value = null;
   }
-  async function getQuestion() {
+  function getQuestion() {
     isLoading.value = true;
     selectedOption.value = null;
     isDisplayingAnswer.value = false;
-    questionIndex.value = await getRandomNewQuestionIndex();
-    const data = await $fetch(`/api/questions/${questionIndex.value}`);
-    question.value = { ...data, options: shuffle(data.options) };
+    questionIndex.value = getRandomNewQuestionIndex();
+    const newQuestion = allQuestions.value[questionIndex.value as number];
+    question.value = { ...newQuestion, options: shuffle(newQuestion.options) };
     isLoading.value = false;
   }
   function displayAnswer() {
@@ -75,16 +79,12 @@ export default function () {
   function isCorrectAnswer(id: string) {
     return id === question.value?.correctId;
   }
-  async function getRandomNewQuestionIndex() {
-    if (!questionsLength.value) {
-      const { data } = await useFetch("/api/questionsLength");
-      questionsLength.value = data.value as number;
-    }
-    if (loadedQuestions.value.length >= questionsLength.value) {
+  function getRandomNewQuestionIndex() {
+    if (loadedQuestions.value.length >= allQuestions.value.length) {
       console.log("No more new questions to get...");
       return;
     }
-    const randomIndex = generateRandom(1, questionsLength.value);
+    const randomIndex = generateRandom(1, allQuestions.value.length - 1);
     return randomIndex;
   }
   function generateRandom(min: number, max: number): number {
