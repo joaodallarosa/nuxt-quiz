@@ -30,13 +30,13 @@ async function flagQuestion() {
   });
   if (status === 201) {
     toast.add({
-      title: "Question flagged!",
-      description: `Flagged questions will be reviewed by the admin, thank you for your contribution.`,
+      title: "Question reported!",
+      description: `Reported questions will be reviewed by the admin, thank you for your contribution.`,
       icon: "uil:robot",
     });
   } else {
     toast.add({
-      title: "Error When Flagging Question",
+      title: "Error Reporting Question",
       icon: "uil-bolt-slash",
     });
   }
@@ -95,7 +95,7 @@ async function flagQuestion() {
           </UButton>
           <UButton @click="flagQuestion()" class="text-sm" variant="subtle" color="warning"
             :disabled="flagQuestionLoading" :loading="flagQuestionLoading" loading-icon="i-lucide-loader">
-            <span class="truncate">Flag Question</span>
+            <span class="truncate">Report question</span>
           </UButton>
         </div>
         <div class="flex gap-4">
