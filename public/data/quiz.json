@@ -1,94 +1,175 @@
 {
   "questions": [
     {
+      "id": 1,
       "title": "Which of the following is an option for the useFetch composable?",
       "options": [
-        { "id": "1", "text": "translate" },
-        { "id": "2", "text": "none of these" },
-        { "id": "3", "text": "event" }
+        {
+          "id": "1",
+          "text": "translate"
+        },
+        {
+          "id": "2",
+          "text": "none of these"
+        },
+        {
+          "id": "3",
+          "text": "event"
+        }
       ],
       "correctId": "2",
       "explanation": "useFetch supports options like key, method, query, headers, etc. but not 'translate' or 'event'."
     },
     {
+      "id": 2,
       "title": "Server middleware handlers will run on every request before any other server route to:",
       "options": [
-        { "id": "1", "text": "Extend the event's request object" },
-        { "id": "2", "text": "All of these" },
-        { "id": "3", "text": "Log requests" },
-        { "id": "4", "text": "Add or check headers" }
+        {
+          "id": "1",
+          "text": "Extend the event's request object"
+        },
+        {
+          "id": "2",
+          "text": "Log requests"
+        },
+        {
+          "id": "3",
+          "text": "Add or check headers"
+        },
+        {
+          "id": "4",
+          "text": "Serve static assets"
+        }
       ],
-      "correctId": "2",
-      "explanation": "Server middleware can extend requests, log them, and add or check headers — all of these."
+      "correctId": "3",
+      "explanation": "A common use for server middleware is to inspect or add headers before delegating to other routes."
     },
     {
+      "id": 3,
       "title": "What is the advantage of useSeoMeta over useHead?",
       "options": [
         {
           "id": "1",
           "text": "It can handle reactive values, while useHead cannot"
         },
-        { "id": "2", "text": "There is no advantage" },
+        {
+          "id": "2",
+          "text": "There is no advantage"
+        },
         {
           "id": "3",
           "text": "It's slightly more performant since it relies on no external dependencies"
         },
-        { "id": "4", "text": "It helps you avoid typos and common mistakes" }
+        {
+          "id": "4",
+          "text": "It helps you avoid typos and common mistakes"
+        }
       ],
       "correctId": "4",
       "explanation": "useSeoMeta adds helpers for common SEO fields and prevents mistakes when defining meta tags."
     },
     {
+      "id": 4,
       "title": "The createError function can accept an object that includes (but is not limited to) which properties?",
       "options": [
-        { "id": "1", "text": "msg, statusMsg, status" },
-        { "id": "2", "text": "status, fatal, message" },
-        { "id": "3", "text": "statusCode, fatal, message" },
-        { "id": "4", "text": "name, statusCode, msg" }
+        {
+          "id": "1",
+          "text": "msg, statusMsg, status"
+        },
+        {
+          "id": "2",
+          "text": "status, fatal, message"
+        },
+        {
+          "id": "3",
+          "text": "statusCode, fatal, message"
+        },
+        {
+          "id": "4",
+          "text": "name, statusCode, msg"
+        }
       ],
       "correctId": "3",
       "explanation": "createError accepts objects with properties such as statusCode, fatal, and message."
     },
     {
+      "id": 5,
       "title": "Route middleware runs on...",
       "options": [
-        { "id": "1", "text": "The server" },
-        { "id": "2", "text": "Both of these" },
-        { "id": "3", "text": "The client" }
+        {
+          "id": "1",
+          "text": "The server"
+        },
+        {
+          "id": "2",
+          "text": "Both of these"
+        },
+        {
+          "id": "3",
+          "text": "The client"
+        }
       ],
       "correctId": "2",
       "explanation": "Route middleware can run on both client and server depending on navigation and rendering context."
     },
     {
+      "id": 6,
       "title": "Assets served from the assets directory exist at a static, predictable URL that never changes unless the filename changes.",
       "options": [
-        { "id": "1", "text": "false" },
-        { "id": "2", "text": "true" }
+        {
+          "id": "1",
+          "text": "false"
+        },
+        {
+          "id": "2",
+          "text": "true"
+        }
       ],
       "correctId": "1",
       "explanation": "Assets are processed and bundled by Vite, unlike files in /public which are static at predictable URLs."
     },
     {
+      "id": 7,
       "title": "Given the following code, will the page title reactively update when the title property on the post reactive ref updates? const { data: post } = await useFetch(`/api/posts/${slug.value}`);useSeoMeta({title: post.value.title,});",
       "options": [
-        { "id": "1", "text": "Yes" },
-        { "id": "2", "text": "No" }
+        {
+          "id": "1",
+          "text": "Yes"
+        },
+        {
+          "id": "2",
+          "text": "No"
+        }
       ],
       "correctId": "2",
       "explanation": "Passing post.value.title makes it static. To make it reactive, use a function: title: () => post.value.title."
     },
     {
+      "id": 8,
       "title": "What command is used for bootstrapping a new Nuxt project?",
       "options": [
-        { "id": "1", "text": "npx nuxt init" },
-        { "id": "2", "text": "npx nuxi@latest init" },
-        { "id": "3", "text": "None of these" },
-        { "id": "4", "text": "npm create nuxt-project" }
+        {
+          "id": "1",
+          "text": "npx nuxt init"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi@latest init"
+        },
+        {
+          "id": "3",
+          "text": "None of these"
+        },
+        {
+          "id": "4",
+          "text": "npm create nuxt-project"
+        }
       ],
       "correctId": "2",
       "explanation": "The official command is npx nuxi@latest init <project-name>."
     },
     {
+      "id": 9,
       "title": "Which of the following is NOT true about file-based routing?",
       "options": [
         {
@@ -103,12 +184,16 @@
           "id": "3",
           "text": "Files under the pages directory are automatically turned into routes"
         },
-        { "id": "4", "text": "It supports creating routes with dynamic params" }
+        {
+          "id": "4",
+          "text": "It supports creating routes with dynamic params"
+        }
       ],
       "correctId": "1",
       "explanation": "File-based routing is enabled by default and does not require configuration in nuxt.config.ts."
     },
     {
+      "id": 10,
       "title": "What is Nuxt 3?",
       "options": [
         {
@@ -136,6 +221,7 @@
       "explanation": "Nuxt 3 is a modern framework built on top of Vue 3, designed for building performant web applications with features like SSR, SSG, and SPA modes."
     },
     {
+      "id": 11,
       "title": "Which rendering mode is NOT supported by Nuxt 3?",
       "options": [
         {
@@ -163,6 +249,7 @@
       "explanation": "Nuxt 3 supports SSR, SSG, SPA, and CSR modes, but Dynamic Site Generation (DSG) is a Gatsby-specific feature not available in Nuxt."
     },
     {
+      "id": 12,
       "title": "What is the correct way to define a page in Nuxt 3?",
       "options": [
         {
@@ -190,6 +277,7 @@
       "explanation": "In Nuxt 3, pages are automatically created by placing Vue files in the /pages/ directory, leveraging file-based routing."
     },
     {
+      "id": 13,
       "title": "Which script setup syntax is correct for Nuxt 3?",
       "options": [
         {
@@ -217,6 +305,7 @@
       "explanation": "The correct syntax is <script setup lang=\"ts\"> for TypeScript or <script setup> for JavaScript, which enables the Composition API setup syntax."
     },
     {
+      "id": 14,
       "title": "What is the purpose of the useState composable in Nuxt 3?",
       "options": [
         {
@@ -244,6 +333,7 @@
       "explanation": "useState is a server-safe reactive state management composable that creates shared state across components and ensures hydration consistency."
     },
     {
+      "id": 15,
       "title": "How do you fetch data in Nuxt 3 using the $fetch utility?",
       "options": [
         {
@@ -271,6 +361,7 @@
       "explanation": "$fetch is a promise-based utility that requires await when used for data fetching, providing automatic request/response parsing."
     },
     {
+      "id": 16,
       "title": "Which directory is used for Nuxt 3 layouts?",
       "options": [
         {
@@ -298,6 +389,7 @@
       "explanation": "Layouts in Nuxt 3 are placed in the /layouts/ directory and provide a template structure that wraps around pages."
     },
     {
+      "id": 17,
       "title": "What is the correct way to define a dynamic route in Nuxt 3?",
       "options": [
         {
@@ -325,6 +417,7 @@
       "explanation": "Dynamic routes in Nuxt 3 are created using square brackets, like [id].vue, which creates a route parameter accessible via useRoute()."
     },
     {
+      "id": 18,
       "title": "Nuxt 3 is built on top of which Vue version?",
       "options": [
         {
@@ -348,6 +441,7 @@
       "explanation": "Nuxt 3 is built on top of Vue 3, taking advantage of its Composition API, better performance, and modern features."
     },
     {
+      "id": 19,
       "title": "What is the purpose of the public/ directory in Nuxt 3?",
       "options": [
         {
@@ -375,6 +469,7 @@
       "explanation": "The public/ directory contains static assets that are served directly at the root URL without processing, like images, fonts, and favicon."
     },
     {
+      "id": 20,
       "title": "Which composable should you use for reactive data that needs to persist across navigation?",
       "options": [
         {
@@ -402,6 +497,7 @@
       "explanation": "useState() is specifically designed for shared state that persists across page navigation and ensures server-client hydration consistency."
     },
     {
+      "id": 21,
       "title": "What is the correct syntax to access route parameters in Nuxt 3?",
       "options": [
         {
@@ -429,6 +525,7 @@
       "explanation": "In Nuxt 3, you use useRoute() composable to access the current route object and its parameters via route.params."
     },
     {
+      "id": 22,
       "title": "How do you define a server API route in Nuxt 3?",
       "options": [
         {
@@ -456,6 +553,7 @@
       "explanation": "Server API routes in Nuxt 3 are created by placing files in the /server/api/ directory, automatically creating endpoints."
     },
     {
+      "id": 23,
       "title": "What is the difference between assets/ and public/ directories?",
       "options": [
         {
@@ -483,6 +581,7 @@
       "explanation": "Files in assets/ are processed by build tools (Vite) and can be optimized, while public/ files are served directly without processing."
     },
     {
+      "id": 24,
       "title": "Which command creates a new Nuxt 3 project?",
       "options": [
         {
@@ -510,6 +609,7 @@
       "explanation": "The correct command to create a new Nuxt 3 project is 'npx nuxi@latest init project-name' using the Nuxi CLI."
     },
     {
+      "id": 25,
       "title": "What is the purpose of the <NuxtPage> component?",
       "options": [
         {
@@ -537,6 +637,7 @@
       "explanation": "<NuxtPage> is used in layouts to display the current page component, acting as a placeholder for routed content."
     },
     {
+      "id": 26,
       "title": "How do you navigate programmatically in Nuxt 3?",
       "options": [
         {
@@ -564,6 +665,7 @@
       "explanation": "Both useRouter().push() and navigateTo() are valid approaches for programmatic navigation in Nuxt 3, with navigateTo() being the Nuxt-specific helper."
     },
     {
+      "id": 27,
       "title": "What is the purpose of useFetch in Nuxt 3?",
       "options": [
         {
@@ -591,6 +693,7 @@
       "explanation": "useFetch provides universal data fetching with automatic SSR support, caching, and hydration handling between server and client."
     },
     {
+      "id": 28,
       "title": "Which file is used for global Nuxt 3 configuration?",
       "options": [
         {
@@ -618,6 +721,7 @@
       "explanation": "Both nuxt.config.ts (build-time configuration) and app.config.ts (runtime configuration) are used for different types of Nuxt 3 configuration."
     },
     {
+      "id": 29,
       "title": "What is the correct way to define a catch-all route in Nuxt 3?",
       "options": [
         {
@@ -645,6 +749,7 @@
       "explanation": "Catch-all routes in Nuxt 3 are created using the [...slug].vue syntax, where 'slug' can be any parameter name."
     },
     {
+      "id": 30,
       "title": "How do you add custom CSS in Nuxt 3?",
       "options": [
         {
@@ -672,6 +777,7 @@
       "explanation": "Custom CSS can be added by placing files in /assets/css/ and configuring them in the css array of nuxt.config.ts."
     },
     {
+      "id": 31,
       "title": "What is the purpose of middleware in Nuxt 3?",
       "options": [
         {
@@ -699,6 +805,7 @@
       "explanation": "Middleware in Nuxt 3 allows you to run custom code before navigation to specific routes, useful for authentication, validation, or redirects."
     },
     {
+      "id": 32,
       "title": "Which composable is used to manage document head in Nuxt 3?",
       "options": [
         {
@@ -726,6 +833,7 @@
       "explanation": "useHead() is the composable used to manage document head elements like title, meta tags, and scripts in Nuxt 3."
     },
     {
+      "id": 33,
       "title": "What is the correct syntax for a named layout in Nuxt 3?",
       "options": [
         {
@@ -753,6 +861,7 @@
       "explanation": "Named layouts are specified using definePageMeta({ layout: 'layoutName' }) at the top level of a page component."
     },
     {
+      "id": 34,
       "title": "How do you handle errors globally in Nuxt 3?",
       "options": [
         {
@@ -780,6 +889,7 @@
       "explanation": "Global error handling in Nuxt 3 is implemented by creating an error.vue file in the project root, which will be used for all unhandled errors."
     },
     {
+      "id": 35,
       "title": "What is the purpose of plugins in Nuxt 3?",
       "options": [
         {
@@ -807,6 +917,7 @@
       "explanation": "Plugins in Nuxt 3 allow you to extend Vue functionality, register global components, add composables, or run code before the app is created."
     },
     {
+      "id": 36,
       "title": "Which directory contains Nuxt 3 plugins?",
       "options": [
         {
@@ -834,6 +945,7 @@
       "explanation": "Plugins in Nuxt 3 are placed in the /plugins/ directory and are automatically registered when the application starts."
     },
     {
+      "id": 37,
       "title": "What does the useLazyFetch composable do?",
       "options": [
         {
@@ -861,6 +973,7 @@
       "explanation": "useLazyFetch fetches data asynchronously without blocking client-side navigation, improving perceived performance by not waiting for data resolution."
     },
     {
+      "id": 38,
       "title": "Is Nuxt 3 fully compatible with Vue 2 components?",
       "options": [
         {
@@ -876,6 +989,7 @@
       "explanation": "Nuxt 3 is built on Vue 3 and is not fully compatible with Vue 2 components due to breaking changes in Vue 3's API and architecture."
     },
     {
+      "id": 39,
       "title": "What is the correct way to define metadata for a page?",
       "options": [
         {
@@ -903,6 +1017,7 @@
       "explanation": "useHead() is the composable used to define metadata for pages in Nuxt 3, allowing you to set title, meta tags, and other head elements."
     },
     {
+      "id": 40,
       "title": "How do you create a custom 404 page in Nuxt 3?",
       "options": [
         {
@@ -930,6 +1045,7 @@
       "explanation": "A custom 404 page is created using a catch-all route [...slug].vue in the /pages/ directory, which handles all unmatched routes."
     },
     {
+      "id": 41,
       "title": "What is the purpose of the <NuxtLink> component?",
       "options": [
         {
@@ -957,6 +1073,7 @@
       "explanation": "<NuxtLink> provides optimized client-side navigation between pages with features like prefetching and intelligent loading strategies."
     },
     {
+      "id": 42,
       "title": "Which is the correct syntax for reactive state in Nuxt 3?",
       "options": [
         {
@@ -984,6 +1101,7 @@
       "explanation": "reactive(), ref(), and useState() are all valid ways to create reactive state in Nuxt 3, each serving different purposes: reactive() for objects, ref() for primitives, and useState() for shared state. computed() returns computed values, not reactive state."
     },
     {
+      "id": 43,
       "title": "What is the difference between server and client rendering in Nuxt 3?",
       "options": [
         {
@@ -1011,6 +1129,7 @@
       "explanation": "Server rendering generates HTML on the server before sending to the browser, while client rendering generates HTML in the browser using JavaScript."
     },
     {
+      "id": 44,
       "title": "How do you access environment variables in Nuxt 3?",
       "options": [
         {
@@ -1031,13 +1150,14 @@
         },
         {
           "id": "5",
-          "text": "All options are correct"
+          "text": "Store values in localStorage and read them at runtime"
         }
       ],
       "correctId": "2",
       "explanation": "useRuntimeConfig() is the recommended way to access environment variables in Nuxt 3, providing reactive access to runtime configuration."
     },
     {
+      "id": 45,
       "title": "What is the purpose of the <ClientOnly> component?",
       "options": [
         {
@@ -1065,6 +1185,7 @@
       "explanation": "<ClientOnly> wraps components that should only be rendered on the client side, useful for components that depend on browser APIs or cause hydration issues."
     },
     {
+      "id": 46,
       "title": "How do you configure TypeScript in Nuxt 3?",
       "options": [
         {
@@ -1092,6 +1213,7 @@
       "explanation": "Nuxt 3 has built-in TypeScript support out of the box, requiring no additional configuration for basic TypeScript usage."
     },
     {
+      "id": 47,
       "title": "What is the correct way to handle loading states with useFetch?",
       "options": [
         {
@@ -1119,6 +1241,7 @@
       "explanation": "useFetch returns a 'pending' reactive property that indicates whether the request is still in progress, useful for showing loading states."
     },
     {
+      "id": 48,
       "title": "Which CSS framework is officially supported by Nuxt 3?",
       "options": [
         {
@@ -1146,6 +1269,7 @@
       "explanation": "Nuxt 3 doesn't officially endorse a specific CSS framework but provides easy integration methods for popular frameworks like Tailwind, Bootstrap, and others."
     },
     {
+      "id": 49,
       "title": "How do you define a server API route that accepts POST requests?",
       "options": [
         {
@@ -1173,6 +1297,7 @@
       "explanation": "POST requests can be handled by checking the method inside defineEventHandler or by using the HTTP method naming convention like users.post.ts."
     },
     {
+      "id": 50,
       "title": "What is the purpose of the refreshCookie() function?",
       "options": [
         {
@@ -1200,6 +1325,7 @@
       "explanation": "refreshCookie() is used to refresh cookie values from the server, ensuring the client has the latest cookie data."
     },
     {
+      "id": 51,
       "title": "Does Nuxt 3 support automatic code splitting?",
       "options": [
         {
@@ -1215,6 +1341,7 @@
       "explanation": "Nuxt 3 automatically implements code splitting, creating separate chunks for different routes and components to optimize loading performance."
     },
     {
+      "id": 52,
       "title": "What is the correct way to add global styles in nuxt.config.ts?",
       "options": [
         {
@@ -1242,6 +1369,7 @@
       "explanation": "Global styles are added using the 'css' array in nuxt.config.ts, which will include the styles in every page of the application."
     },
     {
+      "id": 53,
       "title": "How do you create an auto imported composable in Nuxt 3?",
       "options": [
         {
@@ -1269,6 +1397,7 @@
       "explanation": "Composables in Nuxt 3 are created by placing files in the /composables/ directory, typically with names starting with 'use', and they're auto-imported."
     },
     {
+      "id": 54,
       "title": "What is the purpose of the useNuxtApp() composable?",
       "options": [
         {
@@ -1296,6 +1425,7 @@
       "explanation": "useNuxtApp() provides access to the Nuxt application instance, allowing you to access plugins, hooks, and other app-level functionality."
     },
     {
+      "id": 55,
       "title": "Which is the correct way to handle form data in a server API route?",
       "options": [
         {
@@ -1323,6 +1453,7 @@
       "explanation": "readBody(event) is the correct Nuxt 3 utility to read and parse the request body in server API routes."
     },
     {
+      "id": 56,
       "title": "What is the difference between app.vue and default layout?",
       "options": [
         {
@@ -1350,6 +1481,7 @@
       "explanation": "app.vue is the root component that wraps the entire application, while layouts wrap individual pages and are more specific."
     },
     {
+      "id": 57,
       "title": "How do you implement authentication middleware in Nuxt 3?",
       "options": [
         {
@@ -1377,6 +1509,7 @@
       "explanation": "Authentication middleware is implemented by creating files in the /middleware/ directory that run before route navigation."
     },
     {
+      "id": 58,
       "title": "What is the correct syntax for conditional rendering in Nuxt 3 templates?",
       "options": [
         {
@@ -1404,6 +1537,7 @@
       "explanation": "Nuxt 3 uses Vue 3 template syntax, so conditional rendering is done with v-if, v-else-if, and v-else directives."
     },
     {
+      "id": 59,
       "title": "How do you define route middleware that runs on every route?",
       "options": [
         {
@@ -1431,6 +1565,7 @@
       "explanation": "Global middleware in Nuxt 3 is created by adding the .global suffix to the middleware filename, making it run on every route."
     },
     {
+      "id": 60,
       "title": "What is the purpose of the useRequestHeaders() composable?",
       "options": [
         {
@@ -1458,6 +1593,7 @@
       "explanation": "useRequestHeaders() allows you to access HTTP request headers in both server and client contexts during SSR."
     },
     {
+      "id": 61,
       "title": "Can you use Pinia for state management in Nuxt 3?",
       "options": [
         {
@@ -1473,6 +1609,7 @@
       "explanation": "Pinia is fully supported in Nuxt 3 and is the recommended state management solution, offering better TypeScript support than Vuex."
     },
     {
+      "id": 62,
       "title": "What is the correct way to handle query parameters in Nuxt 3?",
       "options": [
         {
@@ -1500,6 +1637,7 @@
       "explanation": "Query parameters are accessed through the useRoute() composable's query property, which is reactive and updates when the URL changes."
     },
     {
+      "id": 63,
       "title": "How do you optimize images in Nuxt 3?",
       "options": [
         {
@@ -1527,6 +1665,7 @@
       "explanation": "Image optimization in Nuxt 3 is achieved by installing the @nuxt/image module and using the <NuxtImg> component, which provides automatic optimization features."
     },
     {
+      "id": 64,
       "title": "What is the purpose of the useAsyncData composable?",
       "options": [
         {
@@ -1554,6 +1693,7 @@
       "explanation": "useAsyncData allows you to fetch data with a custom key and handler function, providing more control over data fetching than useFetch."
     },
     {
+      "id": 65,
       "title": "How do you create a dynamic import in Nuxt 3?",
       "options": [
         {
@@ -1581,6 +1721,7 @@
       "explanation": "Dynamic imports in Nuxt 3 use Vue 3's defineAsyncComponent with the import() function to create lazily loaded components."
     },
     {
+      "id": 66,
       "title": "What is the purpose of the <Teleport> component in Nuxt 3?",
       "options": [
         {
@@ -1608,6 +1749,7 @@
       "explanation": "<Teleport> is a Vue 3 feature that allows you to render component content in a different part of the DOM tree, useful for modals and overlays."
     },
     {
+      "id": 67,
       "title": "How do you configure SASS/SCSS in Nuxt 3?",
       "options": [
         {
@@ -1635,6 +1777,7 @@
       "explanation": "SASS/SCSS support in Nuxt 3 is achieved by installing the 'sass' package and using lang=\"scss\" in style blocks."
     },
     {
+      "id": 68,
       "title": "What is the correct way to handle redirects in Nuxt 3?",
       "options": [
         {
@@ -1655,13 +1798,14 @@
         },
         {
           "id": "5",
-          "text": "All options are correct"
+          "text": "Call window.location.replace('/new-path') inside setup() for SSR-safe redirects"
         }
       ],
       "correctId": "1",
       "explanation": "navigateTo() is the recommended way to handle redirects in Nuxt 3, supporting both client and server-side redirects."
     },
     {
+      "id": 69,
       "title": "Does Nuxt 3 provide built-in PWA support?",
       "options": [
         {
@@ -1677,6 +1821,7 @@
       "explanation": "Nuxt 3 doesn't have built-in PWA support, but you can use the @vite-pwa/nuxt module or @nuxtjs/pwa for PWA functionality."
     },
     {
+      "id": 70,
       "title": "What is the purpose of the refresh() method in useFetch?",
       "options": [
         {
@@ -1704,6 +1849,7 @@
       "explanation": "The refresh() method from useFetch allows you to manually trigger a refetch of the data, useful for updating content based on user actions."
     },
     {
+      "id": 71,
       "title": "How do you handle loading states with useAsyncData?",
       "options": [
         {
@@ -1731,33 +1877,31 @@
       "explanation": "useAsyncData returns a 'pending' reactive property that indicates whether the async operation is still in progress."
     },
     {
+      "id": 72,
       "title": "What is the correct way to add external scripts in Nuxt 3?",
       "options": [
         {
           "id": "1",
-          "text": "useHead({ script: [{ src: 'https://example.com/script.js' }] })"
+          "text": "Drop raw <script> tags directly inside components"
         },
         {
           "id": "2",
-          "text": "Add to head.script in nuxt.config.ts"
+          "text": "Serve the script from server middleware for every request"
         },
         {
           "id": "3",
-          "text": "Use <script> tag in template"
+          "text": "Place the file in /assets so Vite injects it automatically"
         },
         {
           "id": "4",
-          "text": "All options are correct"
-        },
-        {
-          "id": "5",
-          "text": "Adding scripts via useHead() or nuxt.config.ts head.script are both valid approaches"
+          "text": "Use useHead() for per-page scripts or nuxt.config.ts head.script for global scripts"
         }
       ],
-      "correctId": "5",
-      "explanation": "External scripts can be added using useHead() composable or by configuring them in nuxt.config.ts head.script array for global scripts."
+      "correctId": "4",
+      "explanation": "Use useHead() when you need a script on a specific view and nuxt.config.ts head.script when you want it included globally."
     },
     {
+      "id": 73,
       "title": "What is the purpose of the clearError() function?",
       "options": [
         {
@@ -1785,6 +1929,7 @@
       "explanation": "clearError() is used to programmatically clear the current error state and return the application to normal operation from an error page."
     },
     {
+      "id": 74,
       "title": "How do you create a custom error page for specific HTTP status codes?",
       "options": [
         {
@@ -1812,6 +1957,7 @@
       "explanation": "Custom error pages for specific HTTP status codes are handled within the error.vue file by checking the error.statusCode and displaying different content accordingly."
     },
     {
+      "id": 75,
       "title": "What is the correct way to define a layout with props in Nuxt 3?",
       "options": [
         {
@@ -1839,6 +1985,7 @@
       "explanation": "Layouts in Nuxt 3 cannot directly receive props from pages. Data sharing should be done through composables, provide/inject, or global state management."
     },
     {
+      "id": 76,
       "title": "How do you configure auto-imports in Nuxt 3?",
       "options": [
         {
@@ -1855,17 +2002,18 @@
         },
         {
           "id": "4",
-          "text": "All of the above"
+          "text": "Add imports to plugin meta"
         },
         {
           "id": "5",
           "text": "Auto-imports are not supported"
         }
       ],
-      "correctId": "4",
-      "explanation": "Auto-imports in Nuxt 3 are enabled by default, can be configured in nuxt.config.ts, and work automatically for files in specific directories like /composables/."
+      "correctId": "2",
+      "explanation": "You configure auto-import behavior under the imports section of nuxt.config.ts, where you can enable, disable, or add directories."
     },
     {
+      "id": 77,
       "title": "What is the purpose of the <NuxtLayout> component?",
       "options": [
         {
@@ -1893,6 +2041,7 @@
       "explanation": "<NuxtLayout> is used in app.vue to wrap page content with the appropriate layout, providing the structure for page rendering."
     },
     {
+      "id": 78,
       "title": "How do you handle form submissions in Nuxt 3?",
       "options": [
         {
@@ -1909,7 +2058,7 @@
         },
         {
           "id": "4",
-          "text": "All options are valid approaches"
+          "text": "Combine event handlers, server API routes, or useFetch based on the flow you need"
         },
         {
           "id": "5",
@@ -1920,6 +2069,7 @@
       "explanation": "Form submissions in Nuxt 3 can be handled using traditional form events, server API routes, or data fetching composables depending on the use case."
     },
     {
+      "id": 79,
       "title": "What is the correct way to implement SEO meta tags dynamically?",
       "options": [
         {
@@ -1947,6 +2097,7 @@
       "explanation": "Dynamic SEO meta tags can be implemented using useHead() with reactive values or useSeoMeta() which is specifically designed for SEO-related metadata."
     },
     {
+      "id": 80,
       "title": "What is the purpose of the <Suspense> component in Nuxt 3?",
       "options": [
         {
@@ -1974,6 +2125,7 @@
       "explanation": "<Suspense> is a Vue 3 feature that allows you to handle async components with fallback content while they're loading, improving user experience during async operations."
     },
     {
+      "id": 81,
       "title": "How do you create a nested route in Nuxt 3?",
       "options": [
         {
@@ -2001,6 +2153,7 @@
       "explanation": "Nested routes in Nuxt 3 are created by making a folder with the same name as the parent route file, and the folder contains the child route files."
     },
     {
+      "id": 82,
       "title": "How do you implement internationalization (i18n) in Nuxt 3?",
       "options": [
         {
@@ -2017,17 +2170,18 @@
         },
         {
           "id": "4",
-          "text": "All options are possible"
+          "text": "Rely on browser auto-translation"
         },
         {
           "id": "5",
           "text": "i18n is not supported in Nuxt 3"
         }
       ],
-      "correctId": "4",
-      "explanation": "Internationalization can be implemented using @nuxtjs/i18n module (recommended), Vue i18n directly, or custom translation solutions."
+      "correctId": "1",
+      "explanation": "The recommended approach is to install the @nuxtjs/i18n module, which integrates Vue I18n with Nuxt 3 and handles routing, translations, and locale management."
     },
     {
+      "id": 83,
       "title": "What is the correct way to handle environment-specific configuration?",
       "options": [
         {
@@ -2055,6 +2209,7 @@
       "explanation": "Environment-specific configuration can be handled using process.env variables in nuxt.config.ts or by creating .env files and accessing them through runtimeConfig."
     },
     {
+      "id": 84,
       "title": "Which of the following is NOT a valid Nuxt 3 composable?",
       "options": [
         {
@@ -2082,6 +2237,7 @@
       "explanation": "useStore() is not a built-in Nuxt 3 composable. Nuxt 3 doesn't include Vuex by default, and state management is typically handled with Pinia or custom composables."
     },
     {
+      "id": 85,
       "title": "How do you implement route validation in Nuxt 3?",
       "options": [
         {
@@ -2109,6 +2265,7 @@
       "explanation": "Route validation in Nuxt 3 is implemented using definePageMeta with a validate function that receives the route object and returns a boolean."
     },
     {
+      "id": 86,
       "title": "What is the purpose of the useLazyAsyncData composable?",
       "options": [
         {
@@ -2136,6 +2293,7 @@
       "explanation": "useLazyAsyncData allows data fetching without blocking client-side navigation, similar to useLazyFetch but with more control over the async operation."
     },
     {
+      "id": 87,
       "title": "Can Nuxt 3 generate static sites (SSG)?",
       "options": [
         {
@@ -2151,33 +2309,31 @@
       "explanation": "Nuxt 3 fully supports Static Site Generation (SSG) through the 'nuxt generate' command, creating pre-rendered HTML files for all routes."
     },
     {
-      "title": "What is the correct way to add a favicon in Nuxt 3?",
+      "id": 88,
+      "title": "What is the recommended way to configure a custom favicon for the entire Nuxt 3 site?",
       "options": [
         {
           "id": "1",
-          "text": "Place favicon.ico in the public/ directory"
+          "text": "Add a <link rel='icon'> entry under head.link in nuxt.config.ts pointing to a file in /public"
         },
         {
           "id": "2",
-          "text": "Configure it in nuxt.config.ts head.link"
+          "text": "Call useHead() in every page component to register the favicon"
         },
         {
           "id": "3",
-          "text": "Use useHead() to set favicon link"
+          "text": "Store the favicon under assets/ so Vite hashes and injects it automatically"
         },
         {
           "id": "4",
-          "text": "All options are correct"
-        },
-        {
-          "id": "5",
-          "text": "Placing the file in public/ or declaring it through nuxt.config.ts head.link both work"
+          "text": "Serve the favicon from a server API route on each request"
         }
       ],
-      "correctId": "5",
-      "explanation": "Favicons can be added by placing them in the public/ directory (automatically served) or by configuring them in nuxt.config.ts head.link array for global setup."
+      "correctId": "1",
+      "explanation": "Defining the favicon link globally in nuxt.config.ts head.link while referencing a file in /public applies it consistently across the app."
     },
     {
+      "id": 89,
       "title": "How do you implement custom error handling for specific routes?",
       "options": [
         {
@@ -2194,17 +2350,18 @@
         },
         {
           "id": "4",
-          "text": "All options are valid approaches"
+          "text": "Layer middleware guards with createError() and component-level try-catch blocks"
         },
         {
           "id": "5",
-          "text": "Use window.onerror for global error handling"
+          "text": "Rely on window.onerror for global error handling"
         }
       ],
       "correctId": "4",
-      "explanation": "Custom error handling can be implemented using try-catch blocks, throwing createError() to trigger the error page, or using route-specific middleware."
+      "explanation": "Effective per-route error handling usually layers middleware guards, createError() for surfaced failures, and component try-catch blocks for graceful fallbacks."
     },
     {
+      "id": 90,
       "title": "What is the purpose of the useRequestURL() composable?",
       "options": [
         {
@@ -2232,6 +2389,7 @@
       "explanation": "useRequestURL() provides access to the current request URL object, useful for accessing the full URL including origin, pathname, and search parameters."
     },
     {
+      "id": 91,
       "title": "How do you implement code splitting for specific components?",
       "options": [
         {
@@ -2259,6 +2417,7 @@
       "explanation": "Code splitting for components can be achieved using defineAsyncComponent with dynamic imports or by prefixing component names with 'Lazy' in Nuxt 3."
     },
     {
+      "id": 92,
       "title": "What is the correct syntax for defining a server middleware in Nuxt 3?",
       "options": [
         {
@@ -2286,6 +2445,7 @@
       "explanation": "Server middleware in Nuxt 3 is created by placing files in the /server/middleware/ directory, which will run on every server request."
     },
     {
+      "id": 93,
       "title": "How do you implement route transitions in Nuxt 3?",
       "options": [
         {
@@ -2302,17 +2462,18 @@
         },
         {
           "id": "4",
-          "text": "All options can be used"
+          "text": "Use page-specific defineNuxtComponent options"
         },
         {
           "id": "5",
           "text": "Route transitions are not supported"
         }
       ],
-      "correctId": "4",
-      "explanation": "Route transitions can be implemented using definePageMeta, global configuration in nuxt.config.ts, or custom CSS classes for transition effects."
+      "correctId": "1",
+      "explanation": "A direct way to enable a transition is to call definePageMeta within the page component and set transition properties such as name or mode."
     },
     {
+      "id": 94,
       "title": "What is the purpose of the key property in useFetch?",
       "options": [
         {
@@ -2340,6 +2501,7 @@
       "explanation": "The key property in useFetch provides a unique identifier for caching the request, preventing duplicate requests and managing cache invalidation."
     },
     {
+      "id": 95,
       "title": "How do you implement custom directory imports in Nuxt 3?",
       "options": [
         {
@@ -2367,6 +2529,7 @@
       "explanation": "Custom directory imports are configured using the imports.dirs array in nuxt.config.ts, allowing auto-imports from specified directories."
     },
     {
+      "id": 96,
       "title": "What is the difference between useFetch and $fetch in error handling?",
       "options": [
         {
@@ -2394,6 +2557,7 @@
       "explanation": "useFetch returns reactive error refs for declarative error handling, while $fetch requires manual try-catch blocks for error handling."
     },
     {
+      "id": 97,
       "title": "How do you implement content security policy (CSP) in Nuxt 3?",
       "options": [
         {
@@ -2410,17 +2574,18 @@
         },
         {
           "id": "4",
-          "text": "All options are valid approaches"
+          "text": "Apply policies through meta tags only"
         },
         {
           "id": "5",
           "text": "CSP must be configured in the web server only"
         }
       ],
-      "correctId": "4",
-      "explanation": "Content Security Policy can be implemented through security headers in nuxt.config.ts, using security modules, or setting headers in server middleware."
+      "correctId": "2",
+      "explanation": "The @nuxtjs/security module centralizes CSP configuration, letting you define strict policies that Nuxt applies to every response."
     },
     {
+      "id": 98,
       "title": "What is the purpose of the transform option in useFetch?",
       "options": [
         {
@@ -2448,6 +2613,7 @@
       "explanation": "The transform option in useFetch allows you to process and transform the response data before it's returned, useful for data normalization or extraction."
     },
     {
+      "id": 99,
       "title": "How do you implement custom page loading indicators in Nuxt 3?",
       "options": [
         {
@@ -2468,13 +2634,14 @@
         },
         {
           "id": "5",
-          "text": "All options are valid approaches"
+          "text": "Page loading indicators are not supported"
         }
       ],
-      "correctId": "5",
-      "explanation": "Custom loading indicators can be implemented using configuration, the built-in NuxtLoadingIndicator component, custom middleware, or pending states from composables."
+      "correctId": "2",
+      "explanation": "The <NuxtLoadingIndicator> component is built specifically for customizing global route loading feedback in Nuxt 3."
     },
     {
+      "id": 100,
       "title": "What is the purpose of the watch option in useFetch?",
       "options": [
         {
@@ -2502,6 +2669,7 @@
       "explanation": "The watch option in useFetch allows you to specify reactive dependencies that will trigger an automatic refetch when their values change."
     },
     {
+      "id": 101,
       "title": "How do you implement custom 500 error handling in Nuxt 3?",
       "options": [
         {
@@ -2518,7 +2686,7 @@
         },
         {
           "id": "4",
-          "text": "All options are correct"
+          "text": "Combine try-catch, createError(), and error.vue logic for a tailored 500 response"
         },
         {
           "id": "5",
@@ -2529,6 +2697,7 @@
       "explanation": "Custom 500 error handling can be implemented using createError(), try-catch blocks in server routes, and custom handling in error.vue based on statusCode."
     },
     {
+      "id": 102,
       "title": "What is the correct way to implement role-based authentication middleware?",
       "options": [
         {
@@ -2556,6 +2725,7 @@
       "explanation": "Role-based authentication middleware is implemented using defineNuxtRouteMiddleware with role checking logic that can throw appropriate errors for unauthorized access."
     },
     {
+      "id": 103,
       "title": "How do you implement lazy loading for images in Nuxt 3?",
       "options": [
         {
@@ -2572,17 +2742,18 @@
         },
         {
           "id": "4",
-          "text": "All options are valid"
+          "text": "Wrap images in suspense boundaries"
         },
         {
           "id": "5",
           "text": "Images must be preloaded using link tags"
         }
       ],
-      "correctId": "4",
-      "explanation": "Lazy loading for images can be implemented using NuxtImg component, native HTML loading attribute, or custom Intersection Observer implementation."
+      "correctId": "1",
+      "explanation": "Nuxt 3 apps typically rely on the <NuxtImg> component which provides built-in lazy loading and automatic optimization."
     },
     {
+      "id": 104,
       "title": "What is the purpose of the server option in useFetch?",
       "options": [
         {
@@ -2610,6 +2781,7 @@
       "explanation": "The server option in useFetch controls whether the request should be executed on the server during server-side rendering or only on the client."
     },
     {
+      "id": 105,
       "title": "How do you implement breadcrumbs in Nuxt 3?",
       "options": [
         {
@@ -2637,6 +2809,7 @@
       "explanation": "Breadcrumbs can be implemented using route.matched array, defining them in page metadata, or creating custom composables to generate breadcrumb trails."
     },
     {
+      "id": 106,
       "title": "What is the difference between app.config.ts and nuxt.config.ts?",
       "options": [
         {
@@ -2664,6 +2837,7 @@
       "explanation": "app.config.ts contains runtime configuration that can be updated without rebuilding, while nuxt.config.ts contains build-time configuration that requires a rebuild to change."
     },
     {
+      "id": 107,
       "title": "How do you implement dark mode toggle in Nuxt 3?",
       "options": [
         {
@@ -2680,17 +2854,18 @@
         },
         {
           "id": "4",
-          "text": "All approaches are valid"
+          "text": "Define alternative color palettes in tailwind.config"
         },
         {
           "id": "5",
           "text": "Dark mode requires a separate CSS framework"
         }
       ],
-      "correctId": "4",
-      "explanation": "Dark mode can be implemented using the @nuxtjs/color-mode module, custom state management with useState, or CSS variables with localStorage persistence."
+      "correctId": "1",
+      "explanation": "The @nuxtjs/color-mode module provides first-class dark mode support with automatic class toggling and preference persistence."
     },
     {
+      "id": 108,
       "title": "What is the correct way to handle file uploads in Nuxt 3?",
       "options": [
         {
@@ -2707,17 +2882,18 @@
         },
         {
           "id": "4",
-          "text": "All options are valid approaches"
+          "text": "Send files via query parameters"
         },
         {
           "id": "5",
           "text": "File uploads require external cloud services only"
         }
       ],
-      "correctId": "4",
-      "explanation": "File uploads can be handled using FormData on the client, processing multipart data in server routes, or using specialized libraries for file handling."
+      "correctId": "2",
+      "explanation": "Handling uploads securely involves parsing multipart/form-data in a server route so the backend can validate and store the file."
     },
     {
+      "id": 109,
       "title": "How do you implement infinite scrolling in Nuxt 3?",
       "options": [
         {
@@ -2734,17 +2910,18 @@
         },
         {
           "id": "4",
-          "text": "All approaches can work"
+          "text": "Rely on server middleware to push items"
         },
         {
           "id": "5",
           "text": "Infinite scrolling requires external libraries"
         }
       ],
-      "correctId": "4",
-      "explanation": "Infinite scrolling can be implemented using Intersection Observer, scroll events, or pagination techniques combined with Nuxt's data fetching composables."
+      "correctId": "1",
+      "explanation": "A practical Nuxt pattern is to watch an Intersection Observer target and call useFetch().refresh() when it becomes visible, loading the next page."
     },
     {
+      "id": 110,
       "title": "What is the purpose of the immediate option in useFetch?",
       "options": [
         {
@@ -2772,6 +2949,7 @@
       "explanation": "The immediate option in useFetch controls whether the request should be executed immediately when the composable is called or wait for manual triggering."
     },
     {
+      "id": 111,
       "title": "How do you implement search functionality with debouncing in Nuxt 3?",
       "options": [
         {
@@ -2788,17 +2966,18 @@
         },
         {
           "id": "4",
-          "text": "All approaches are valid"
+          "text": "Trigger synchronous server middleware calls"
         },
         {
           "id": "5",
           "text": "Search requires immediate execution without delay"
         }
       ],
-      "correctId": "4",
-      "explanation": "Search with debouncing can be implemented using debounce utilities, useLazyFetch with watched inputs, or custom composables that handle delayed execution."
+      "correctId": "3",
+      "explanation": "Wrapping the debounce logic in a composable keeps your components lean while delaying execution of the linked useFetch refresh until the user stops typing."
     },
     {
+      "id": 112,
       "title": "What is the correct way to implement WebSocket connections in Nuxt 3?",
       "options": [
         {
@@ -2815,17 +2994,18 @@
         },
         {
           "id": "4",
-          "text": "All approaches are valid"
+          "text": "Proxy traffic through server middleware only"
         },
         {
           "id": "5",
           "text": "WebSockets require a separate server framework"
         }
       ],
-      "correctId": "4",
-      "explanation": "WebSocket connections can be implemented using native WebSocket API, through plugins for lifecycle management, or with libraries like socket.io integrated via Nuxt plugins."
+      "correctId": "2",
+      "explanation": "Registering WebSocket logic inside a Nuxt plugin lets you share a single connection instance and hook into app lifecycle events cleanly."
     },
     {
+      "id": 113,
       "title": "How do you implement progressive web app (PWA) caching strategies?",
       "options": [
         {
@@ -2842,17 +3022,18 @@
         },
         {
           "id": "4",
-          "text": "All options are valid"
+          "text": "Rely on HTTP cache headers only"
         },
         {
           "id": "5",
           "text": "PWA caching must be implemented manually without tools"
         }
       ],
-      "correctId": "4",
-      "explanation": "PWA caching strategies can be implemented through service worker configuration, PWA modules with built-in options, or custom cache strategies based on application needs."
+      "correctId": "2",
+      "explanation": "Using @vite-pwa/nuxt supplies opinionated caching defaults and lets you tune strategies for assets and API routes from a single configuration file."
     },
     {
+      "id": 114,
       "title": "What is the purpose of the dedupe option in useFetch?",
       "options": [
         {
@@ -2880,6 +3061,7 @@
       "explanation": "The dedupe option in useFetch prevents multiple requests with the same key from being executed simultaneously, reducing unnecessary network calls."
     },
     {
+      "id": 115,
       "title": "How do you implement component-level error boundaries in Nuxt 3?",
       "options": [
         {
@@ -2907,6 +3089,7 @@
       "explanation": "Component-level error boundaries can be implemented using onErrorCaptured hooks, Suspense components with error handling, or custom wrapper components."
     },
     {
+      "id": 116,
       "title": "What is the correct way to implement real-time updates in Nuxt 3?",
       "options": [
         {
@@ -2934,6 +3117,7 @@
       "explanation": "Real-time updates can be implemented using Server-Sent Events, WebSockets, or polling strategies with Nuxt's data fetching composables."
     },
     {
+      "id": 117,
       "title": "How do you implement custom validators for form fields in Nuxt 3?",
       "options": [
         {
@@ -2961,6 +3145,7 @@
       "explanation": "Form validation can be implemented using custom composables, validation libraries like Vuelidate/VeeValidate, or custom reactive validation logic."
     },
     {
+      "id": 118,
       "title": "What is the purpose of the getCachedData option in useFetch?",
       "options": [
         {
@@ -2988,6 +3173,7 @@
       "explanation": "The getCachedData option in useFetch allows you to provide custom logic for retrieving cached data, giving you control over cache behavior."
     },
     {
+      "id": 119,
       "title": "How do you implement API rate limiting in Nuxt 3 server routes?",
       "options": [
         {
@@ -3015,6 +3201,7 @@
       "explanation": "API rate limiting can be implemented using server middleware, storage solutions like Redis, or adapting existing rate limiting libraries for h3 server framework."
     },
     {
+      "id": 120,
       "title": "Given the following code, what will happen when the component mounts? const count = ref(0); onMounted(() => { count.value = 10; });",
       "options": [
         {
@@ -3042,6 +3229,7 @@
       "explanation": "onMounted only runs on the client side, so count will be updated to 10 only after the component is mounted in the browser."
     },
     {
+      "id": 121,
       "title": "What's wrong with this middleware code? export default defineNuxtRouteMiddleware((to, from) => { if (!user.value) { return navigateTo('/login'); } });",
       "options": [
         {
@@ -3069,6 +3257,7 @@
       "explanation": "The 'user' reactive reference is not defined in the middleware scope. You need to import or define the user state properly."
     },
     {
+      "id": 122,
       "title": "Given this server API route, what will be the response? export default defineEventHandler(async (event) => { return { message: 'Hello', data: await $fetch('/api/external') }; });",
       "options": [
         {
@@ -3096,6 +3285,7 @@
       "explanation": "$fetch is available in server routes and can be used to make HTTP requests to external APIs or internal routes."
     },
     {
+      "id": 123,
       "title": "What will this composable return on first render? const useCounter = () => { const count = useState('counter', () => 0); const increment = () => count.value++; return { count, increment }; };",
       "options": [
         {
@@ -3123,6 +3313,7 @@
       "explanation": "useState initializes with the provided factory function result (0) on first render and maintains this state across navigation."
     },
     {
+      "id": 124,
       "title": "What's the issue with this useFetch call? const { data } = await useFetch('/api/users', { query: { page: page.value } });",
       "options": [
         {
@@ -3150,6 +3341,7 @@
       "explanation": "Using page.value directly makes the query static. Use a computed or function to make it reactive: query: computed(() => ({ page: page.value }))."
     },
     {
+      "id": 125,
       "title": "Given this plugin code, when will it execute? export default defineNuxtPlugin(() => { console.log('Plugin loaded'); return { provide: { myFunction: () => 'hello' } }; });",
       "options": [
         {
@@ -3177,6 +3369,7 @@
       "explanation": "By default, Nuxt plugins run on both server and client unless explicitly configured otherwise with .client or .server suffixes."
     },
     {
+      "id": 126,
       "title": "What will happen with this watch statement? const search = ref(''); watch(search, (newVal) => { console.log('Search:', newVal); }, { immediate: true });",
       "options": [
         {
@@ -3204,6 +3397,7 @@
       "explanation": "With immediate: true, the watch callback executes immediately with the current value of search, which is an empty string ''."
     },
     {
+      "id": 127,
       "title": "What's wrong with this layout code? <template><div><slot /></div></template><script setup>const route = useRoute(); useHead({ title: route.params.title });</script>",
       "options": [
         {
@@ -3231,6 +3425,7 @@
       "explanation": "useHead() needs reactive values for dynamic updates. Use computed(() => route.params.title) or a function to make the title reactive."
     },
     {
+      "id": 128,
       "title": "Given this server middleware, what will it do? export default defineEventHandler(async (event) => { if (event.node.req.url?.startsWith('/api/')) { setHeader(event, 'X-API-Version', '1.0'); } });",
       "options": [
         {
@@ -3258,6 +3453,7 @@
       "explanation": "This middleware checks if the request URL starts with '/api/' and only adds the X-API-Version header to those requests."
     },
     {
+      "id": 129,
       "title": "What will this computed property return? const user = ref({ name: 'John', age: 25 }); const userInfo = computed(() => `${user.value.name} is ${user.value.age} years old`);",
       "options": [
         {
@@ -3283,6 +3479,4002 @@
       ],
       "correctId": "1",
       "explanation": "The computed property will reactively return the formatted string 'John is 25 years old' based on the user ref values."
+    },
+    {
+      "id": 130,
+      "title": "Which route middleware filename makes it run only on client-side navigations?",
+      "options": [
+        {
+          "id": "1",
+          "text": "auth.global.ts"
+        },
+        {
+          "id": "2",
+          "text": "auth.client.ts"
+        },
+        {
+          "id": "3",
+          "text": "auth.middleware.ts"
+        },
+        {
+          "id": "4",
+          "text": "auth.server.ts"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Adding the .client suffix limits middleware execution to client-side navigations."
+    },
+    {
+      "id": 131,
+      "title": "What is the effect of setting ssr: false in nuxt.config.ts?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Nuxt will disable server-side rendering and run as a pure SPA."
+        },
+        {
+          "id": "2",
+          "text": "Nuxt will pre-render every route at build time."
+        },
+        {
+          "id": "3",
+          "text": "Nuxt will only rebuild pages in development."
+        },
+        {
+          "id": "4",
+          "text": "Nuxt will enable hybrid rendering with islands."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting ssr to false switches the app into single-page application mode with client-only rendering."
+    },
+    {
+      "id": 132,
+      "title": "How do you declare an emit named 'submit' inside <script setup>?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const emit = defineEmits(['submit'])"
+        },
+        {
+          "id": "2",
+          "text": "const emit = defineEmits('submit')"
+        },
+        {
+          "id": "3",
+          "text": "defineEmits = ['submit']"
+        },
+        {
+          "id": "4",
+          "text": "export const emits = ['submit']"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "defineEmits accepts an array of event names, so defineEmits(['submit']) correctly declares the emit."
+    },
+    {
+      "id": 133,
+      "title": "Where should you place a composable so it is auto-imported as useCart()?",
+      "options": [
+        {
+          "id": "1",
+          "text": "composables/useCart.ts"
+        },
+        {
+          "id": "2",
+          "text": "plugins/useCart.ts"
+        },
+        {
+          "id": "3",
+          "text": "utils/useCart.ts"
+        },
+        {
+          "id": "4",
+          "text": "store/useCart.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt auto-imports files in the composables directory, so composables/useCart.ts becomes available as useCart()."
+    },
+    {
+      "id": 134,
+      "title": "What does definePageMeta({ middleware: 'auth' }) inside a page component do?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It runs middleware/auth.ts before entering that page."
+        },
+        {
+          "id": "2",
+          "text": "It globally registers the auth middleware."
+        },
+        {
+          "id": "3",
+          "text": "It enables server-side rendering for the page."
+        },
+        {
+          "id": "4",
+          "text": "It disables client-side rendering for the page."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "definePageMeta with a middleware key ensures the named middleware runs before the page is rendered."
+    },
+    {
+      "id": 135,
+      "title": "True or false: You can use top-level await with useAsyncData inside <script setup>.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "<script setup> supports top-level await, allowing direct awaits on useAsyncData or useFetch calls."
+    },
+    {
+      "id": 136,
+      "title": "Which runtimeConfig section makes values available on both server and client?",
+      "options": [
+        {
+          "id": "1",
+          "text": "runtimeConfig.public"
+        },
+        {
+          "id": "2",
+          "text": "runtimeConfig.private"
+        },
+        {
+          "id": "3",
+          "text": "runtimeConfig.secret"
+        },
+        {
+          "id": "4",
+          "text": "runtimeConfig.shared"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Properties placed under runtimeConfig.public are exposed to the client while remaining reactive during runtime."
+    },
+    {
+      "id": 137,
+      "title": "Where should you store custom font files so Vite processes and hashes them?",
+      "options": [
+        {
+          "id": "1",
+          "text": "assets/fonts/"
+        },
+        {
+          "id": "2",
+          "text": "public/fonts/"
+        },
+        {
+          "id": "3",
+          "text": "server/fonts/"
+        },
+        {
+          "id": "4",
+          "text": "pages/fonts/"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Files in assets/ are processed by Vite, which fingerprints and optimizes bundled assets like fonts."
+    },
+    {
+      "id": 138,
+      "title": "Given the file server/api/admin/users.post.ts, which endpoint does it expose?",
+      "options": [
+        {
+          "id": "1",
+          "text": "/admin/users"
+        },
+        {
+          "id": "2",
+          "text": "/server/api/admin/users"
+        },
+        {
+          "id": "3",
+          "text": "/api/admin/users"
+        },
+        {
+          "id": "4",
+          "text": "/admin/users/post"
+        },
+        {
+          "id": "5",
+          "text": "/api/admin/users.post"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "Nitro maps files from server/api to endpoints prefixed with /api, so the handler lives at /api/admin/users."
+    },
+    {
+      "id": 139,
+      "title": "What is the purpose of the <NuxtErrorBoundary> component?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It lets you catch and render fallback UIs for child component errors."
+        },
+        {
+          "id": "2",
+          "text": "It renders the global error page."
+        },
+        {
+          "id": "3",
+          "text": "It restarts the Nuxt server."
+        },
+        {
+          "id": "4",
+          "text": "It logs errors to the console automatically."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "<NuxtErrorBoundary> provides a scoped error boundary so you can display local fallback content when children throw."
+    },
+    {
+      "id": 140,
+      "title": "Which command generates a fully pre-rendered static build?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi generate"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi build"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi dev"
+        },
+        {
+          "id": "4",
+          "text": "npx nuxi preview"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "npx nuxi generate pre-renders routes into static HTML for deployment to static hosts."
+    },
+    {
+      "id": 141,
+      "title": "How do you access a plugin-provided helper named hello inside a component?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const { $hello } = useNuxtApp();"
+        },
+        {
+          "id": "2",
+          "text": "import { $hello } from 'nuxt';"
+        },
+        {
+          "id": "3",
+          "text": "const hello = usePlugin('hello');"
+        },
+        {
+          "id": "4",
+          "text": "this.$hello"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Plugin injections are exposed on the Nuxt app instance, which you can access via useNuxtApp()."
+    },
+    {
+      "id": 142,
+      "title": "What happens if two components call useState('cart')?",
+      "options": [
+        {
+          "id": "1",
+          "text": "They share the same reactive state instance."
+        },
+        {
+          "id": "2",
+          "text": "Each component gets a fresh ref."
+        },
+        {
+          "id": "3",
+          "text": "The second call throws an error."
+        },
+        {
+          "id": "4",
+          "text": "State is only available on the server."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useState caches values by key, so identical keys expose shared reactive state across components."
+    },
+    {
+      "id": 143,
+      "title": "Which helper should you use to stop a navigation with an error inside middleware?",
+      "options": [
+        {
+          "id": "1",
+          "text": "abortNavigation"
+        },
+        {
+          "id": "2",
+          "text": "stopRoute"
+        },
+        {
+          "id": "3",
+          "text": "haltNavigation"
+        },
+        {
+          "id": "4",
+          "text": "cancelRoute"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "abortNavigation lets you cancel navigation and optionally surface an error to the user."
+    },
+    {
+      "id": 144,
+      "title": "Which useFetch option ensures the request runs only in the browser?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server: false"
+        },
+        {
+          "id": "2",
+          "text": "client: false"
+        },
+        {
+          "id": "3",
+          "text": "lazy: true"
+        },
+        {
+          "id": "4",
+          "text": "dedupe: true"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting server to false skips the server-side call and defers fetching until the client."
+    },
+    {
+      "id": 145,
+      "title": "Inside server/api/items/[id].get.ts, how can you read the id parameter?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const id = getRouterParam(event, 'id')"
+        },
+        {
+          "id": "2",
+          "text": "const id = event.node.req.params.id"
+        },
+        {
+          "id": "3",
+          "text": "const id = useRoute().params.id"
+        },
+        {
+          "id": "4",
+          "text": "const id = event.context.query.id"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "getRouterParam is a Nitro helper that safely reads dynamic route parameters on the server."
+    },
+    {
+      "id": 146,
+      "title": "Which nuxt.config.ts property lets you define caching or redirect rules per route?",
+      "options": [
+        {
+          "id": "1",
+          "text": "routeRules"
+        },
+        {
+          "id": "2",
+          "text": "router"
+        },
+        {
+          "id": "3",
+          "text": "nitroRoutes"
+        },
+        {
+          "id": "4",
+          "text": "render"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "routeRules in nuxt.config.ts configures Nitro behaviors such as caching, redirects, and headers on a per-path basis."
+    },
+    {
+      "id": 147,
+      "title": "How do you create a plugin that only runs on the client?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Place it in plugins/analytics.client.ts"
+        },
+        {
+          "id": "2",
+          "text": "Place it in plugins/analytics.server.ts"
+        },
+        {
+          "id": "3",
+          "text": "Add client: true to nuxt.config.ts"
+        },
+        {
+          "id": "4",
+          "text": "Register it inside app.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Using the .client suffix ensures the plugin is only executed in the browser runtime."
+    },
+    {
+      "id": 148,
+      "title": "Which useSeoMeta call keeps the description reactive to a ref named summary?",
+      "options": [
+        {
+          "id": "1",
+          "text": "useSeoMeta({ description: () => summary.value })"
+        },
+        {
+          "id": "2",
+          "text": "useSeoMeta({ description: summary.value })"
+        },
+        {
+          "id": "3",
+          "text": "useSeoMeta({ description: ref(summary) })"
+        },
+        {
+          "id": "4",
+          "text": "useSeoMeta({ description: summary })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Passing a function allows useSeoMeta to track the ref and recompute when summary changes."
+    },
+    {
+      "id": 149,
+      "title": "How can you auto-import components from an additional directory named widgets?",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNuxtConfig({ components: { dirs: ['~/components', '~/components/widgets'] } })"
+        },
+        {
+          "id": "2",
+          "text": "Add widgets to runtimeConfig"
+        },
+        {
+          "id": "3",
+          "text": "Place the folder under server/widgets"
+        },
+        {
+          "id": "4",
+          "text": "Register widgets in app.vue manually"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The components.dirs array controls which directories Nuxt scans for auto-registered components."
+    },
+    {
+      "id": 150,
+      "title": "How do you read values from app.config.ts inside a component?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const appConfig = useAppConfig();"
+        },
+        {
+          "id": "2",
+          "text": "import appConfig from '~/app.config'"
+        },
+        {
+          "id": "3",
+          "text": "const appConfig = useRuntimeConfig();"
+        },
+        {
+          "id": "4",
+          "text": "this.$appConfig"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useAppConfig returns the reactive runtime configuration defined in app.config.ts."
+    },
+    {
+      "id": 151,
+      "title": "Which helper sets a custom response header inside a server API handler?",
+      "options": [
+        {
+          "id": "1",
+          "text": "setHeader(event, 'X-Version', '1.0')"
+        },
+        {
+          "id": "2",
+          "text": "event.res.headers['X-Version'] = '1.0'"
+        },
+        {
+          "id": "3",
+          "text": "useHead({ meta: [{ name: 'X-Version', content: '1.0' }] })"
+        },
+        {
+          "id": "4",
+          "text": "defineHead(event, 'X-Version', '1.0')"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "setHeader is the Nitro utility for mutating response headers within event handlers."
+    },
+    {
+      "id": 152,
+      "title": "Where do you place Nitro plugins created with defineNitroPlugin?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/plugins/"
+        },
+        {
+          "id": "2",
+          "text": "plugins/"
+        },
+        {
+          "id": "3",
+          "text": "server/api/"
+        },
+        {
+          "id": "4",
+          "text": "middleware/"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro automatically loads plugins from server/plugins to extend the server runtime."
+    },
+    {
+      "id": 153,
+      "title": "How do you provide a server-only secret API key with runtimeConfig?",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNuxtConfig({ runtimeConfig: { apiKey: '' } })"
+        },
+        {
+          "id": "2",
+          "text": "export default defineNuxtConfig({ runtimeConfig: { public: { apiKey: '' } } })"
+        },
+        {
+          "id": "3",
+          "text": "Set process.env.NUXT_PUBLIC_API_KEY"
+        },
+        {
+          "id": "4",
+          "text": "Store it in app.config.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Keys defined at the top level of runtimeConfig stay server-only and are not exposed to the client."
+    },
+    {
+      "id": 154,
+      "title": "Which built-in component displays the default loading bar?",
+      "options": [
+        {
+          "id": "1",
+          "text": "<NuxtLoadingIndicator />"
+        },
+        {
+          "id": "2",
+          "text": "<LoadingBar />"
+        },
+        {
+          "id": "3",
+          "text": "<ProgressLoader />"
+        },
+        {
+          "id": "4",
+          "text": "<NuxtProgress />"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt exposes <NuxtLoadingIndicator /> to show the default progress bar during navigation."
+    },
+    {
+      "id": 155,
+      "title": "What does enable devtools with defineNuxtConfig({ devtools: { enabled: true } }) provide?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Access to the Nuxt DevTools overlay with inspector panels."
+        },
+        {
+          "id": "2",
+          "text": "Automatic Lighthouse audits after builds."
+        },
+        {
+          "id": "3",
+          "text": "Automatic code formatting on save."
+        },
+        {
+          "id": "4",
+          "text": "Production-only stack traces."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Enabling devtools unlocks the interactive Nuxt DevTools UI for inspecting routes, components, and payloads."
+    },
+    {
+      "id": 156,
+      "title": "True or false: useLazyAsyncData returns the same object shape as useAsyncData (data, pending, error, refresh).",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useLazyAsyncData shares the same return interface as useAsyncData while delaying execution until needed."
+    },
+    {
+      "id": 157,
+      "title": "Which property on the object returned by useAsyncData holds fetch errors?",
+      "options": [
+        {
+          "id": "1",
+          "text": "error"
+        },
+        {
+          "id": "2",
+          "text": "status"
+        },
+        {
+          "id": "3",
+          "text": "issues"
+        },
+        {
+          "id": "4",
+          "text": "message"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Both useAsyncData and useFetch expose a reactive error property containing thrown errors."
+    },
+    {
+      "id": 158,
+      "title": "Which command lets you preview the production build locally?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi preview"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi dev"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi analyze"
+        },
+        {
+          "id": "4",
+          "text": "npx nuxi lint"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi preview starts a Nitro server using the built output for production-like testing."
+    },
+    {
+      "id": 159,
+      "title": "Which useFetch configuration keeps the request in sync with a changing slug ref?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const { data } = await useFetch(() => `/api/posts/${slug.value}`)"
+        },
+        {
+          "id": "2",
+          "text": "const { data } = await useFetch('/api/posts/' + slug.value)"
+        },
+        {
+          "id": "3",
+          "text": "const { data } = await useFetch('/api/posts/[slug]')"
+        },
+        {
+          "id": "4",
+          "text": "const { data } = await useFetch('/api/posts', { params: slug })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Passing a function lets useFetch recompute the request URL whenever slug changes."
+    },
+    {
+      "id": 160,
+      "title": "Which configuration enables stricter TypeScript checks in Nuxt 3?",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNuxtConfig({ typescript: { strict: true } })"
+        },
+        {
+          "id": "2",
+          "text": "export default defineNuxtConfig({ tsconfig: { strict: true } })"
+        },
+        {
+          "id": "3",
+          "text": "export default defineNuxtConfig({ typings: 'strict' })"
+        },
+        {
+          "id": "4",
+          "text": "export default defineNuxtConfig({ vue: { strict: true } })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The typescript.strict flag asks Nuxt to run vue-tsc in strict mode for tighter type safety."
+    },
+    {
+      "id": 161,
+      "title": "How do you expose a HEAD handler for /api/posts?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/posts.head.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/api/posts/head.ts"
+        },
+        {
+          "id": "3",
+          "text": "server/routes/posts.head.ts"
+        },
+        {
+          "id": "4",
+          "text": "api/posts/head.server.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro maps server/api files using HTTP method suffixes such as .head.ts for the same endpoint path."
+    },
+    {
+      "id": 162,
+      "title": "Which command starts the dev server on port 4000?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi dev --port 4000"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi dev -d 4000"
+        },
+        {
+          "id": "3",
+          "text": "npm run dev -- --host=4000"
+        },
+        {
+          "id": "4",
+          "text": "nuxt start --port 4000"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Passing --port 4000 to nuxi dev changes the development server port without extra configuration."
+    },
+    {
+      "id": 163,
+      "title": "How do you declare props inside <script setup> using TypeScript?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const props = defineProps<{ title: string }>()"
+        },
+        {
+          "id": "2",
+          "text": "export default { props: { title: String } }"
+        },
+        {
+          "id": "3",
+          "text": "defineProps = { title: String }"
+        },
+        {
+          "id": "4",
+          "text": "const props = useProps<{ title: string }>()"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "defineProps accepts a generic type argument, letting you strongly type props within <script setup>."
+    },
+    {
+      "id": 164,
+      "title": "Where do you configure the default page transition globally?",
+      "options": [
+        {
+          "id": "1",
+          "text": "app.config.ts"
+        },
+        {
+          "id": "2",
+          "text": "nuxt.config.ts > router"
+        },
+        {
+          "id": "3",
+          "text": "pages/app.vue"
+        },
+        {
+          "id": "4",
+          "text": "layouts/default.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "defineAppConfig in app.config.ts can set pageTransition defaults that apply across the app."
+    },
+    {
+      "id": 165,
+      "title": "True or false: useCookie can be called inside route middleware to read cookies during SSR.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useCookie works on both server and client, making it safe for authentication checks within middleware."
+    },
+    {
+      "id": 166,
+      "title": "Which lifecycle hook runs only during server-side rendering before the component is rendered?",
+      "options": [
+        {
+          "id": "1",
+          "text": "onServerPrefetch"
+        },
+        {
+          "id": "2",
+          "text": "onMounted"
+        },
+        {
+          "id": "3",
+          "text": "onBeforeMount"
+        },
+        {
+          "id": "4",
+          "text": "onActivated"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "onServerPrefetch executes during SSR to allow data fetching that resolves before HTML is generated."
+    },
+    {
+      "id": 167,
+      "title": "What does the file pages/blog/[...slug].vue capture?",
+      "options": [
+        {
+          "id": "1",
+          "text": "All nested blog segments as an array"
+        },
+        {
+          "id": "2",
+          "text": "Only the first slug segment"
+        },
+        {
+          "id": "3",
+          "text": "Static /blog/* files under public"
+        },
+        {
+          "id": "4",
+          "text": "Query parameters for /blog"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Catch-all routes use [...param] to gather remaining path segments into an array accessible via route.params.slug."
+    },
+    {
+      "id": 168,
+      "title": "Which nuxt.config.ts snippet enables payload extraction for smaller HTML?",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNuxtConfig({ experimental: { payloadExtraction: true } })"
+        },
+        {
+          "id": "2",
+          "text": "export default defineNuxtConfig({ nitro: { payloadExtraction: true } })"
+        },
+        {
+          "id": "3",
+          "text": "export default defineNuxtConfig({ build: { extractPayload: true } })"
+        },
+        {
+          "id": "4",
+          "text": "export default defineNuxtConfig({ ssr: { payloadExtraction: true } })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The experimental.payloadExtraction flag tells Nuxt to split page payloads from HTML during rendering."
+    },
+    {
+      "id": 169,
+      "title": "What does lazy: true do in useAsyncData?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It delays fetching until the component is mounted or watched dependencies change."
+        },
+        {
+          "id": "2",
+          "text": "It caches the response forever."
+        },
+        {
+          "id": "3",
+          "text": "It forces the fetch to run on the server only."
+        },
+        {
+          "id": "4",
+          "text": "It retries failed requests automatically."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "lazy: true avoids blocking navigation by postponing the request until needed on the client."
+    },
+    {
+      "id": 170,
+      "title": "Which command performs a one-off type check using Vue TSC?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi typecheck"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi lint"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi prepare"
+        },
+        {
+          "id": "4",
+          "text": "npm run build -- --types"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi typecheck runs vue-tsc against the project to surface type errors without building."
+    },
+    {
+      "id": 171,
+      "title": "How do you read query parameters inside server/api handlers?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const query = getQuery(event)"
+        },
+        {
+          "id": "2",
+          "text": "const query = event.node.req.query"
+        },
+        {
+          "id": "3",
+          "text": "const query = useRoute().query"
+        },
+        {
+          "id": "4",
+          "text": "const query = useRequestHeaders()"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro exposes getQuery to parse query parameters from the current event in server handlers."
+    },
+    {
+      "id": 172,
+      "title": "What is defineCachedEventHandler used for?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Wrap an event handler with built-in caching logic."
+        },
+        {
+          "id": "2",
+          "text": "Define middleware that skips SSR."
+        },
+        {
+          "id": "3",
+          "text": "Create a route that streams data."
+        },
+        {
+          "id": "4",
+          "text": "Register a plugin inside Nitro."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "defineCachedEventHandler memoizes responses based on configured cache rules, ideal for expensive API calls."
+    },
+    {
+      "id": 173,
+      "title": "Where would you place middleware to force HTTPS on every request?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/middleware/https.global.ts"
+        },
+        {
+          "id": "2",
+          "text": "middleware/https.ts"
+        },
+        {
+          "id": "3",
+          "text": "plugins/https.server.ts"
+        },
+        {
+          "id": "4",
+          "text": "layouts/https.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Server middleware files with the .global suffix run for every request before route handling, making them perfect for redirects."
+    },
+    {
+      "id": 174,
+      "title": "True or false: defineNuxtRouteMiddleware can be an async function returning a Promise.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Route middleware may be async, allowing awaits and promise returns before navigation completes."
+    },
+    {
+      "id": 175,
+      "title": "Which nuxt.config.ts property selects the deployment preset for Nitro?",
+      "options": [
+        {
+          "id": "1",
+          "text": "nitro.preset"
+        },
+        {
+          "id": "2",
+          "text": "deploy.target"
+        },
+        {
+          "id": "3",
+          "text": "build.preset"
+        },
+        {
+          "id": "4",
+          "text": "ssr.platform"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nitro.preset tells the server builder which hosting environment (like vercel) to optimize for."
+    },
+    {
+      "id": 176,
+      "title": "What does setting app: { baseURL: '/docs/' } in nuxt.config.ts do?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Serves the application from the /docs/ subdirectory."
+        },
+        {
+          "id": "2",
+          "text": "Changes the default layout."
+        },
+        {
+          "id": "3",
+          "text": "Forces routes to use trailing slashes."
+        },
+        {
+          "id": "4",
+          "text": "Enables static site generation."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "app.baseURL adjusts router links and asset URLs so the site works when deployed under a subpath."
+    },
+    {
+      "id": 177,
+      "title": "Which composable gives access to the current H3 event during SSR?",
+      "options": [
+        {
+          "id": "1",
+          "text": "useRequestEvent()"
+        },
+        {
+          "id": "2",
+          "text": "useNuxtAppEvent()"
+        },
+        {
+          "id": "3",
+          "text": "useServerEvent()"
+        },
+        {
+          "id": "4",
+          "text": "useAppEvent()"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useRequestEvent exposes the underlying event object so you can reach request or response data inside composables."
+    },
+    {
+      "id": 178,
+      "title": "Which helper sends a Readable stream response from a server handler?",
+      "options": [
+        {
+          "id": "1",
+          "text": "sendStream(event, stream)"
+        },
+        {
+          "id": "2",
+          "text": "event.node.res.end(stream)"
+        },
+        {
+          "id": "3",
+          "text": "return stream"
+        },
+        {
+          "id": "4",
+          "text": "useStream(event, stream)"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "sendStream handles piping Node streams through Nitro responses with correct headers."
+    },
+    {
+      "id": 179,
+      "title": "Which nuxt.config.ts property registers community modules like '@nuxt/image'?",
+      "options": [
+        {
+          "id": "1",
+          "text": "modules"
+        },
+        {
+          "id": "2",
+          "text": "plugins"
+        },
+        {
+          "id": "3",
+          "text": "imports"
+        },
+        {
+          "id": "4",
+          "text": "hooks"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Modules listed in the modules array load automatically and can extend Nuxt during build and runtime."
+    },
+    {
+      "id": 180,
+      "title": "Which command builds the project for production deployment?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi build"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi preview"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi analyze"
+        },
+        {
+          "id": "4",
+          "text": "npm run lint"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi build compiles the app into the .output directory ready for hosting with Nitro."
+    },
+    {
+      "id": 181,
+      "title": "True or false: useHead can be safely called inside composables that run during setup.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useHead relies on the current Nuxt app context, making it usable inside composables invoked during setup."
+    },
+    {
+      "id": 182,
+      "title": "Which nuxt.config.ts option adds additional packages to the transpile list?",
+      "options": [
+        {
+          "id": "1",
+          "text": "build.transpile"
+        },
+        {
+          "id": "2",
+          "text": "vite.optimizeDeps"
+        },
+        {
+          "id": "3",
+          "text": "modules.transpile"
+        },
+        {
+          "id": "4",
+          "text": "build.extend"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "build.transpile accepts globs or package names that Nuxt should transpile for compatibility."
+    },
+    {
+      "id": 183,
+      "title": "Which experimental flag enables component islands rendering?",
+      "options": [
+        {
+          "id": "1",
+          "text": "experimental.componentIslands"
+        },
+        {
+          "id": "2",
+          "text": "experimental.clientIslands"
+        },
+        {
+          "id": "3",
+          "text": "experimental.lazyIslands"
+        },
+        {
+          "id": "4",
+          "text": "experimental.islandsMode"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "experimental.componentIslands activates Nuxt's partial hydration islands feature."
+    },
+    {
+      "id": 184,
+      "title": "Inside server/plugins/log.ts using defineNitroPlugin, what argument is received?",
+      "options": [
+        {
+          "id": "1",
+          "text": "defineNitroPlugin((nitroApp) => { ... })"
+        },
+        {
+          "id": "2",
+          "text": "defineNitroPlugin(({ app }) => { ... })"
+        },
+        {
+          "id": "3",
+          "text": "defineNitroPlugin((nuxtApp) => { ... })"
+        },
+        {
+          "id": "4",
+          "text": "defineNitroPlugin((event) => { ... })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "defineNitroPlugin passes the Nitro app instance so you can attach hooks or utilities to the server runtime."
+    },
+    {
+      "id": 185,
+      "title": "What does definePageMeta({ alias: ['/home'] }) do?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Makes /home route render the same page."
+        },
+        {
+          "id": "2",
+          "text": "Changes the layout to 'home'."
+        },
+        {
+          "id": "3",
+          "text": "Adds a redirect to /home."
+        },
+        {
+          "id": "4",
+          "text": "Disables prefetching for the page."
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Page aliases map additional paths to the same component without creating duplicate files."
+    },
+    {
+      "id": 186,
+      "title": "Which filename ensures a plugin runs only during server-side execution?",
+      "options": [
+        {
+          "id": "1",
+          "text": "plugins/auth.server.ts"
+        },
+        {
+          "id": "2",
+          "text": "plugins/auth.client.ts"
+        },
+        {
+          "id": "3",
+          "text": "plugins/auth.global.ts"
+        },
+        {
+          "id": "4",
+          "text": "plugins/server/auth.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Adding the .server suffix confines the plugin to server runtimes, excluding it from client bundles."
+    },
+    {
+      "id": 187,
+      "title": "Which routeRules configuration prerenders /pricing at build time?",
+      "options": [
+        {
+          "id": "1",
+          "text": "routeRules: { '/pricing': { prerender: true } }"
+        },
+        {
+          "id": "2",
+          "text": "routeRules: { '/pricing': { ssr: false } }"
+        },
+        {
+          "id": "3",
+          "text": "nitro: { prerender: ['/pricing'] }"
+        },
+        {
+          "id": "4",
+          "text": "generate: { routes: ['/pricing'] }"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting prerender: true within routeRules asks Nitro to emit a static HTML file for that path."
+    },
+    {
+      "id": 188,
+      "title": "Which helper sets the HTTP status code for a server response?",
+      "options": [
+        {
+          "id": "1",
+          "text": "setResponseStatus(event, 201)"
+        },
+        {
+          "id": "2",
+          "text": "event.node.res.statusCode = 201"
+        },
+        {
+          "id": "3",
+          "text": "useHead({ status: 201 })"
+        },
+        {
+          "id": "4",
+          "text": "setHeader(event, 'status', '201')"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "setResponseStatus is the Nitro helper for adjusting the outgoing status metadata in a consistent way."
+    },
+    {
+      "id": 189,
+      "title": "Which directory stores the static output of nuxi generate?",
+      "options": [
+        {
+          "id": "1",
+          "text": ".output/public"
+        },
+        {
+          "id": "2",
+          "text": "dist/"
+        },
+        {
+          "id": "3",
+          "text": "static/"
+        },
+        {
+          "id": "4",
+          "text": "build/ssg"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Static generation writes HTML and assets into .output/public ready for deployment on static hosts."
+    },
+    {
+      "id": 190,
+      "title": "True or false: layouts can include <NuxtLoadingIndicator> to show the global progress bar.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The loading indicator component can be placed in layouts to render the default progress UI app-wide."
+    },
+    {
+      "id": 191,
+      "title": "Which runtime config key should you read for a server-only secret named apiSecret?",
+      "options": [
+        {
+          "id": "1",
+          "text": "useRuntimeConfig().apiSecret"
+        },
+        {
+          "id": "2",
+          "text": "useRuntimeConfig().public.apiSecret"
+        },
+        {
+          "id": "3",
+          "text": "useAppConfig().apiSecret"
+        },
+        {
+          "id": "4",
+          "text": "process.env.NUXT_PUBLIC_API_SECRET"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Server-only secrets live at the top level of runtimeConfig and are accessible only in server contexts."
+    },
+    {
+      "id": 192,
+      "title": "Which helper should you call to emit a readable body without buffering the entire payload?",
+      "options": [
+        {
+          "id": "1",
+          "text": "sendStream(event, stream)"
+        },
+        {
+          "id": "2",
+          "text": "send(event, stream)"
+        },
+        {
+          "id": "3",
+          "text": "send(event, await stream.toString())"
+        },
+        {
+          "id": "4",
+          "text": "event.node.res.end(JSON.stringify(stream))"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "sendStream pipes the Readable to the response, avoiding manual buffering or JSON stringification."
+    },
+    {
+      "id": 193,
+      "title": "Which useFetch option prevents the initial request until refresh is called or a watch triggers?",
+      "options": [
+        {
+          "id": "1",
+          "text": "immediate: false"
+        },
+        {
+          "id": "2",
+          "text": "server: false"
+        },
+        {
+          "id": "3",
+          "text": "lazy: true"
+        },
+        {
+          "id": "4",
+          "text": "dedupe: false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting immediate to false defers the request until you manually refresh or a watched dependency updates."
+    },
+    {
+      "id": 194,
+      "title": "Which config property lets you add custom Vite plugins to the build?",
+      "options": [
+        {
+          "id": "1",
+          "text": "vite.plugins"
+        },
+        {
+          "id": "2",
+          "text": "vite.extend"
+        },
+        {
+          "id": "3",
+          "text": "build.vitePlugins"
+        },
+        {
+          "id": "4",
+          "text": "modules.vite"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The vite key in nuxt.config.ts is merged into Vite config, including the plugins array."
+    },
+    {
+      "id": 195,
+      "title": "True or false: definePageMeta can disable a layout by setting layout: false.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Passing layout: false renders the page without wrapping it in any layout component."
+    },
+    {
+      "id": 196,
+      "title": "Which helper should you call inside server routes to parse multipart/form-data uploads?",
+      "options": [
+        {
+          "id": "1",
+          "text": "await readMultipartFormData(event)"
+        },
+        {
+          "id": "2",
+          "text": "await useBody(event)"
+        },
+        {
+          "id": "3",
+          "text": "await parseForm(event)"
+        },
+        {
+          "id": "4",
+          "text": "await getMultipartBody(event)"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "readMultipartFormData(event) parses incoming multipart form data and returns the uploaded parts."
+    },
+    {
+      "id": 197,
+      "title": "What does running npx nuxi analyze generate?",
+      "options": [
+        {
+          "id": "1",
+          "text": "A bundle analysis report showing client chunks and sizes"
+        },
+        {
+          "id": "2",
+          "text": "A production build in the .output directory"
+        },
+        {
+          "id": "3",
+          "text": "A list of pending migrations"
+        },
+        {
+          "id": "4",
+          "text": "A cleanup of the .nuxt folder"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi analyze bundles the project and opens a size report that helps diagnose client payload weight."
+    },
+    {
+      "id": 198,
+      "title": "Which nuxt.config.ts entry disables Nuxt telemetry prompts?",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNuxtConfig({ telemetry: false })"
+        },
+        {
+          "id": "2",
+          "text": "export default defineNuxtConfig({ tracking: false })"
+        },
+        {
+          "id": "3",
+          "text": "export default defineNuxtConfig({ diagnostics: false })"
+        },
+        {
+          "id": "4",
+          "text": "export default defineNuxtConfig({ analytics: { enabled: false } })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting telemetry to false opts the project out of Nuxt telemetry collection."
+    },
+    {
+      "id": 199,
+      "title": "Which snippet correctly derives a reactive page title stored in route meta?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const route = useRoute(); const pageTitle = computed(() => route.meta.title);"
+        },
+        {
+          "id": "2",
+          "text": "const router = useRouter(); const pageTitle = ref(router.meta.title);"
+        },
+        {
+          "id": "3",
+          "text": "const meta = useHead(); const pageTitle = computed(() => meta.title);"
+        },
+        {
+          "id": "4",
+          "text": "const route = useRoute(); const pageTitle = route.params.title;"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useRoute().meta is reactive, so wrapping the access in computed keeps the title in sync with navigation."
+    },
+    {
+      "id": 200,
+      "title": "How do you turn off automatic component registration globally?",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNuxtConfig({ components: false })"
+        },
+        {
+          "id": "2",
+          "text": "export default defineNuxtConfig({ autoComponents: false })"
+        },
+        {
+          "id": "3",
+          "text": "export default defineNuxtConfig({ components: [] })"
+        },
+        {
+          "id": "4",
+          "text": "export default defineNuxtConfig({ pages: false })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting components to false disables Nuxt's auto-discovery of components entirely."
+    },
+    {
+      "id": 201,
+      "title": "Where do you place reusable server utilities for auto-import via #imports?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/utils/format.ts"
+        },
+        {
+          "id": "2",
+          "text": "utils/server/format.ts"
+        },
+        {
+          "id": "3",
+          "text": "plugins/utils/format.ts"
+        },
+        {
+          "id": "4",
+          "text": "composables/server/format.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Files inside server/utils are auto-imported on the server and available through the #imports alias."
+    },
+    {
+      "id": 202,
+      "title": "What is the effect of adding routeRules: { '/api/**': { cors: true } } to nuxt.config.ts?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It enables CORS headers for every matching API route"
+        },
+        {
+          "id": "2",
+          "text": "It disables SSR for API routes"
+        },
+        {
+          "id": "3",
+          "text": "It forces API routes to be prerendered"
+        },
+        {
+          "id": "4",
+          "text": "It adds authentication to the routes"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The cors flag in routeRules instructs Nitro to attach permissive CORS headers for the matched paths."
+    },
+    {
+      "id": 203,
+      "title": "Which environment variable prefix makes a value available on both client and server?",
+      "options": [
+        {
+          "id": "1",
+          "text": "NUXT_PUBLIC_"
+        },
+        {
+          "id": "2",
+          "text": "NUXT_PRIVATE_"
+        },
+        {
+          "id": "3",
+          "text": "PUBLIC_"
+        },
+        {
+          "id": "4",
+          "text": "NEXT_PUBLIC_"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Variables starting with NUXT_PUBLIC_ are injected into runtimeConfig.public and exposed to the client."
+    },
+    {
+      "id": 204,
+      "title": "True or false: useLazyFetch returns the same reactive keys (data, pending, error, refresh) as useFetch.",
+      "options": [
+        {
+          "id": "1",
+          "text": "true"
+        },
+        {
+          "id": "2",
+          "text": "false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useLazyFetch mirrors the useFetch return signature while deferring the initial request."
+    },
+    {
+      "id": 205,
+      "title": "Which useAsyncData option lets you return only certain properties from the fetched object?",
+      "options": [
+        {
+          "id": "1",
+          "text": "pick"
+        },
+        {
+          "id": "2",
+          "text": "select"
+        },
+        {
+          "id": "3",
+          "text": "only"
+        },
+        {
+          "id": "4",
+          "text": "fields"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The pick option takes an array of keys and filters the resolved data to those fields."
+    },
+    {
+      "id": 206,
+      "title": "Where can you configure default head metadata for every page?",
+      "options": [
+        {
+          "id": "1",
+          "text": "nuxt.config.ts via app: { head: { ... } }"
+        },
+        {
+          "id": "2",
+          "text": "app.vue via definePageMeta"
+        },
+        {
+          "id": "3",
+          "text": "layouts/default.vue via useHead"
+        },
+        {
+          "id": "4",
+          "text": "middleware/head.global.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Global defaults for the document head are set under app.head in nuxt.config.ts."
+    },
+    {
+      "id": 207,
+      "title": "Which expression correctly detects server-side execution inside a composable?",
+      "options": [
+        {
+          "id": "1",
+          "text": "if (process.server) { ... }"
+        },
+        {
+          "id": "2",
+          "text": "if (window.server) { ... }"
+        },
+        {
+          "id": "3",
+          "text": "if (import.meta.browser) { ... }"
+        },
+        {
+          "id": "4",
+          "text": "if (useNuxtApp().server) { ... }"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt exposes process.server (and import.meta.server) to branch logic on SSR-only code."
+    },
+    {
+      "id": 208,
+      "title": "What does definePageMeta({ keepalive: true }) enable?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It keeps the page component alive in memory between visits"
+        },
+        {
+          "id": "2",
+          "text": "It forces the page to render only on the client"
+        },
+        {
+          "id": "3",
+          "text": "It disables navigation guards"
+        },
+        {
+          "id": "4",
+          "text": "It preloads all linked routes"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "keepalive caches component state using Vue's KeepAlive integration when returning to the route."
+    },
+    {
+      "id": 209,
+      "title": "Which CLI command cleans Nuxt's temporary caches and generated files?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi cleanup"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi reset"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi prune"
+        },
+        {
+          "id": "4",
+          "text": "npx nuxi tidy"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi cleanup removes the .nuxt directory and other caches so the next build starts fresh."
+    },
+    {
+      "id": 210,
+      "title": "Which plugin snippet correctly logs every request using Nitro hooks?",
+      "options": [
+        {
+          "id": "1",
+          "text": "export default defineNitroPlugin((nitroApp) => { nitroApp.hooks.hook('request', (event) => { console.log(event.node.req.url); }); });"
+        },
+        {
+          "id": "2",
+          "text": "export default defineNitroPlugin(() => { useRouter().beforeEach(() => console.log('request')); });"
+        },
+        {
+          "id": "3",
+          "text": "export default defineNitroPlugin((event) => { console.log(event.req.url); });"
+        },
+        {
+          "id": "4",
+          "text": "export default defineNitroPlugin((nitroApp) => { nitroApp.on('request', console.log); });"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro exposes hooks.hook('request', callback) for request-level logging inside server/plugins."
+    },
+    {
+      "id": 211,
+      "title": "What does routeRules: { '/docs': { redirect: '/guide' } } accomplish?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It issues an HTTP redirect from /docs to /guide"
+        },
+        {
+          "id": "2",
+          "text": "It renders /docs as a static page"
+        },
+        {
+          "id": "3",
+          "text": "It disables SSR for /docs"
+        },
+        {
+          "id": "4",
+          "text": "It caches /docs responses for one hour"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The redirect property tells Nitro to respond with a redirect when clients hit /docs."
+    },
+    {
+      "id": 212,
+      "title": "Which filename handles PUT requests for an individual user resource?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/api/users/[id].put.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/api/users.put.ts"
+        },
+        {
+          "id": "3",
+          "text": "server/api/users/[id]/put.ts"
+        },
+        {
+          "id": "4",
+          "text": "server/api/users.put/[id].ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Appending .put.ts with a dynamic segment maps to PUT /api/users/:id."
+    },
+    {
+      "id": 213,
+      "title": "Which statement about Nuxt path aliases is correct?",
+      "options": [
+        {
+          "id": "1",
+          "text": "'@' and '~' both resolve to the project root directory"
+        },
+        {
+          "id": "2",
+          "text": "'@' points to /components while '~' points to /pages"
+        },
+        {
+          "id": "3",
+          "text": "'~' is only available in CSS imports"
+        },
+        {
+          "id": "4",
+          "text": "'@' resolves to node_modules by default"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt aliases '@' and '~' to the project root (srcDir), simplifying relative imports."
+    },
+    {
+      "id": 214,
+      "title": "What happens when you set pages: false in nuxt.config.ts?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Nuxt stops generating routes from /pages, letting you provide your own router"
+        },
+        {
+          "id": "2",
+          "text": "Nuxt deletes the /pages directory"
+        },
+        {
+          "id": "3",
+          "text": "Nuxt renders every page on the client only"
+        },
+        {
+          "id": "4",
+          "text": "Nuxt automatically registers every file as middleware"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "pages: false disables file-based routing so you can integrate a custom routing solution."
+    },
+    {
+      "id": 215,
+      "title": "Which CLI command prints environment details such as Nuxt and Node versions?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi info"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi doctor"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi report"
+        },
+        {
+          "id": "4",
+          "text": "npx nuxi versions"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi info outputs diagnostic information about the local environment and installed Nuxt version."
+    },
+    {
+      "id": 216,
+      "title": "Where should you place files that export defineTask to register scheduled Nitro tasks?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/tasks/cleanup.ts"
+        },
+        {
+          "id": "2",
+          "text": "server/api/tasks/cleanup.ts"
+        },
+        {
+          "id": "3",
+          "text": "modules/tasks/cleanup.ts"
+        },
+        {
+          "id": "4",
+          "text": "scripts/cleanup.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro loads task definitions from server/tasks, so placing defineTask exports there registers scheduled jobs."
+    },
+    {
+      "id": 217,
+      "title": "Which helper do you call in a server route to access a storage driver named cache configured in nitro.storage?",
+      "options": [
+        {
+          "id": "1",
+          "text": "useStorage('cache')"
+        },
+        {
+          "id": "2",
+          "text": "useRuntimeConfig('cache')"
+        },
+        {
+          "id": "3",
+          "text": "useState('cache')"
+        },
+        {
+          "id": "4",
+          "text": "getStorageDriver('cache')"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "useStorage returns the named Nitro storage driver, giving you access to the configured backend like fs or redis."
+    },
+    {
+      "id": 218,
+      "title": "What is the effect of setting experimental.inlineSSRStyles to true in nuxt.config.ts?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Nuxt inlines critical CSS into the SSR HTML to reduce flashes of unstyled content"
+        },
+        {
+          "id": "2",
+          "text": "Nuxt disables importing global CSS files"
+        },
+        {
+          "id": "3",
+          "text": "Nuxt lazy loads all CSS after hydration"
+        },
+        {
+          "id": "4",
+          "text": "Nuxt moves CSS declarations into app.config.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "experimental.inlineSSRStyles streams CSS alongside SSR HTML so above-the-fold styles are inlined for faster rendering."
+    },
+    {
+      "id": 219,
+      "title": "How can you proxy /api requests to http://localhost:5000 during development using Nuxt config?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Set devServer.proxy['/api'] = 'http://localhost:5000'"
+        },
+        {
+          "id": "2",
+          "text": "Add routeRules['/api'] = { proxy: 'http://localhost:5000' }"
+        },
+        {
+          "id": "3",
+          "text": "Call navigateTo('/api') with a base URL"
+        },
+        {
+          "id": "4",
+          "text": "Place handlers under server/proxy/api"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "devServer.proxy forwards matching paths to a target during local development, letting you call external backends transparently."
+    },
+    {
+      "id": 220,
+      "title": "Which Nitro hook lets you mutate the response payload right before it is sent to the client?",
+      "options": [
+        {
+          "id": "1",
+          "text": "render:response"
+        },
+        {
+          "id": "2",
+          "text": "request"
+        },
+        {
+          "id": "3",
+          "text": "build:done"
+        },
+        {
+          "id": "4",
+          "text": "close"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The render:response hook exposes the generated response so you can tweak headers or body content before it leaves the server."
+    },
+    {
+      "id": 221,
+      "title": "Which command regenerates types and auto-imports after adding new files or modules?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi prepare"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi analyze"
+        },
+        {
+          "id": "3",
+          "text": "npm run build"
+        },
+        {
+          "id": "4",
+          "text": "npx nuxi cleanup"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi prepare refreshes the .nuxt directory, generating updated type definitions for auto-imported utilities."
+    },
+    {
+      "id": 222,
+      "title": "Which nuxt.config.ts option moves your application source code into a custom src/ directory?",
+      "options": [
+        {
+          "id": "1",
+          "text": "srcDir"
+        },
+        {
+          "id": "2",
+          "text": "rootDir"
+        },
+        {
+          "id": "3",
+          "text": "modulesDir"
+        },
+        {
+          "id": "4",
+          "text": "buildDir"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting srcDir changes the directory Nuxt scans for pages, components, and other source files."
+    },
+    {
+      "id": 223,
+      "title": "How can you watch extra server directories for hot reload in Nitro?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Add paths to nitro.watch"
+        },
+        {
+          "id": "2",
+          "text": "Configure devServer.watch"
+        },
+        {
+          "id": "3",
+          "text": "Extend vite.optimizeDeps"
+        },
+        {
+          "id": "4",
+          "text": "Modify router.watch"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nitro.watch accepts additional glob patterns so the dev server reloads when those files change."
+    },
+    {
+      "id": 224,
+      "title": "How do you read the raw Node.js request object inside a server handler?",
+      "options": [
+        {
+          "id": "1",
+          "text": "event.node.req"
+        },
+        {
+          "id": "2",
+          "text": "useRuntimeConfig().req"
+        },
+        {
+          "id": "3",
+          "text": "process.req"
+        },
+        {
+          "id": "4",
+          "text": "event.context.req"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro exposes the native request and response on event.node, letting you interop with lower-level Node APIs."
+    },
+    {
+      "id": 225,
+      "title": "What does setting nitro.compressPublicAssets to true enable during build?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Precompress static assets with gzip/brotli for faster serving"
+        },
+        {
+          "id": "2",
+          "text": "Remove assets from the build output"
+        },
+        {
+          "id": "3",
+          "text": "Disable browser caching headers"
+        },
+        {
+          "id": "4",
+          "text": "Automatically generate a service worker"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "With compressPublicAssets enabled, Nitro pre-generates compressed versions of static files so servers can serve them directly."
+    },
+    {
+      "id": 226,
+      "title": "Which nuxt.config.ts property lets you register custom import aliases like '@assets'?",
+      "options": [
+        {
+          "id": "1",
+          "text": "alias"
+        },
+        {
+          "id": "2",
+          "text": "modules"
+        },
+        {
+          "id": "3",
+          "text": "appConfig"
+        },
+        {
+          "id": "4",
+          "text": "nitro.routeRules"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The alias property lets you define additional path aliases consumed by both Vite and Nitro bundlers."
+    },
+    {
+      "id": 227,
+      "title": "Which Nitro utility lets you lazily load a heavy handler only when it is first requested?",
+      "options": [
+        {
+          "id": "1",
+          "text": "defineLazyEventHandler"
+        },
+        {
+          "id": "2",
+          "text": "defineCachedEventHandler"
+        },
+        {
+          "id": "3",
+          "text": "defineAsyncComponent"
+        },
+        {
+          "id": "4",
+          "text": "defineTask"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "defineLazyEventHandler defers importing the underlying handler module until the first request hits the endpoint."
+    },
+    {
+      "id": 228,
+      "title": "Where do you configure global SCSS variables so they are injected into every style block?",
+      "options": [
+        {
+          "id": "1",
+          "text": "vite.css.preprocessorOptions.scss.additionalData"
+        },
+        {
+          "id": "2",
+          "text": "app.config.ts.styles"
+        },
+        {
+          "id": "3",
+          "text": "runtimeConfig.scss.global"
+        },
+        {
+          "id": "4",
+          "text": "nitro.preprocessor"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Configuring additionalData under Vite's SCSS preprocessor options injects shared variables and mixins automatically."
+    },
+    {
+      "id": 229,
+      "title": "Which nuxi command lets you inspect Nitro storage drivers and their keys?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi storage"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi info"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi dev"
+        },
+        {
+          "id": "4",
+          "text": "npm run test"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi storage opens an interactive inspector for Nitro storage drivers, helping you debug cached data."
+    },
+    {
+      "id": 230,
+      "title": "How do you disable SSR for a specific page while leaving SSR enabled globally?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Call definePageMeta({ ssr: false }) in the page"
+        },
+        {
+          "id": "2",
+          "text": "Invoke setPageSSR(false) inside setup"
+        },
+        {
+          "id": "3",
+          "text": "Export const ssr = false from nuxt.config.ts"
+        },
+        {
+          "id": "4",
+          "text": "Set ssr: false globally and re-enable per page"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Page metadata accepts ssr: false, letting individual routes render purely on the client without changing the global mode."
+    },
+    {
+      "id": 231,
+      "title": "How can you share custom data between middleware and handlers during a single request?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Assign values to event.context"
+        },
+        {
+          "id": "2",
+          "text": "Store values on globalThis"
+        },
+        {
+          "id": "3",
+          "text": "Mutate runtimeConfig"
+        },
+        {
+          "id": "4",
+          "text": "Write to process.env"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "event.context is a per-request object designed for sharing data between Nitro middleware, plugins, and handlers."
+    },
+    {
+      "id": 232,
+      "title": "Which experimental flag enables native View Transitions for client-side navigation?",
+      "options": [
+        {
+          "id": "1",
+          "text": "experimental.viewTransition"
+        },
+        {
+          "id": "2",
+          "text": "app.viewTransition"
+        },
+        {
+          "id": "3",
+          "text": "router.transitions"
+        },
+        {
+          "id": "4",
+          "text": "vite.viewTransition"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The experimental.viewTransition flag activates browser view transitions so Nuxt can animate page swaps with native APIs."
+    },
+    {
+      "id": 233,
+      "title": "What does setting nitro.prerender.crawlLinks to true achieve during static generation?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Nitro automatically follows discovered links to enqueue additional routes"
+        },
+        {
+          "id": "2",
+          "text": "Nitro disables prerendering entirely"
+        },
+        {
+          "id": "3",
+          "text": "Nitro forces all dynamic routes to stay dynamic"
+        },
+        {
+          "id": "4",
+          "text": "Nitro only caches API responses"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "With crawlLinks enabled, Nitro scans rendered HTML for links and adds them to the prerender queue automatically."
+    },
+    {
+      "id": 234,
+      "title": "Which helper should you use to set an HTTP cookie inside a server event handler?",
+      "options": [
+        {
+          "id": "1",
+          "text": "setCookie"
+        },
+        {
+          "id": "2",
+          "text": "useCookie"
+        },
+        {
+          "id": "3",
+          "text": "defineCookie"
+        },
+        {
+          "id": "4",
+          "text": "cookie.set"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "setCookie writes cookies to the outgoing response, while useCookie reads or creates reactive cookie refs."
+    },
+    {
+      "id": 235,
+      "title": "Which nuxt.config.ts option changes the directory that serves static public assets?",
+      "options": [
+        {
+          "id": "1",
+          "text": "dir.public"
+        },
+        {
+          "id": "2",
+          "text": "dir.assets"
+        },
+        {
+          "id": "3",
+          "text": "app.publicDir"
+        },
+        {
+          "id": "4",
+          "text": "router.publicPath"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "dir.public lets you remap the folder Nuxt treats as the public/ directory when customizing project structure."
+    },
+    {
+      "id": 236,
+      "title": "How do you instrument all server responses for observability without touching each handler individually?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Register a defineNitroPlugin that hooks into 'render:response'"
+        },
+        {
+          "id": "2",
+          "text": "Wrap every defineEventHandler call manually"
+        },
+        {
+          "id": "3",
+          "text": "Add middleware files under pages/"
+        },
+        {
+          "id": "4",
+          "text": "Enable telemetry: true in nuxt.config.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "A Nitro plugin can hook render:response once and enrich outgoing responses for logging or tracing globally."
+    },
+    {
+      "id": 237,
+      "title": "Which helper should you use to memoize expensive data inside a server route across requests?",
+      "options": [
+        {
+          "id": "1",
+          "text": "cachedEventHandler"
+        },
+        {
+          "id": "2",
+          "text": "defineLazyEventHandler"
+        },
+        {
+          "id": "3",
+          "text": "useState"
+        },
+        {
+          "id": "4",
+          "text": "useAsyncData"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "cachedEventHandler wraps a handler and remembers responses according to configured cache rules, avoiding repeated work."
+    },
+    {
+      "id": 238,
+      "title": "How can you expose additional directories for auto-imported composables beyond /composables?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Set imports.dirs in nuxt.config.ts with the extra paths"
+        },
+        {
+          "id": "2",
+          "text": "Place files under server/utils"
+        },
+        {
+          "id": "3",
+          "text": "Use module.exports in app.vue"
+        },
+        {
+          "id": "4",
+          "text": "Create a plugins/imports.ts file"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Adding directories to imports.dirs registers them with Nuxt's auto-import scanning for composables."
+    },
+    {
+      "id": 239,
+      "title": "Which runtime hook lets you intercept navigateTo calls before they complete?",
+      "options": [
+        {
+          "id": "1",
+          "text": "app:beforeMount"
+        },
+        {
+          "id": "2",
+          "text": "page:transition:finish"
+        },
+        {
+          "id": "3",
+          "text": "navigateTo"
+        },
+        {
+          "id": "4",
+          "text": "page:start"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "Nuxt exposes a navigateTo hook where you can inspect or mutate navigation options prior to routing."
+    },
+    {
+      "id": 240,
+      "title": "What is the benefit of defining nitro.storage with a redis driver for 'cache'?",
+      "options": [
+        {
+          "id": "1",
+          "text": "It allows distributed caching shared across multiple server instances"
+        },
+        {
+          "id": "2",
+          "text": "It automatically enables offline mode"
+        },
+        {
+          "id": "3",
+          "text": "It forces SSR to be disabled"
+        },
+        {
+          "id": "4",
+          "text": "It replaces runtimeConfig"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Using a Redis storage driver makes cached content available to all Nitro workers, enabling cross-instance cache reads."
+    },
+    {
+      "id": 241,
+      "title": "How do you configure a global middleware to rewrite unauthorized users to /login on both SSR and client navigation?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Create middleware/auth.global.ts exporting defineNuxtRouteMiddleware"
+        },
+        {
+          "id": "2",
+          "text": "Place a composable under server/plugins"
+        },
+        {
+          "id": "3",
+          "text": "Modify router.options in app.vue"
+        },
+        {
+          "id": "4",
+          "text": "Enable pages: false"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "A .global middleware file runs on every route both server and client, letting you redirect unauthorized traffic."
+    },
+    {
+      "id": 242,
+      "title": "Which Nitro configuration enables HTTP streaming responses by default when supported?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Set experimental.asyncContext to true"
+        },
+        {
+          "id": "2",
+          "text": "Set experimental.streamResponse to true"
+        },
+        {
+          "id": "3",
+          "text": "Enable ssr: false"
+        },
+        {
+          "id": "4",
+          "text": "Use app.head"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "experimental.streamResponse opts Nitro into streaming HTML and payloads when the platform supports it."
+    },
+    {
+      "id": 243,
+      "title": "How do you transform payloads emitted from useAsyncData globally before hydration?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Implement a plugin hooking to nuxtApp.hooks.hook('app:payload', cb)"
+        },
+        {
+          "id": "2",
+          "text": "Override useAsyncData in every component"
+        },
+        {
+          "id": "3",
+          "text": "Set payloadTransform in runtimeConfig"
+        },
+        {
+          "id": "4",
+          "text": "Use definePageMeta"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The app:payload hook runs whenever payload data is serialized, allowing global transformations before hydration."
+    },
+    {
+      "id": 244,
+      "title": "Which property enables experimental cross-origin prefetching for <NuxtLink>?",
+      "options": [
+        {
+          "id": "1",
+          "text": "experimental.crossOriginPrefetch"
+        },
+        {
+          "id": "2",
+          "text": "router.prefetchCrossOrigin"
+        },
+        {
+          "id": "3",
+          "text": "app.crossOrigin"
+        },
+        {
+          "id": "4",
+          "text": "vite.optimizeDeps.external"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "experimental.crossOriginPrefetch lets Nuxt prefetch assets from other origins when supported by the browser."
+    },
+    {
+      "id": 245,
+      "title": "How do you ensure a server route returns JSON with a specific HTTP status in one line?",
+      "options": [
+        {
+          "id": "1",
+          "text": "return send(event, { message: 'ok' }, 202)"
+        },
+        {
+          "id": "2",
+          "text": "throw createError({ message: 'ok', statusCode: 202 })"
+        },
+        {
+          "id": "3",
+          "text": "event.node.res.json({ message: 'ok', status: 202 })"
+        },
+        {
+          "id": "4",
+          "text": "return defineEventHandler(() => 202)"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro's send helper takes the event, body, and status code, writing a JSON response with the desired status."
+    },
+    {
+      "id": 246,
+      "title": "Which command visualizes bundle composition using an interactive treemap?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi analyze"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi info"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi typecheck"
+        },
+        {
+          "id": "4",
+          "text": "npx nuxi prepare"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi analyze builds the project and opens an interactive treemap to inspect bundle weight and splits."
+    },
+    {
+      "id": 247,
+      "title": "How do you customize the HTML template shell used for SSR responses?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Create app.vue"
+        },
+        {
+          "id": "2",
+          "text": "Provide a template via app/html template option"
+        },
+        {
+          "id": "3",
+          "text": "Edit .nuxt/output/index.html"
+        },
+        {
+          "id": "4",
+          "text": "Override default.vue"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "You can supply a custom HTML template using the app.html template option in nuxt.config.ts or by creating app/app.html."
+    },
+    {
+      "id": 248,
+      "title": "Which flag makes Nuxt produce client bundles that omit server code when running in hybrid mode?",
+      "options": [
+        {
+          "id": "1",
+          "text": "nitro.experimental.inlineClientBuilds"
+        },
+        {
+          "id": "2",
+          "text": "experimental.noScripts"
+        },
+        {
+          "id": "3",
+          "text": "vite.ssr.noExternal"
+        },
+        {
+          "id": "4",
+          "text": "build.analyze"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "inlineClientBuilds prevents server files from being shipped to the client bundle by inlining references in hybrid deployments."
+    },
+    {
+      "id": 249,
+      "title": "How do you opt a specific dynamic route out of payload extraction to keep JSON inlined?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Set routeRules['/blog/:slug'] = { experimental: { payloadExtraction: false } }"
+        },
+        {
+          "id": "2",
+          "text": "Disable experimental.payloadExtraction globally"
+        },
+        {
+          "id": "3",
+          "text": "Use definePageMeta({ payload: false })"
+        },
+        {
+          "id": "4",
+          "text": "Place a .nopayload file next to the page"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "routeRules can override experimental settings per path, letting you keep payloads inline for specific dynamic routes."
+    },
+    {
+      "id": 250,
+      "title": "Which helper retrieves a typed Prisma client instance registered via a plugin?",
+      "options": [
+        {
+          "id": "1",
+          "text": "const { $prisma } = useNuxtApp()"
+        },
+        {
+          "id": "2",
+          "text": "const prisma = usePrisma()"
+        },
+        {
+          "id": "3",
+          "text": "import prisma from '@/server/plugins/prisma'"
+        },
+        {
+          "id": "4",
+          "text": "const prisma = useRuntimeConfig().prisma"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Plugin injections are accessible via useNuxtApp() using their $-prefixed names, preserving types when declared in the plugin."
+    },
+    {
+      "id": 251,
+      "title": "What is the recommended way to expose global TypeScript types for app.config runtime properties?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Create a types/app-config.d.ts extending ConfigApp"
+        },
+        {
+          "id": "2",
+          "text": "Add comments in app.config.ts"
+        },
+        {
+          "id": "3",
+          "text": "Set tsconfig.compilerOptions.types = ['app']"
+        },
+        {
+          "id": "4",
+          "text": "Use defineNuxtConfig"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Augmenting ConfigApp inside a .d.ts file teaches TypeScript about custom app.config properties, making useAppConfig strongly typed."
+    },
+    {
+      "id": 252,
+      "title": "How do you add a custom Vite plugin only in development?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Push the plugin into vite.plugins inside a hook for 'vite:extendConfig' when isClient"
+        },
+        {
+          "id": "2",
+          "text": "Modify package.json scripts"
+        },
+        {
+          "id": "3",
+          "text": "Place the plugin under modules/"
+        },
+        {
+          "id": "4",
+          "text": "Add it to buildModules"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The vite:extendConfig hook receives context so you can conditionally push plugins depending on command or mode."
+    },
+    {
+      "id": 253,
+      "title": "Which composable gives you access to the current page's payload after hydration for client-only logic?",
+      "options": [
+        {
+          "id": "1",
+          "text": "useState"
+        },
+        {
+          "id": "2",
+          "text": "useRouter"
+        },
+        {
+          "id": "3",
+          "text": "useAsyncDataPayload"
+        },
+        {
+          "id": "4",
+          "text": "useNuxtApp().payload"
+        }
+      ],
+      "correctId": "4",
+      "explanation": "The Nuxt app instance exposes a payload object containing hydrated data that client logic can read post-mount."
+    },
+    {
+      "id": 254,
+      "title": "How can you defer registration of a heavy component until it enters the viewport without writing manual Intersection Observer code?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Wrap it with <ClientOnly>"
+        },
+        {
+          "id": "2",
+          "text": "Use the built-in <LazyFoo> component naming convention"
+        },
+        {
+          "id": "3",
+          "text": "Set ssr: false"
+        },
+        {
+          "id": "4",
+          "text": "Enable experimental.observe"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Prefixing component filenames with Lazy (or importing via defineAsyncComponent) leverages Nuxt's auto lazy-loading strategy."
+    },
+    {
+      "id": 255,
+      "title": "Which nitro.prerender setting allows you to include routes generated by an external script?",
+      "options": [
+        {
+          "id": "1",
+          "text": "nitro.prerender.routes"
+        },
+        {
+          "id": "2",
+          "text": "nitro.prerender.auto"
+        },
+        {
+          "id": "3",
+          "text": "nitro.prerender.script"
+        },
+        {
+          "id": "4",
+          "text": "nitro.prerender.exclude"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Providing an array under nitro.prerender.routes seeds the prerenderer with explicit paths, including those discovered externally."
+    },
+    {
+      "id": 256,
+      "title": "How do you detect on the client that the current route was prerendered at build time?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Check useRoute().meta.prerendered"
+        },
+        {
+          "id": "2",
+          "text": "Inspect useNuxtApp().payload.prerendered"
+        },
+        {
+          "id": "3",
+          "text": "Read process.client"
+        },
+        {
+          "id": "4",
+          "text": "Look at navigator.prerender"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Nuxt marks payloads generated during prerender with a prerendered flag accessible on useNuxtApp().payload for client logic."
+    },
+    {
+      "id": 257,
+      "title": "Which nitro.config option enables WebSocket upgrade handling for specific routes?",
+      "options": [
+        {
+          "id": "1",
+          "text": "routeRules['/ws/**'] = { websocket: true }"
+        },
+        {
+          "id": "2",
+          "text": "ssr.websocket = true"
+        },
+        {
+          "id": "3",
+          "text": "hooks.websocket"
+        },
+        {
+          "id": "4",
+          "text": "nitro.ws = true"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Setting websocket: true inside routeRules ensures Nitro keeps the upgrade request open for WebSocket communication."
+    },
+    {
+      "id": 258,
+      "title": "How do you ensure a composable only runs during server-side rendering?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Wrap logic in if (process.server) blocks"
+        },
+        {
+          "id": "2",
+          "text": "Export it from server/utils only"
+        },
+        {
+          "id": "3",
+          "text": "Use defineNuxtRouteMiddleware"
+        },
+        {
+          "id": "4",
+          "text": "Import it inside app.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "process.server (and import.meta.server) gates code to the SSR context, preventing execution on the client."
+    },
+    {
+      "id": 259,
+      "title": "Which nuxt.config.ts hook lets you mutate generated types before they are written to .nuxt?",
+      "options": [
+        {
+          "id": "1",
+          "text": "hooks['prepare:types']"
+        },
+        {
+          "id": "2",
+          "text": "hooks['builder:generateApp']"
+        },
+        {
+          "id": "3",
+          "text": "hooks['pages:extend']"
+        },
+        {
+          "id": "4",
+          "text": "hooks['vite:extend']"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The prepare:types hook exposes generated type content, letting you append custom declarations before they land in .nuxt."
+    },
+    {
+      "id": 260,
+      "title": "What is the advantage of setting nitro.importsDirs with a server-only utilities folder?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Utilities become auto-importable on the server via #imports"
+        },
+        {
+          "id": "2",
+          "text": "The folder is copied to public/"
+        },
+        {
+          "id": "3",
+          "text": "The files are bundled into client chunks"
+        },
+        {
+          "id": "4",
+          "text": "It replaces composables/ auto imports"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nitro.importsDirs registers additional directories for server auto-imports, making helpers available without manual imports."
+    },
+    {
+      "id": 261,
+      "title": "Which command runs the Nuxt dev server with open telemetry instrumentation enabled?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi dev --experimental.telemetryTracing"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi dev --inspect"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi dev --trace-warnings"
+        },
+        {
+          "id": "4",
+          "text": "npx nuxi analyze --otel"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Passing experimental.telemetryTracing enables Nuxt's OTEL integration for instrumentation and span collection during dev."
+    },
+    {
+      "id": 262,
+      "title": "How can you expose a typed RPC-like endpoint under /api/rpc without writing separate files for each method?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Use server/api/rpc.post.ts with a method switch and TypeScript discriminated unions"
+        },
+        {
+          "id": "2",
+          "text": "Create server/routes/rpc.ts"
+        },
+        {
+          "id": "3",
+          "text": "Configure router.extendRoutes"
+        },
+        {
+          "id": "4",
+          "text": "Use pages/api/rpc.vue"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Handling POST in a single RPC endpoint with typed unions keeps the contract in one place while supporting multiple operations."
+    },
+    {
+      "id": 263,
+      "title": "Which helper attaches event listeners to Nitro hooks from within a module?",
+      "options": [
+        {
+          "id": "1",
+          "text": "nuxt.hook('nitro:config', cb)"
+        },
+        {
+          "id": "2",
+          "text": "nuxt.on('nitro', cb)"
+        },
+        {
+          "id": "3",
+          "text": "nitro.listen(cb)"
+        },
+        {
+          "id": "4",
+          "text": "useNuxtApp().hook(cb)"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Inside modules you can call nuxt.hook with Nitro hook names (like nitro:config) to customize server behavior."
+    },
+    {
+      "id": 264,
+      "title": "How do you configure a custom logger implementation for Nitro requests?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Provide nitro.logger = { info, warn, error } in nuxt.config.ts"
+        },
+        {
+          "id": "2",
+          "text": "Override console.log globally"
+        },
+        {
+          "id": "3",
+          "text": "Set app.logger"
+        },
+        {
+          "id": "4",
+          "text": "Use definePageMeta"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro accepts a logger object so you can integrate structured logging libraries instead of the default console output."
+    },
+    {
+      "id": 265,
+      "title": "Which experimental flag enables automatic component server bundling boundaries for partial hydration?",
+      "options": [
+        {
+          "id": "1",
+          "text": "experimental.componentIslands"
+        },
+        {
+          "id": "2",
+          "text": "experimental.inlineSSRStyles"
+        },
+        {
+          "id": "3",
+          "text": "experimental.viewTransition"
+        },
+        {
+          "id": "4",
+          "text": "experimental.observer"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "experimental.componentIslands activates Nuxt's island architecture, splitting components into isolated hydrated chunks."
+    },
+    {
+      "id": 266,
+      "title": "How can you automatically persist useState values to cookies on the client?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Watch the state and sync with useCookie inside a plugin"
+        },
+        {
+          "id": "2",
+          "text": "Set state.persist = true"
+        },
+        {
+          "id": "3",
+          "text": "Store state inside runtimeConfig"
+        },
+        {
+          "id": "4",
+          "text": "Use defineStatePersist"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "A client plugin can watch a shared state ref and mirror values into cookies via useCookie for persistence."
+    },
+    {
+      "id": 267,
+      "title": "Which nuxt.config.ts setting increases the HMR timeout for slow machines?",
+      "options": [
+        {
+          "id": "1",
+          "text": "vite.server.hmr.timeout = 60000"
+        },
+        {
+          "id": "2",
+          "text": "devServer.hmrTimeout = 60000"
+        },
+        {
+          "id": "3",
+          "text": "builder.hmr = 60000"
+        },
+        {
+          "id": "4",
+          "text": "nitro.hmrTimeout = 60000"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Extending Vite's HMR timeout helps maintain hot-module connections when file changes or builds are slow."
+    },
+    {
+      "id": 268,
+      "title": "How do you inject environment-based feature flags into both SSR and client code without exposing secrets?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Define runtimeConfig.public.features with non-sensitive values"
+        },
+        {
+          "id": "2",
+          "text": "Set process.env.FEATURES"
+        },
+        {
+          "id": "3",
+          "text": "Create an .env.feature file"
+        },
+        {
+          "id": "4",
+          "text": "Pass flags via app.html"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "runtimeConfig.public exposes safe flags to the client while keeping server secrets at the top level of runtimeConfig."
+    },
+    {
+      "id": 269,
+      "title": "Which helper should you use to schedule periodic background jobs in Nitro?",
+      "options": [
+        {
+          "id": "1",
+          "text": "defineTask"
+        },
+        {
+          "id": "2",
+          "text": "defineLazyEventHandler"
+        },
+        {
+          "id": "3",
+          "text": "useInterval"
+        },
+        {
+          "id": "4",
+          "text": "setImmediate"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "defineTask registers scheduled jobs that Nitro can run on defined cron expressions or timers."
+    },
+    {
+      "id": 270,
+      "title": "How can you disable prefetching on a specific NuxtLink component?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Set :prefetch=\"false\" on <NuxtLink>"
+        },
+        {
+          "id": "2",
+          "text": "Use navigateTo instead"
+        },
+        {
+          "id": "3",
+          "text": "Add rel=\"nofollow\""
+        },
+        {
+          "id": "4",
+          "text": "Place the link inside <ClientOnly>"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "The prefetch prop controls whether Nuxt fetches route data ahead of navigation on a per-link basis."
+    },
+    {
+      "id": 271,
+      "title": "Which Nitro utility streams file downloads without loading them entirely into memory?",
+      "options": [
+        {
+          "id": "1",
+          "text": "sendStream"
+        },
+        {
+          "id": "2",
+          "text": "sendFile"
+        },
+        {
+          "id": "3",
+          "text": "readBody"
+        },
+        {
+          "id": "4",
+          "text": "useStreamDownload"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "sendStream pipes a Node Readable directly to the response, ideal for large file downloads."
+    },
+    {
+      "id": 272,
+      "title": "What is the recommended place to register custom server handlers that run before every request?",
+      "options": [
+        {
+          "id": "1",
+          "text": "server/middleware/*.global.ts"
+        },
+        {
+          "id": "2",
+          "text": "composables/global.ts"
+        },
+        {
+          "id": "3",
+          "text": "plugins/server.ts"
+        },
+        {
+          "id": "4",
+          "text": "pages/middleware.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Global server middleware files execute for every request, letting you inject headers or security logic universally."
+    },
+    {
+      "id": 273,
+      "title": "How do you cache the response of an expensive useFetch call until a watched ref changes?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Provide a key and watch option referencing the ref"
+        },
+        {
+          "id": "2",
+          "text": "Set dedupe: false"
+        },
+        {
+          "id": "3",
+          "text": "Disable server rendering"
+        },
+        {
+          "id": "4",
+          "text": "Call refresh() after every render"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Combining a stable key with watch dependencies keeps cached data until the watched ref triggers a refetch."
+    },
+    {
+      "id": 274,
+      "title": "Which CLI command runs your Nuxt project in test mode with a mock Nitro server?",
+      "options": [
+        {
+          "id": "1",
+          "text": "npx nuxi test"
+        },
+        {
+          "id": "2",
+          "text": "npx nuxi preview --mock"
+        },
+        {
+          "id": "3",
+          "text": "npx nuxi lint"
+        },
+        {
+          "id": "4",
+          "text": "npm run build --test"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "nuxi test spins up a lightweight Nitro instance so you can run integration tests against your server routes."
+    },
+    {
+      "id": 275,
+      "title": "How can you customize the base URL used by $fetch on both server and client?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Set runtimeConfig.public.apiBase and pass it to $fetch calls"
+        },
+        {
+          "id": "2",
+          "text": "Override globalThis.fetch"
+        },
+        {
+          "id": "3",
+          "text": "Modify process.env.BASE_URL during runtime"
+        },
+        {
+          "id": "4",
+          "text": "Call useServerFetch()"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Storing API base URLs in runtimeConfig ensures SSR and client code share the same configurable endpoint."
+    },
+    {
+      "id": 276,
+      "title": "Which hook can you use to strip sensitive fields from payloads before they reach the client?",
+      "options": [
+        {
+          "id": "1",
+          "text": "nuxtApp.hook('app:rendered', cb)"
+        },
+        {
+          "id": "2",
+          "text": "nuxtApp.hook('app:serialized', cb)"
+        },
+        {
+          "id": "3",
+          "text": "nuxtApp.hook('vue:setup', cb)"
+        },
+        {
+          "id": "4",
+          "text": "nuxtApp.hook('page:start', cb)"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "The app:serialized hook exposes the payload right before serialization, giving you a chance to redact sensitive data."
+    },
+    {
+      "id": 277,
+      "title": "How do you conditionally register Nitro plugins only in production deployments?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Check nitro.options.dev inside server/plugins with an if guard"
+        },
+        {
+          "id": "2",
+          "text": "Rename the plugin .prod.ts"
+        },
+        {
+          "id": "3",
+          "text": "Place the plugin in public/"
+        },
+        {
+          "id": "4",
+          "text": "Use defineNuxtConfig({ plugins: [...] })"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nitro plugins receive the Nitro app with options.dev, allowing you to early-return when running in development."
+    },
+    {
+      "id": 278,
+      "title": "What is the benefit of adding routeRules with cache: { swr: 60 } for an API endpoint?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Nitro serves cached responses while revalidating in the background"
+        },
+        {
+          "id": "2",
+          "text": "It forces the route to render on the client"
+        },
+        {
+          "id": "3",
+          "text": "It disables ETag headers"
+        },
+        {
+          "id": "4",
+          "text": "It makes the route private"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Stale-while-revalidate caching returns cached data immediately and refreshes the cache asynchronously, combining speed and freshness."
+    },
+    {
+      "id": 279,
+      "title": "Which component renders when an unhandled error occurs during navigation?",
+      "options": [
+        {
+          "id": "1",
+          "text": "error.vue"
+        },
+        {
+          "id": "2",
+          "text": "app.vue"
+        },
+        {
+          "id": "3",
+          "text": "layouts/default.vue"
+        },
+        {
+          "id": "4",
+          "text": "middleware/error.global.ts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt renders the root-level error.vue component whenever an unhandled error reaches the top of the navigation lifecycle."
+    },
+    {
+      "id": 280,
+      "title": "How do you programmatically trigger a 404 from a server route?",
+      "options": [
+        {
+          "id": "1",
+          "text": "return sendError(event, 404)"
+        },
+        {
+          "id": "2",
+          "text": "throw createError({ statusCode: 404 })"
+        },
+        {
+          "id": "3",
+          "text": "event.node.res.statusMessage = 'Not Found'"
+        },
+        {
+          "id": "4",
+          "text": "setResponseStatus(event, 404)"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Throwing createError with statusCode: 404 surfaces the error through Nuxt's handling pipeline and renders the global error page."
+    },
+    {
+      "id": 281,
+      "title": "What does callOnce(() => clearError()) accomplish in a layout?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Automatically retries failed API calls"
+        },
+        {
+          "id": "2",
+          "text": "Ensures the error state clears only a single time"
+        },
+        {
+          "id": "3",
+          "text": "Prevents error.vue from rendering"
+        },
+        {
+          "id": "4",
+          "text": "Registers global error listeners"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "callOnce guarantees the callback runs just once per navigation cycle, making it handy for clearing errors after they have been acknowledged."
+    },
+    {
+      "id": 282,
+      "title": "Which Nuxt hook lets you inspect errors thrown during SSR rendering?",
+      "options": [
+        {
+          "id": "1",
+          "text": "app:rendered"
+        },
+        {
+          "id": "2",
+          "text": "app:error"
+        },
+        {
+          "id": "3",
+          "text": "nitro:request"
+        },
+        {
+          "id": "4",
+          "text": "pages:extend"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "The app:error hook fires whenever Nuxt captures an error, allowing you to log or report it during server-side or client rendering."
+    },
+    {
+      "id": 283,
+      "title": "How do you catch errors thrown inside a <Suspense> block?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Wrap the block with <NuxtErrorBoundary>"
+        },
+        {
+          "id": "2",
+          "text": "Add v-on:error=\"handle\" to <Suspense>"
+        },
+        {
+          "id": "3",
+          "text": "Use defineExpose in the child component"
+        },
+        {
+          "id": "4",
+          "text": "Move the logic to onMounted"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Placing the content inside <NuxtErrorBoundary> provides scoped error handling for async children rendered by Suspense."
+    },
+    {
+      "id": 284,
+      "title": "What is the default status code when you throw createError({ statusMessage: 'Boom' })?",
+      "options": [
+        {
+          "id": "1",
+          "text": "200"
+        },
+        {
+          "id": "2",
+          "text": "400"
+        },
+        {
+          "id": "3",
+          "text": "500"
+        },
+        {
+          "id": "4",
+          "text": "418"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "If you omit statusCode, createError defaults to sending a 500 Internal Server Error."
+    },
+    {
+      "id": 285,
+      "title": "Which helper lets you send a custom JSON error response from a server route without throwing?",
+      "options": [
+        {
+          "id": "1",
+          "text": "sendError(event, error)"
+        },
+        {
+          "id": "2",
+          "text": "showError(error)"
+        },
+        {
+          "id": "3",
+          "text": "abortNavigation(error)"
+        },
+        {
+          "id": "4",
+          "text": "retryFetch(error)"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "sendError responds with the provided error payload and halts further processing of the route handler."
+    },
+    {
+      "id": 286,
+      "title": "How do you navigate away from error.vue after showing a friendly message?",
+      "options": [
+        {
+          "id": "1",
+          "text": "navigateTo('/')"
+        },
+        {
+          "id": "2",
+          "text": "clearError({ redirect: '/' })"
+        },
+        {
+          "id": "3",
+          "text": "useRouter().go(-1)"
+        },
+        {
+          "id": "4",
+          "text": "setPageLayout('default')"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Passing a redirect target to clearError resets the error state and transitions the user back to a safe route."
+    },
+    {
+      "id": 287,
+      "title": "Which lifecycle hook lets you intercept component-level errors before they bubble up?",
+      "options": [
+        {
+          "id": "1",
+          "text": "onServerPrefetch"
+        },
+        {
+          "id": "2",
+          "text": "onErrorCaptured"
+        },
+        {
+          "id": "3",
+          "text": "onRouterReady"
+        },
+        {
+          "id": "4",
+          "text": "onBeforeRouteLeave"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Vue's onErrorCaptured hook allows a parent component to gracefully handle errors thrown by its children."
+    },
+    {
+      "id": 288,
+      "title": "What does defineNitroPlugin(({ hooks }) => hooks.hook('error', handler)) allow you to do?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Override Vue's global errorHandler"
+        },
+        {
+          "id": "2",
+          "text": "Listen to every Nitro server error"
+        },
+        {
+          "id": "3",
+          "text": "Disable stack traces"
+        },
+        {
+          "id": "4",
+          "text": "Customize route rules"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Nitro plugins can subscribe to the error hook to centralize logging, alerting, or cleanup for server-side failures."
+    },
+    {
+      "id": 289,
+      "title": "How do you return a custom payload from error.vue?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Call definePayload in setup"
+        },
+        {
+          "id": "2",
+          "text": "Use useError() to access the thrown data"
+        },
+        {
+          "id": "3",
+          "text": "Modify nuxt.config.ts"
+        },
+        {
+          "id": "4",
+          "text": "Read from useRoute().meta.error"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "useError() exposes the status, message, and any custom data passed through createError or showError."
+    },
+    {
+      "id": 290,
+      "title": "Which utility retries a server handler if an error occurs during streaming?",
+      "options": [
+        {
+          "id": "1",
+          "text": "defineCachedEventHandler"
+        },
+        {
+          "id": "2",
+          "text": "defineLazyEventHandler"
+        },
+        {
+          "id": "3",
+          "text": "defineRetryEventHandler"
+        },
+        {
+          "id": "4",
+          "text": "None; you must implement retries yourself"
+        }
+      ],
+      "correctId": "4",
+      "explanation": "Nitro does not ship with an automatic retry wrapper, so resilient streaming endpoints need custom retry logic."
+    },
+    {
+      "id": 291,
+      "title": "How can you log client-side errors to an external service?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Create a client-only plugin that hooks window.onerror"
+        },
+        {
+          "id": "2",
+          "text": "Set experimental.crossOriginPrefetch"
+        },
+        {
+          "id": "3",
+          "text": "Enable vue:extend hooks"
+        },
+        {
+          "id": "4",
+          "text": "Update nuxt.config.ts build.transpile"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "A .client plugin can register window.onerror and unhandledrejection handlers to forward errors to services like Sentry or LogRocket."
+    },
+    {
+      "id": 292,
+      "title": "What happens when middleware calls abortNavigation(createError(...))?",
+      "options": [
+        {
+          "id": "1",
+          "text": "The navigation is cancelled and the error pipeline runs"
+        },
+        {
+          "id": "2",
+          "text": "The navigation continues but logs a warning"
+        },
+        {
+          "id": "3",
+          "text": "Nuxt redirects to /error"
+        },
+        {
+          "id": "4",
+          "text": "The middleware restarts"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "abortNavigation stops the current route change and forwards the error to Nuxt's global handlers."
+    },
+    {
+      "id": 293,
+      "title": "How do you expose additional data to error.vue after catching an exception in a page?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Attach metadata to route.meta.error"
+        },
+        {
+          "id": "2",
+          "text": "Throw createError({ data: { details } })"
+        },
+        {
+          "id": "3",
+          "text": "Set process.env.NUXT_ERROR"
+        },
+        {
+          "id": "4",
+          "text": "Write to window.__NUXT__"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "Any data object passed to createError is available in useError().data inside error.vue for tailored messaging."
+    },
+    {
+      "id": 294,
+      "title": "What is the recommended way to surface validation failures from a server endpoint?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Throw createError({ statusCode: 422, data: issues })"
+        },
+        {
+          "id": "2",
+          "text": "Return { success: false } with status 200"
+        },
+        {
+          "id": "3",
+          "text": "console.warn and continue"
+        },
+        {
+          "id": "4",
+          "text": "Call sendStream with the errors"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Returning a 422 Unprocessable Entity via createError communicates validation problems clearly to clients."
+    },
+    {
+      "id": 295,
+      "title": "How do you avoid leaking stack traces in production error pages?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Run in production mode and display sanitized messaging in error.vue"
+        },
+        {
+          "id": "2",
+          "text": "Disable Nitro"
+        },
+        {
+          "id": "3",
+          "text": "Delete error.vue"
+        },
+        {
+          "id": "4",
+          "text": "Set console.debug = null"
+        }
+      ],
+      "correctId": "1",
+      "explanation": "Nuxt hides stack traces when dev is false, so customizing error.vue to show friendly text keeps implementation details private."
+    },
+    {
+      "id": 296,
+      "title": "Which pattern prevents Nuxt from showing the global error page for a handled failure?",
+      "options": [
+        {
+          "id": "1",
+          "text": "definePageMeta({ layout: false })"
+        },
+        {
+          "id": "2",
+          "text": "Handle the failure locally and return a response instead of throwing"
+        },
+        {
+          "id": "3",
+          "text": "Rename error.vue"
+        },
+        {
+          "id": "4",
+          "text": "Disable route rules"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "If you catch the error and respond within the handler or component, it never bubbles to error.vue."
+    },
+    {
+      "id": 297,
+      "title": "What does showError({ statusCode: 503, message: 'Offline' }) do during SSR?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Queues a client-only toast notification"
+        },
+        {
+          "id": "2",
+          "text": "Throws an error that renders error.vue with the payload"
+        },
+        {
+          "id": "3",
+          "text": "Redirects the user to /offline automatically"
+        },
+        {
+          "id": "4",
+          "text": "Logs the error but returns 200"
+        }
+      ],
+      "correctId": "2",
+      "explanation": "showError is sugar for throwing createError, so SSR stops and the error page renders using the supplied metadata."
+    },
+    {
+      "id": 298,
+      "title": "How can you swap to a custom layout when displaying error.vue?",
+      "options": [
+        {
+          "id": "1",
+          "text": "Use definePageMeta inside error.vue"
+        },
+        {
+          "id": "2",
+          "text": "Set runtimeConfig.errorLayout"
+        },
+        {
+          "id": "3",
+          "text": "Wrap the template in <NuxtLayout name='error'>"
+        },
+        {
+          "id": "4",
+          "text": "You cannot change layouts in error.vue"
+        }
+      ],
+      "correctId": "3",
+      "explanation": "Wrapping the content in <NuxtLayout name='error'> lets you display a dedicated layout for error scenarios."
     }
   ]
 }

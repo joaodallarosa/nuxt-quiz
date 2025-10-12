@@ -1,6 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 export default defineEventHandler(async (event) => {
-  const { questionIndex } = await readBody(event);
+  const { questionId } = await readBody(event);
   const config = useRuntimeConfig();
   const supabase = createClient(
     config.public.supabaseUrl,
@@ -8,5 +8,5 @@ export default defineEventHandler(async (event) => {
   );
   return await supabase
     .from("flagged-questions")
-    .insert({ question_index: questionIndex });
+    .insert({ question_id: questionId });
 });
