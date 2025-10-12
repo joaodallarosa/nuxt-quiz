@@ -8,10 +8,7 @@ const {
   displayAnswer,
   isLoading
 } = useQuiz();
-useAsyncData("quiz", () => {
-  return getQuestion();
-});
-async function onNextQuestion() {
+if (import.meta.client) {
   await getQuestion();
 }
 function getNextButtonText(): string {
@@ -74,7 +71,7 @@ function getNextButtonText(): string {
         </UButton>
         <div class="flex gap-4">
           <UButton v-if="isDisplayingAnswer" size="md" variant="subtle" :color="selectedOption ? 'primary' : 'neutral'"
-            @click="onNextQuestion" :disabled="!selectedOption" class="secondary">
+            @click="getQuestion()" :disabled="!selectedOption" class="secondary">
             Continue
           </UButton>
           <UButton v-else size="md" variant="subtle" :color="selectedOption ? 'primary' : 'neutral'"

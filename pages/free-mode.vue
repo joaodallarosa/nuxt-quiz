@@ -1,6 +1,6 @@
 <script setup lang="ts">
 definePageMeta({
-  colorMode: "dark",
+    colorMode: "dark",
 });
 const { answersRatio, answeredCount, clearCookies } = useQuiz()
 function reset() {
