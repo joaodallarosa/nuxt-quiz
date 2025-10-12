@@ -28,6 +28,7 @@ export default function () {
 
   return {
     question,
+    questionIndex,
     selectedOption,
     isDisplayingAnswer,
     hasSelectedCorrectAnswer,

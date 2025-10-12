@@ -1,21 +1,46 @@
 <script setup lang="ts">
+const toast = useToast();
+const flagQuestionLoading = ref(false);
 const {
   question,
+  questionIndex,
   getQuestion,
   isDisplayingAnswer,
   selectedOption,
   isCorrectAnswer,
   displayAnswer,
-  isLoading
+  isLoading,
 } = useQuiz();
 if (import.meta.client) {
   await getQuestion();
 }
 function getNextButtonText(): string {
   if (selectedOption.value) {
-    return 'Verify'
+    return "Verify";
   }
-  return 'Continue'
+  return "Continue";
+}
+async function flagQuestion() {
+  flagQuestionLoading.value = true;
+  const { status } = await $fetch("/api/questions/flag", {
+    method: "POST",
+    body: {
+      questionIndex: questionIndex.value,
+    },
+  });
+  if (status === 201) {
+    toast.add({
+      title: "Question flagged!",
+      description: `Flagged questions will be reviewed by the admin, thank you for your contribution.`,
+      icon: "uil:robot",
+    });
+  } else {
+    toast.add({
+      title: "Error When Flagging Question",
+      icon: "uil-bolt-slash",
+    });
+  }
+  flagQuestionLoading.value = false;
 }
 </script>
 
@@ -49,10 +74,8 @@ function getNextButtonText(): string {
         <div class="flex items-center">
           <UIcon :name="`uil:${isCorrectAnswer(item.id) ? 'check-circle' : 'multiply'
             }`" class="size-5 flex-none" :class="{
-              'text-green-700':
-                isCorrectAnswer(item.id),
-              'text-red-700':
-                !isCorrectAnswer(item.id),
+              'text-green-700': isCorrectAnswer(item.id),
+              'text-red-700': !isCorrectAnswer(item.id),
             }" />
           <span class="ml-2">
             {{ item.text }}
@@ -66,9 +89,15 @@ function getNextButtonText(): string {
     </div>
     <template #footer>
       <div class="flex justify-between">
-        <UButton to="/" class="text-sm" variant="subtle" color="error">
-          <span class="truncate">Exit</span>
-        </UButton>
+        <div class="flex gap-4">
+          <UButton to="/" class="text-sm" variant="subtle" color="error">
+            <span class="truncate">Exit</span>
+          </UButton>
+          <UButton @click="flagQuestion()" class="text-sm" variant="subtle" color="warning"
+            :disabled="flagQuestionLoading" :loading="flagQuestionLoading" loading-icon="i-lucide-loader">
+            <span class="truncate">Flag Question</span>
+          </UButton>
+        </div>
         <div class="flex gap-4">
           <UButton v-if="isDisplayingAnswer" size="md" variant="subtle" :color="selectedOption ? 'primary' : 'neutral'"
             @click="getQuestion()" :disabled="!selectedOption" class="secondary">

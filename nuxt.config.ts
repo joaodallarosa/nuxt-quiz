@@ -11,4 +11,10 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "dark",
   },
+  runtimeConfig: {
+    supabasePublishableKey: process.env.NUXT_SUPABASE_PUBLISHABLE_KEY,
+    public: {
+      supabaseUrl: process.env.NUXT_PUBLIC_SUPABASE_URL,
+    },
+  },
 });
