@@ -1242,7 +1242,7 @@
       "explanation": "Global styles are added using the 'css' array in nuxt.config.ts, which will include the styles in every page of the application."
     },
     {
-      "title": "How do you create a composable in Nuxt 3?",
+      "title": "How do you create an auto imported composable in Nuxt 3?",
       "options": [
         {
           "id": "1",
@@ -1751,7 +1751,7 @@
         },
         {
           "id": "5",
-          "text": "Only options 1 and 2 are correct"
+          "text": "Adding scripts via useHead() or nuxt.config.ts head.script are both valid approaches"
         }
       ],
       "correctId": "5",
@@ -2171,7 +2171,7 @@
         },
         {
           "id": "5",
-          "text": "Only options 1 and 2 are correct"
+          "text": "Placing the file in public/ or declaring it through nuxt.config.ts head.link both work"
         }
       ],
       "correctId": "5",
