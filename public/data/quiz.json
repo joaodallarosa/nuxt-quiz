@@ -918,7 +918,7 @@
     },
     {
       "id": 36,
-      "title": "Which directory contains Nuxt 3 plugins?",
+      "title": "Which directory contains Nuxt plugins?",
       "options": [
         {
           "id": "1",
@@ -3089,34 +3089,6 @@
       "explanation": "Component-level error boundaries can be implemented using onErrorCaptured hooks, Suspense components with error handling, or custom wrapper components."
     },
     {
-      "id": 116,
-      "title": "What is the correct way to implement real-time updates in Nuxt 3?",
-      "options": [
-        {
-          "id": "1",
-          "text": "Use Server-Sent Events (SSE)"
-        },
-        {
-          "id": "2",
-          "text": "Implement WebSocket connections"
-        },
-        {
-          "id": "3",
-          "text": "Use polling with useFetch refresh"
-        },
-        {
-          "id": "4",
-          "text": "All approaches are valid"
-        },
-        {
-          "id": "5",
-          "text": "Real-time updates require external services"
-        }
-      ],
-      "correctId": "4",
-      "explanation": "Real-time updates can be implemented using Server-Sent Events, WebSockets, or polling strategies with Nuxt's data fetching composables."
-    },
-    {
       "id": 117,
       "title": "How do you implement custom validators for form fields in Nuxt 3?",
       "options": [
@@ -4741,30 +4713,6 @@
       "explanation": "experimental.componentIslands activates Nuxt's partial hydration islands feature."
     },
     {
-      "id": 184,
-      "title": "Inside server/plugins/log.ts using defineNitroPlugin, what argument is received?",
-      "options": [
-        {
-          "id": "1",
-          "text": "defineNitroPlugin((nitroApp) => { ... })"
-        },
-        {
-          "id": "2",
-          "text": "defineNitroPlugin(({ app }) => { ... })"
-        },
-        {
-          "id": "3",
-          "text": "defineNitroPlugin((nuxtApp) => { ... })"
-        },
-        {
-          "id": "4",
-          "text": "defineNitroPlugin((event) => { ... })"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "defineNitroPlugin passes the Nitro app instance so you can attach hooks or utilities to the server runtime."
-    },
-    {
       "id": 185,
       "title": "What does definePageMeta({ alias: ['/home'] }) do?",
       "options": [
@@ -4971,30 +4919,6 @@
       ],
       "correctId": "1",
       "explanation": "Setting immediate to false defers the request until you manually refresh or a watched dependency updates."
-    },
-    {
-      "id": 194,
-      "title": "Which config property lets you add custom Vite plugins to the build?",
-      "options": [
-        {
-          "id": "1",
-          "text": "vite.plugins"
-        },
-        {
-          "id": "2",
-          "text": "vite.extend"
-        },
-        {
-          "id": "3",
-          "text": "build.vitePlugins"
-        },
-        {
-          "id": "4",
-          "text": "modules.vite"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "The vite key in nuxt.config.ts is merged into Vite config, including the plugins array."
     },
     {
       "id": 195,
@@ -5509,30 +5433,6 @@
       "explanation": "Nitro loads task definitions from server/tasks, so placing defineTask exports there registers scheduled jobs."
     },
     {
-      "id": 217,
-      "title": "Which helper do you call in a server route to access a storage driver named cache configured in nitro.storage?",
-      "options": [
-        {
-          "id": "1",
-          "text": "useStorage('cache')"
-        },
-        {
-          "id": "2",
-          "text": "useRuntimeConfig('cache')"
-        },
-        {
-          "id": "3",
-          "text": "useState('cache')"
-        },
-        {
-          "id": "4",
-          "text": "getStorageDriver('cache')"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "useStorage returns the named Nitro storage driver, giving you access to the configured backend like fs or redis."
-    },
-    {
       "id": 218,
       "title": "What is the effect of setting experimental.inlineSSRStyles to true in nuxt.config.ts?",
       "options": [
@@ -5555,54 +5455,6 @@
       ],
       "correctId": "1",
       "explanation": "experimental.inlineSSRStyles streams CSS alongside SSR HTML so above-the-fold styles are inlined for faster rendering."
-    },
-    {
-      "id": 219,
-      "title": "How can you proxy /api requests to http://localhost:5000 during development using Nuxt config?",
-      "options": [
-        {
-          "id": "1",
-          "text": "Set devServer.proxy['/api'] = 'http://localhost:5000'"
-        },
-        {
-          "id": "2",
-          "text": "Add routeRules['/api'] = { proxy: 'http://localhost:5000' }"
-        },
-        {
-          "id": "3",
-          "text": "Call navigateTo('/api') with a base URL"
-        },
-        {
-          "id": "4",
-          "text": "Place handlers under server/proxy/api"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "devServer.proxy forwards matching paths to a target during local development, letting you call external backends transparently."
-    },
-    {
-      "id": 220,
-      "title": "Which Nitro hook lets you mutate the response payload right before it is sent to the client?",
-      "options": [
-        {
-          "id": "1",
-          "text": "render:response"
-        },
-        {
-          "id": "2",
-          "text": "request"
-        },
-        {
-          "id": "3",
-          "text": "build:done"
-        },
-        {
-          "id": "4",
-          "text": "close"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "The render:response hook exposes the generated response so you can tweak headers or body content before it leaves the server."
     },
     {
       "id": 221,
@@ -5651,30 +5503,6 @@
       ],
       "correctId": "1",
       "explanation": "Setting srcDir changes the directory Nuxt scans for pages, components, and other source files."
-    },
-    {
-      "id": 223,
-      "title": "How can you watch extra server directories for hot reload in Nitro?",
-      "options": [
-        {
-          "id": "1",
-          "text": "Add paths to nitro.watch"
-        },
-        {
-          "id": "2",
-          "text": "Configure devServer.watch"
-        },
-        {
-          "id": "3",
-          "text": "Extend vite.optimizeDeps"
-        },
-        {
-          "id": "4",
-          "text": "Modify router.watch"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "nitro.watch accepts additional glob patterns so the dev server reloads when those files change."
     },
     {
       "id": 224,
@@ -5987,30 +5815,6 @@
       ],
       "correctId": "1",
       "explanation": "A Nitro plugin can hook render:response once and enrich outgoing responses for logging or tracing globally."
-    },
-    {
-      "id": 237,
-      "title": "Which helper should you use to memoize expensive data inside a server route across requests?",
-      "options": [
-        {
-          "id": "1",
-          "text": "cachedEventHandler"
-        },
-        {
-          "id": "2",
-          "text": "defineLazyEventHandler"
-        },
-        {
-          "id": "3",
-          "text": "useState"
-        },
-        {
-          "id": "4",
-          "text": "useAsyncData"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "cachedEventHandler wraps a handler and remembers responses according to configured cache rules, avoiding repeated work."
     },
     {
       "id": 238,
@@ -6419,30 +6223,6 @@
       ],
       "correctId": "2",
       "explanation": "Prefixing component filenames with Lazy (or importing via defineAsyncComponent) leverages Nuxt's auto lazy-loading strategy."
-    },
-    {
-      "id": 255,
-      "title": "Which nitro.prerender setting allows you to include routes generated by an external script?",
-      "options": [
-        {
-          "id": "1",
-          "text": "nitro.prerender.routes"
-        },
-        {
-          "id": "2",
-          "text": "nitro.prerender.auto"
-        },
-        {
-          "id": "3",
-          "text": "nitro.prerender.script"
-        },
-        {
-          "id": "4",
-          "text": "nitro.prerender.exclude"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "Providing an array under nitro.prerender.routes seeds the prerenderer with explicit paths, including those discovered externally."
     },
     {
       "id": 256,
@@ -7261,30 +7041,6 @@
       "explanation": "useError() exposes the status, message, and any custom data passed through createError or showError."
     },
     {
-      "id": 290,
-      "title": "Which utility retries a server handler if an error occurs during streaming?",
-      "options": [
-        {
-          "id": "1",
-          "text": "defineCachedEventHandler"
-        },
-        {
-          "id": "2",
-          "text": "defineLazyEventHandler"
-        },
-        {
-          "id": "3",
-          "text": "defineRetryEventHandler"
-        },
-        {
-          "id": "4",
-          "text": "None; you must implement retries yourself"
-        }
-      ],
-      "correctId": "4",
-      "explanation": "Nitro does not ship with an automatic retry wrapper, so resilient streaming endpoints need custom retry logic."
-    },
-    {
       "id": 291,
       "title": "How can you log client-side errors to an external service?",
       "options": [
@@ -7379,30 +7135,6 @@
       ],
       "correctId": "1",
       "explanation": "Returning a 422 Unprocessable Entity via createError communicates validation problems clearly to clients."
-    },
-    {
-      "id": 295,
-      "title": "How do you avoid leaking stack traces in production error pages?",
-      "options": [
-        {
-          "id": "1",
-          "text": "Run in production mode and display sanitized messaging in error.vue"
-        },
-        {
-          "id": "2",
-          "text": "Disable Nitro"
-        },
-        {
-          "id": "3",
-          "text": "Delete error.vue"
-        },
-        {
-          "id": "4",
-          "text": "Set console.debug = null"
-        }
-      ],
-      "correctId": "1",
-      "explanation": "Nuxt hides stack traces when dev is false, so customizing error.vue to show friendly text keeps implementation details private."
     },
     {
       "id": 296,
