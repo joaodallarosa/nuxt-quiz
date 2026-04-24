@@ -162,11 +162,11 @@
         },
         {
           "id": "4",
-          "text": "npm create nuxt-project"
+          "text": "npm create nuxt@latest"
         }
       ],
-      "correctId": "2",
-      "explanation": "The official command is npx nuxi@latest init <project-name>."
+      "correctId": "4",
+      "explanation": "The official Nuxt 4 command to bootstrap a new project is: npm create nuxt@latest <project-name>."
     },
     {
       "id": 9,
@@ -250,7 +250,7 @@
     },
     {
       "id": 12,
-      "title": "What is the correct way to define a page in Nuxt 3?",
+      "title": "What is the correct way to define a page in Nuxt 4?",
       "options": [
         {
           "id": "1",
@@ -258,7 +258,7 @@
         },
         {
           "id": "2",
-          "text": "Create a file in the /pages/ directory"
+          "text": "Create a file in the app/pages/ directory"
         },
         {
           "id": "3",
@@ -274,7 +274,7 @@
         }
       ],
       "correctId": "2",
-      "explanation": "In Nuxt 3, pages are automatically created by placing Vue files in the /pages/ directory, leveraging file-based routing."
+      "explanation": "In Nuxt 4, pages are placed in the app/pages/ directory (the default srcDir is app/), leveraging file-based routing."
     },
     {
       "id": 13,
@@ -362,7 +362,7 @@
     },
     {
       "id": 16,
-      "title": "Which directory is used for Nuxt 3 layouts?",
+      "title": "Which directory is used for Nuxt 4 layouts?",
       "options": [
         {
           "id": "1",
@@ -370,7 +370,7 @@
         },
         {
           "id": "2",
-          "text": "/layouts/"
+          "text": "app/layouts/"
         },
         {
           "id": "3",
@@ -378,7 +378,7 @@
         },
         {
           "id": "4",
-          "text": "/pages/"
+          "text": "app/pages/"
         },
         {
           "id": "5",
@@ -386,7 +386,7 @@
         }
       ],
       "correctId": "2",
-      "explanation": "Layouts in Nuxt 3 are placed in the /layouts/ directory and provide a template structure that wraps around pages."
+      "explanation": "In Nuxt 4, layouts are placed in the app/layouts/ directory and provide a template structure that wraps around pages."
     },
     {
       "id": 17,
@@ -746,11 +746,11 @@
     },
     {
       "id": 30,
-      "title": "How do you add custom CSS in Nuxt 3?",
+      "title": "How do you add custom CSS in Nuxt 4?",
       "options": [
         {
           "id": "1",
-          "text": "Place CSS files in /assets/css/ and configure in nuxt.config.ts"
+          "text": "Place CSS files in app/assets/css/ and configure in nuxt.config.ts"
         },
         {
           "id": "2",
@@ -766,11 +766,11 @@
         },
         {
           "id": "5",
-          "text": "CSS is not supported in Nuxt 3"
+          "text": "CSS is not supported in Nuxt 4"
         }
       ],
       "correctId": "1",
-      "explanation": "Custom CSS can be added by placing files in /assets/css/ and configuring them in the css array of nuxt.config.ts."
+      "explanation": "Custom CSS can be added by placing files in app/assets/css/ and configuring them in the css array of nuxt.config.ts."
     },
     {
       "id": 31,
@@ -858,11 +858,11 @@
     },
     {
       "id": 34,
-      "title": "How do you handle errors globally in Nuxt 3?",
+      "title": "How do you handle errors globally in Nuxt 4?",
       "options": [
         {
           "id": "1",
-          "text": "Create an error.vue file in the root"
+          "text": "Create an error.vue file in the app/ directory"
         },
         {
           "id": "2",
@@ -878,11 +878,11 @@
         },
         {
           "id": "5",
-          "text": "Create an error page in /pages/"
+          "text": "Create an error page in app/pages/"
         }
       ],
       "correctId": "1",
-      "explanation": "Global error handling in Nuxt 3 is implemented by creating an error.vue file in the project root, which will be used for all unhandled errors."
+      "explanation": "Global error handling in Nuxt 4 is implemented by creating an error.vue file in the app/ directory (the default srcDir), which will be used for all unhandled errors."
     },
     {
       "id": 35,
@@ -922,7 +922,7 @@
         },
         {
           "id": "2",
-          "text": "/plugins/"
+          "text": "app/plugins/"
         },
         {
           "id": "3",
@@ -938,7 +938,7 @@
         }
       ],
       "correctId": "2",
-      "explanation": "Plugins in Nuxt 3 are placed in the /plugins/ directory and are automatically registered when the application starts."
+      "explanation": "In Nuxt 4, plugins are placed in the app/plugins/ directory and are automatically registered when the application starts."
     },
     {
       "id": 37,
@@ -1014,19 +1014,19 @@
     },
     {
       "id": 40,
-      "title": "How do you create a custom 404 page in Nuxt 3?",
+      "title": "How do you create a custom 404 page in Nuxt 4?",
       "options": [
         {
           "id": "1",
-          "text": "Create a 404.vue file in /pages/"
+          "text": "Create a 404.vue file in app/pages/"
         },
         {
           "id": "2",
-          "text": "Create a [...slug].vue file in /pages/"
+          "text": "Create a [...slug].vue file in app/pages/"
         },
         {
           "id": "3",
-          "text": "Create a not-found.vue file in /pages/"
+          "text": "Create a not-found.vue file in app/pages/"
         },
         {
           "id": "4",
@@ -1034,11 +1034,11 @@
         },
         {
           "id": "5",
-          "text": "Create an error.vue file in root"
+          "text": "Create an error.vue file in app/"
         }
       ],
       "correctId": "2",
-      "explanation": "A custom 404 page is created using a catch-all route [...slug].vue in the /pages/ directory, which handles all unmatched routes."
+      "explanation": "A custom 404 page is created using a catch-all route [...slug].vue in the app/pages/ directory, which handles all unmatched routes."
     },
     {
       "id": 41,
@@ -1366,11 +1366,11 @@
     },
     {
       "id": 53,
-      "title": "How do you create an auto imported composable in Nuxt 3?",
+      "title": "How do you create an auto imported composable in Nuxt 4?",
       "options": [
         {
           "id": "1",
-          "text": "Create a file in /composables/ starting with 'use'"
+          "text": "Create a file in app/composables/ starting with 'use'"
         },
         {
           "id": "2",
@@ -1390,7 +1390,7 @@
         }
       ],
       "correctId": "1",
-      "explanation": "Composables in Nuxt 3 are created by placing files in the /composables/ directory, typically with names starting with 'use', and they're auto-imported."
+      "explanation": "Composables in Nuxt 4 are created by placing files in the app/composables/ directory, typically with names starting with 'use', and they're auto-imported."
     },
     {
       "id": 54,
@@ -1478,11 +1478,11 @@
     },
     {
       "id": 57,
-      "title": "How do you implement authentication middleware in Nuxt 3?",
+      "title": "How do you implement authentication middleware in Nuxt 4?",
       "options": [
         {
           "id": "1",
-          "text": "Create a file in /middleware/ directory"
+          "text": "Create a file in app/middleware/ directory"
         },
         {
           "id": "2",
@@ -1502,7 +1502,7 @@
         }
       ],
       "correctId": "1",
-      "explanation": "Authentication middleware is implemented by creating files in the /middleware/ directory that run before route navigation."
+      "explanation": "Authentication middleware is implemented by creating files in the app/middleware/ directory that run before route navigation."
     },
     {
       "id": 58,
@@ -3190,15 +3190,15 @@
       "options": [
         {
           "id": "1",
-          "text": "composables/useCart.ts"
+          "text": "app/composables/useCart.ts"
         },
         {
           "id": "2",
-          "text": "plugins/useCart.ts"
+          "text": "app/plugins/useCart.ts"
         },
         {
           "id": "3",
-          "text": "utils/useCart.ts"
+          "text": "app/utils/useCart.ts"
         },
         {
           "id": "4",
@@ -3206,7 +3206,7 @@
         }
       ],
       "correctId": "1",
-      "explanation": "Nuxt auto-imports files in the composables directory, so composables/useCart.ts becomes available as useCart()."
+      "explanation": "In Nuxt 4, files in app/composables/ are auto-imported, so app/composables/useCart.ts becomes available as useCart()."
     },
     {
       "id": 134,
@@ -3278,7 +3278,7 @@
       "options": [
         {
           "id": "1",
-          "text": "assets/fonts/"
+          "text": "app/assets/fonts/"
         },
         {
           "id": "2",
@@ -3294,7 +3294,7 @@
         }
       ],
       "correctId": "1",
-      "explanation": "Files in assets/ are processed by Vite, which fingerprints and optimizes bundled assets like fonts."
+      "explanation": "In Nuxt 4, files in app/assets/ are processed by Vite, which fingerprints and optimizes bundled assets like fonts."
     },
     {
       "id": 138,
@@ -3522,11 +3522,11 @@
       "options": [
         {
           "id": "1",
-          "text": "Place it in plugins/analytics.client.ts"
+          "text": "Place it in app/plugins/analytics.client.ts"
         },
         {
           "id": "2",
-          "text": "Place it in plugins/analytics.server.ts"
+          "text": "Place it in app/plugins/analytics.server.ts"
         },
         {
           "id": "3",
@@ -3538,7 +3538,7 @@
         }
       ],
       "correctId": "1",
-      "explanation": "Using the .client suffix ensures the plugin is only executed in the browser runtime."
+      "explanation": "In Nuxt 4, using the .client suffix in app/plugins/ ensures the plugin is only executed in the browser runtime."
     },
     {
       "id": 148,
@@ -3982,7 +3982,7 @@
     },
     {
       "id": 167,
-      "title": "What does the file pages/blog/[...slug].vue capture?",
+      "title": "What does the file app/pages/blog/[...slug].vue capture?",
       "options": [
         {
           "id": "1",
